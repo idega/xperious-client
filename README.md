@@ -1,7 +1,8 @@
 xperious-client
 ===============
 
-## How to run
+
+## Running locally
 
 1. You will need `Node.js`. Download and install it.
 
@@ -18,3 +19,57 @@ xperious-client
 		grunt run
 
 5. Go to `http://localhost:8000`. You should see xperious portal.
+
+
+## Deployment
+
+Just a reminder about deployment.
+
+1. Execute the following commands:
+	
+		grunt dist
+		grunt dist:deploy
+
+	Beware that this will change your local `properties.json` if you run it from your machine. To restore them use `grunt --apihost=http://localhost:8080 init` or similar.
+
+2. Sample configuration for apache-httpd server:
+
+		<VirtualHost xperious.com:80>
+
+	      ServerName xperious.com
+		  DocumentRoot /var/www/html/xperious
+
+
+		  RewriteEngine On
+      
+		  # all images are in the same directory
+		  RewriteRule ^.*images/(.+)$ /styles/import/images/$1 [L]
+	
+		  # all URLs (except for assets) map to index.html
+		  # and are handled by backbone router there
+		  RewriteCond %{REQUEST_FILENAME}% !^.*\.(html|js|css)
+		  RewriteRule (.*) /index.html [L]
+
+
+		  ExpiresActive On
+		  ExpiresDefault "access plus 15 minutes"
+		  ExpiresByType image/png "access plus 1 day"
+		  ExpiresByType image/jpg "access plus 1 day"
+		  ExpiresByType image/jpeg "access plus 1 day"
+		  ExpiresByType image/gif "access plus 1 day"
+
+
+	      <Directory /var/www/html/xperious>
+	          AuthType Basic
+	          AuthName "xperious"
+	          AuthUserFile /etc/htpasswd/.htpasswd
+	          Require valid-user
+	          Order allow,deny
+	          Allow from all
+	      </Directory>
+
+		</VirtualHost>
+
+3. In case you want to add some users for BASIC auth:
+
+		htpasswd /etc/httpasswd/.htpasswd user_name
