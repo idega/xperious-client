@@ -1,0 +1,15 @@
+{
+  "name": "xperious",
+  "version": "0.0.1",
+  "description": "xperious javascript client",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib": "~0.6.1",
+    "grunt-jsvalidate": "~0.2.1",
+    "grunt-template-jasmine-requirejs": "~0.1.1",
+    "connect-modrewrite": "~0.3.10",
+    "connect": "~2.7.10",
+    "grunt-usemin": "~0.1.12",
+    "grunt-rsync": "~0.1.1"
+  }
+}
