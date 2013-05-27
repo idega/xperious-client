@@ -1,4 +1,5 @@
 define([
+  'text!../properties.json',
   'backbone.layoutmanager',
   'backbone.relational',
   'backbone.queryparams',
@@ -19,8 +20,10 @@ define([
   'jquery.rating',
   'modernizr',
   'common'
-], function(LayoutManager) {	
+], function(props, LayoutManager) {	
 
+    props = JSON.parse(props);
+    
 
 	var JST = window.JST = window.JST || {};
 
@@ -159,7 +162,7 @@ define([
 
   		root: '/',
   		
-  		apihost: 'http://test.xperious.com',
+  		apihost: props.apihost,
   		
 	    module: function(additionalProps) {
 	      return _.extend({ Views: {} }, additionalProps);

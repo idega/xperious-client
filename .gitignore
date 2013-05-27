@@ -3,3 +3,4 @@ dist
 _SpecRunner.html
 .grunt
 .DS_Store
+properties.json

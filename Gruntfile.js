@@ -180,24 +180,38 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-rsync');
 
 
-    grunt.registerTask("run", [
+    grunt.registerTask("init", "Initialize environment", function(apihost) {
+        var properties = {
+            apihost: grunt.option('apihost') || 'http://test.xperious.com'
+        };
+
+        var file = "properties.json";
+        var json = JSON.stringify(properties, undefined, 4);
+        grunt.file.write(file, json);
+        grunt.log.writeln("Initializing '" + file + "': ");
+        grunt.log.writeln(json);
+    });
+
+
+    grunt.registerTask("run", "Run local server", [
         "connect:dev:keepalive"
     ]);
 
     
-    grunt.registerTask("default", [
+    grunt.registerTask("default", "Run local server", [
         "run"
     ]);
 
 
-    grunt.registerTask("test", [
+    grunt.registerTask("test", "Run Jasmine tests" [
         "connect:dev",
         "jasmine"
     ]);
 
 
-    grunt.registerTask("dist", [
+    grunt.registerTask("dist", "Build dist artifacts", [
         "clean",
+        "init",
         "jsvalidate",
         "connect:dev",
         "jasmine",
@@ -211,12 +225,12 @@ module.exports = function(grunt) {
     ]);
 
 
-    grunt.registerTask("dist-run", [
+    grunt.registerTask("dist-run", "Run dist build", [
         "connect:dist:keepalive"
     ]);
 
     
-    grunt.registerTask("dist-deploy", [
+    grunt.registerTask("dist-deploy", "Deploy dist build", [
         "rsync:test.xperious.com"
     ]);
 };
@@ -237,7 +251,7 @@ function _middleware(connect, options) {
         // 3. Everything else should map to index.html (backbone router)
 	    modRewrite([
             '^.*images/(.+)$ /styles/import/images/$1 [L]',
-            '(.*\\.html|\\.js|\\.css)$ $1 [L]',
+            '(.*\\.html|\\.js|\\.css|\\.json)$ $1 [L]',
             '^/(.*)$ /index.html [L]'
 	     ]),
      	connect.static(options.base),
