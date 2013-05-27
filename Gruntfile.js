@@ -232,9 +232,13 @@ function _middleware(connect, options) {
 	var modRewrite = require('connect-modrewrite');
 
 	return [
+        // 1. Handle images from any folder
+        // 2. Do not rewrite URL for html, js and css
+        // 3. Everything else should map to index.html (backbone router)
 	    modRewrite([
             '^.*images/(.+)$ /styles/import/images/$1 [L]',
-            '!\\.html|\\.js|\\.css$ / [L]'
+            '(.*\\.html|\\.js|\\.css)$ $1 [L]',
+            '^/(.*)$ /index.html [L]'
 	     ]),
      	connect.static(options.base),
         connect.directory(options.base)
