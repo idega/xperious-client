@@ -34,41 +34,42 @@ Just a reminder about deployment.
 
 2. Sample configuration for apache-httpd server:
 
-		<VirtualHost xperious.com:80>
+		<VirtualHost test.xperious.com:80>
 
-	      ServerName xperious.com
-		  DocumentRoot /var/www/html/xperious
+	        ServerName test.xperious.com
+	        DocumentRoot /var/www/html/xperious
 
+	        RewriteEngine On
 
-		  RewriteEngine On
-      
-		  # all images are in the same directory
-		  RewriteRule ^.*images/(.+)$ /styles/import/images/$1 [L]
-	
-		  # all URLs (except for assets) map to index.html
-		  # and are handled by backbone router there
-		  RewriteCond %{REQUEST_FILENAME}% !^.*\.(html|js|css)
-		  RewriteRule (.*) /index.html [L]
+	        # all images are in the same directory
+	        RewriteRule ^.*images/(.+)$ /styles/import/images/$1 [L]
 
+	        # all URLs (except for assets) map to index.html and are handled by backbone router there
+	        RewriteCond %{REQUEST_FILENAME}% !^.*\.(html|js|css|png|jpg|jpeg|gif)
+	        RewriteRule (.*) /index.html [L]
 
-		  ExpiresActive On
-		  ExpiresDefault "access plus 15 minutes"
-		  ExpiresByType image/png "access plus 1 day"
-		  ExpiresByType image/jpg "access plus 1 day"
-		  ExpiresByType image/jpeg "access plus 1 day"
-		  ExpiresByType image/gif "access plus 1 day"
+	        ExpiresActive On
+	        ExpiresDefault "access plus 15 minutes"
+	        ExpiresByType image/png "access plus 1 day"
+	        ExpiresByType image/jpg "access plus 1 day"
+	        ExpiresByType image/jpeg "access plus 1 day"
+	        ExpiresByType image/gif "access plus 1 day"
 
+	        <IfModule mod_deflate.c>
+	                AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/x-javascript application/javascript
+	        </IfModule>
 
-	      <Directory /var/www/html/xperious>
-	          AuthType Basic
-	          AuthName "xperious"
-	          AuthUserFile /etc/htpasswd/.htpasswd
-	          Require valid-user
-	          Order allow,deny
-	          Allow from all
-	      </Directory>
+	        <Directory /var/www/html/xperious>
+	                AuthType Basic
+	                AuthName "xperious"
+	                AuthUserFile /etc/htpasswd/.htpasswd
+	                Require valid-user
+	                Order allow,deny
+	                Allow from all
+	        </Directory>
 
 		</VirtualHost>
+
 
 3. In case you want to add some users for BASIC auth:
 
