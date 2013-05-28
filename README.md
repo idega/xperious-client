@@ -6,6 +6,8 @@ xperious-client
 
 1. You will need `Node.js`. Download and install it.
 
+		brew install node
+
 2. Install all dependencies defined in `package.json`. Step into xperious-client folder and execute:
 
 		npm install
@@ -55,9 +57,7 @@ Just a reminder about deployment.
 	        ExpiresByType image/jpeg "access plus 1 day"
 	        ExpiresByType image/gif "access plus 1 day"
 
-	        <IfModule mod_deflate.c>
-	                AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/x-javascript application/javascript
-	        </IfModule>
+	        AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/x-javascript application/javascript
 
 	        <Directory /var/www/html/xperious>
 	                AuthType Basic
@@ -74,3 +74,7 @@ Just a reminder about deployment.
 3. In case you want to add some users for BASIC auth:
 
 		htpasswd /etc/httpasswd/.htpasswd user_name
+
+4. Make sure your system is aware of virtual host. Edit `/etc/hosts`:
+
+		10.1.1.186      test.xperious.com
