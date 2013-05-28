@@ -69,7 +69,7 @@ module.exports = function(grunt) {
         		options: {
         			cssIn: 'styles/main.css',
         			out: 'dist/temp/out.css',
-        			cssPrefix: '/portal/styles/'
+        			cssPrefix: '/styles/'
         		}
         	}
         },
@@ -143,7 +143,12 @@ module.exports = function(grunt) {
     		    	  dest: 'dist/release/'
     		      },
     		      {
-    		    	  src: ['lib/google/maps.js', 'lib/require/async.js'], 
+    		    	  src: [
+                            'lib/google/maps.js',
+                            'lib/require/async.js',
+                            'lib/selectivizr/selectivizr.js',
+                            'lib/pie/PIE.js'
+                      ], 
     		    	  dest: 'dist/release/'
     		      }
     		    ]
@@ -160,7 +165,7 @@ module.exports = function(grunt) {
         /* Use rsync over ssh for deployment */
     	rsync: {
             "test.xperious.com": {
-    	        src: "dist/release",
+    	        src: "dist/release/",
     	        dest: "/var/www/html/xperious",
     	        host: "idegaweb@test.xperious.com",
     	        recursive: true,
@@ -182,11 +187,12 @@ module.exports = function(grunt) {
 
     grunt.registerTask("init", "Initialize environment", function(apihost) {
         var properties = {
-            apihost: grunt.option('apihost') || 'http://test.xperious.com'
+            apihost: grunt.option('apihost') || 'http://core.test.xperious.com'
         };
 
         var file = "properties.json";
         var json = JSON.stringify(properties, undefined, 4);
+
         grunt.file.write(file, json);
         grunt.log.writeln("Initializing '" + file + "': ");
         grunt.log.writeln(json);
@@ -230,7 +236,7 @@ module.exports = function(grunt) {
     ]);
 
     
-    grunt.registerTask("dist:deploy", "Deploy dist build", [
+    grunt.registerTask("dist:rsync", "Deploy (rsync) dist build", [
         "rsync:test.xperious.com"
     ]);
 };
@@ -251,7 +257,7 @@ function _middleware(connect, options) {
         // 3. Everything else should map to index.html (backbone router)
 	    modRewrite([
             '^.*images/(.+)$ /styles/import/images/$1 [L]',
-            '(.*\\.html|\\.js|\\.css|\\.json)$ $1 [L]',
+            '(.*\\.html|\\.js|\\.css|\\.json|\\.gif|\\.jpg|\\.jpeg|\\.png)$ $1 [L]',
             '^/(.*)$ /index.html [L]'
 	     ]),
      	connect.static(options.base),
