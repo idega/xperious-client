@@ -232,11 +232,13 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask("dist:run", "Run dist build", [
+        "dist",
         "connect:dist:keepalive"
     ]);
 
     
     grunt.registerTask("dist:rsync", "Deploy (rsync) dist build", [
+        "dist",
         "rsync:test.xperious.com"
     ]);
 };
