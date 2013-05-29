@@ -8,17 +8,24 @@ define([
 
 		template: 'attractions/list',
 
-
 		events: {
 			'click .attractions-list a' : 'attraction'
 		},
+
+		/* Initial attractions list size */
+		length: 12,
+
+		/* Increment for attractions list whenever bottom is reached */
+		increment: 8,
 	
 		initialize: function() {
+			_.bindAll(this);
 			app.attractions.products.on('reset', this.render, this);
 		},
-		
+
 		cleanup: function() {
 			app.attractions.products.off('reset', this.render, this);
+			$(window).unbind('scroll', this.loadMore);
 		},
 		
 		attraction: function(e) {
@@ -36,7 +43,7 @@ define([
 
 		serialize: function() {
 			return {
-				attractions: app.attractions.products.toJSON(),
+				attractions: _.first(app.attractions.products.toJSON(), this.length),
 				loader: this.loader(),
 				baseUrl: app.router.href(
 					'attractions',
@@ -48,7 +55,19 @@ define([
 
 		afterRender: function() {
         	this.loadImages('.attractions-list .element .img');
+			$(window).scroll(this.loadMore);
+		},
+
+		loadMore: function() {
+			var w = $(window), d = $(document);
+			if (w.scrollTop() >= d.height() - w.height() - 800) {
+				if (this.length < app.attractions.products.size()) {
+					this.length += this.increment;
+					this.render();
+				}
+  			}
 		}
-	});
+   });
+
 
 });
