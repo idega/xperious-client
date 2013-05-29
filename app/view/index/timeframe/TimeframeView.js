@@ -10,6 +10,17 @@ define([
 	TimeframeTerminalView) {
 	
 
+	/**
+	 * Customized terminal view that focuses guests field after closed.
+	 */
+	var TerminalView = TimeframeTerminalView.extend({
+		close: function() {
+			this.empty();
+			$('#guests').focus();
+		}
+	});
+
+
 	/* 
 	 * Customized calendar views that have chained close() callbacks
 	 * to raise terminal view on the end.
@@ -17,7 +28,7 @@ define([
 	var CalendarToView = TimeframeCalendarView.to.extend({
 		close: function() {
 			this.empty();
-			new TimeframeTerminalView({model: this.model}).render();
+			new TerminalView({model: this.model}).render();
 		}
 	}); 
 	
@@ -35,7 +46,12 @@ define([
 		template: 'index/timeframe/timeframe',
 
 		events: {
-			'click .ico-calendar .placeholder' : 'init'
+			'click .ico-calendar .placeholder' : 'suppress',
+			'click .day-month.from' : 'suppress',
+			'click .day-month.to' : 'suppress',
+			'focus .ico-calendar .placeholder' : 'init',
+			'focus .day-month.from' : 'from',
+			'focus .day-month.to' : 'to',
 		},
 
 		initialize: function() {
@@ -76,31 +92,46 @@ define([
 			};
 		},
 
-		afterRender: function() {
-			this.$('.day-month.from').click(this.from);
-			this.$('.day-month.to').click(this.to);
+
+		init: _.debounce(function(e) {
+			// stop event propagation because calendar
+			// closes on any click outside the dialog
+			// e.stopPropagation();
+			if (e.originalEvent !== undefined) {
+				new CalendarFromView({model: this.model}).render().then(_.bind(function() {
+					this.$('.ico-calendar .placeholder').focus();
+				}, this));
+			}
+		}, 200, true),
+	
+		to: _.debounce(function(e) {
+			// stop event propagation because calendar
+			// closes on any click outside the dialog
+			// e.stopPropagation();
+			if (e.originalEvent  !== undefined) {
+				new TimeframeCalendarView.to({model: this.model}).render().then(_.bind(function() {
+					this.$('.day-month.to').focus();
+				}, this));
+			}
+		}, 200, true),
+
+		from: _.debounce(function(e) {
+			// stop event propagation because calendar
+			// closes on any click outside the dialog
+			// e.stopPropagation();
+			if (e.originalEvent  !== undefined) {
+				this._from = new TimeframeCalendarView.from({model: this.model}).render().then(_.bind(function() {
+					this.$('.day-month.from').focus();
+				}, this));
+			}
+		}, 200, true),
+
+		suppress: function(e) {
+			// This is click event suppression callback. Need to avoid
+			// click event because dialog closes on any click outside it.
+			e.stopPropagation();
 		},
 
-		init: function(e) {
-			// stop event propagation because calendar
-			// closes on any click outside the dialog
-			e.stopPropagation();
-			new CalendarFromView({model: this.model}).render();
-		},
-		
-		to: function(e) {
-			// stop event propagation because calendar
-			// closes on any click outside the dialog
-			e.stopPropagation();
-			new TimeframeCalendarView.to({model: this.model}).render();
-		},
-		
-		from: function(e) {
-			// stop event propagation because calendar
-			// closes on any click outside the dialog
-			e.stopPropagation();
-			new TimeframeCalendarView.from({model: this.model}).render();
-		}
 	});
 
 });

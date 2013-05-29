@@ -15,6 +15,7 @@ define([
 		events: {
 			'click #destination' : 'destination',
 			'click #plan' : 'plan',
+			'focus #guests' : 'guestsFocus',
 			'keypress #guests' : 'numeric',
 			'keypress #budget' : 'numeric',
 		},
@@ -30,7 +31,7 @@ define([
 		},
 
 
-		plan: function() {
+		plan: function(e) {
 			var country = app.country();
 
 
@@ -94,6 +95,8 @@ define([
 			});
 			app.search.pref.unset('index', {silent:true});
 			app.router.gosearch({trigger: true});
+
+			e.preventDefault();
 		},
 
 
@@ -353,9 +356,13 @@ define([
 	                width:326
 	            }, 500);
 	        });
-	
 		},
-		
+
+
+		guestsFocus: function(event) {
+			this.$('#guests').trigger('click');
+		},
+
 
 		numeric: function(e) {
 		    var char = (e.which) ? e.which : e.keyCode;

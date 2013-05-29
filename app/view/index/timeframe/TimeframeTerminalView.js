@@ -37,7 +37,7 @@ define([
 					}).asMilliseconds(),
 				terminal: app.search.terminals.at(0).get('code')
 			});
-			this.empty();
+			this.close();
 		},
 
 
@@ -61,7 +61,7 @@ define([
 				resizable: false,
 				width: 270,
 				minHeight: 200,
-				close: this.empty,
+				close: this.close,
 				position: {
 					my: 'top',
 					at: 'bottom',
@@ -81,7 +81,7 @@ define([
 
 			// clicking on anything else except the 
 			// dialog itself should close it
-			$('html').bind('click', this.empty);
+			$('html').bind('click', this.close);
 			this.$el.bind('click', function(e) {
 				e.stopPropagation();
 			});
@@ -106,7 +106,12 @@ define([
 			this.$el.dialog('close');
 			this.$el.remove();
 			$(window).unbind('resize', this.updatePosition);
-			$('html').unbind('click', this.empty);
+			$('html').unbind('click', this.close);
+		},
+
+
+		close: function() {
+			this.empty();
 		}
 	});
 

@@ -52,6 +52,7 @@ define(['app',
 	    	'search(/:query)/:country/:from/:to/:arrivalterminal/:arrivaltime/:guests(/budget/:budgetfrom/:budgetto)(/plan/:index)' : 'search',
 	    	'attractions/:country/:subtype(/:region)(/:product)' : 'attractions',
 	    	'events*path' : 'events',
+            'pages*path' : 'pages',
 	    	'' : 'index'
 	    },
 
@@ -70,6 +71,12 @@ define(['app',
 	    	app.attractions.subtypes.fetch();
 	    },
 
+
+        pages: function() {
+            // TODO: remove, this temporary so users get used to new url
+            alert('This is wrong url. You should start using http://core.test.xperious.com');
+            window.location.href = "http://core.test.xperious.com/pages/admin/attractions";
+        },
 
 	    /**
 	     * Show a list of attractions or one attraction if selected.

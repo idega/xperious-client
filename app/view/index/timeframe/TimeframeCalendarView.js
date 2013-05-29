@@ -14,7 +14,6 @@ define([
 			this.model = options.model;
 		},
 
-
 		afterRender: function() {
 			this.$el.dialog({
 				dialogClass: 'calendar',
@@ -58,6 +57,7 @@ define([
 			if (!defaultDate) {
 				defaultDate = this.model.asString('from');
 			}
+
 			this.$('.datepicker').datepicker({
 				dateFormat: 'yy-mm-dd',
 				numberOfMonths: 1,
@@ -65,7 +65,8 @@ define([
 				modal: false,
 				defaultDate: defaultDate,
 				onSelect: this.onDateSelect,
-                beforeShowDay: this.beforeShowDay
+                beforeShowDay: this.beforeShowDay,
+
 			});
 
 			this.updateTitlebar();

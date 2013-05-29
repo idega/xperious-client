@@ -164,6 +164,11 @@
 	}
 
 
+/** No focus outline should be visible */
+.planner * {
+   outline: 0;
+}
+
 
 /** Define map size for the destination map */
 #map-popup .map-holder {

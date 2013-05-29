@@ -30,15 +30,15 @@
 	    <form class="planner-form">
 	      <div class="form-row hide-on-mobile">
 	        <div class="hidden">
-	          <input type="text" id="query" placeholder="Your type of interest, example: horses, hiking, whale watching" data-tooltiptitle="What is your interest" data-tooltipcontent="Here you type what you want to do in your dream vacation. &lt;br&gt;&lt;br&gt;e.g. whale watching, hicking, glacier tour, river rafting, horses" class="autocomplete-search-input tooltip trigger-input-animation">
+	          <input type="text" id="query" placeholder="Your type of interest, example: horses, hiking, whale watching" data-tooltiptitle="What is your interest" data-tooltipcontent="Here you type what you want to do in your dream vacation. &lt;br&gt;&lt;br&gt;e.g. whale watching, hicking, glacier tour, river rafting, horses" class="autocomplete-search-input tooltip trigger-input-animation" tabIndex="1">
 	          <div id="plan-inputs-container">
 	            <div class="inner clearfix">
 	                <span class="timeframe-view"></span>
-	                <span class="guest"><input id="guests" type="text" placeholder="2 guests" value="<%= pref.guests != 2 ? pref.guests : '' %>" ></input></span>
-	                <span class="budget"><input id="budget" type="text" placeholder="Budget" value="<%= (pref.budget && pref.budget.to > 0) ? pref.budget.to : '' %>"></input></span>
+	                <span class="guest"><input tabindex="4" id="guests" type="text" placeholder="2 guests" value="<%= pref.guests != 2 ? pref.guests : '' %>" ></input></span>
+	                <span class="budget"><input tabindex="5" id="budget" type="text" placeholder="Budget" value="<%= (pref.budget && pref.budget.to > 0) ? pref.budget.to : '' %>"></input></span>
 	            </div>
 	          </div>
-	          <input type="button" id="plan" value="Plan" class="button">
+	          <input type="submit" id="plan" value="Plan" class="button">
 	        </div>
 	      </div>
 	      <div class="form-row touch-only"><a href="#" class="lang lang-1">ISL </a><a href="#" class="lang lang-2 active">EN</a>
