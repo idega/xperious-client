@@ -10,6 +10,7 @@
     "connect-modrewrite": "~0.3.10",
     "connect": "~2.7.10",
     "grunt-usemin": "~0.1.12",
-    "grunt-rsync": "~0.1.1"
+    "grunt-rsync": "~0.1.1",
+    "grunt-sed": "~0.1.1"
   }
 }

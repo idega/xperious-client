@@ -161,6 +161,16 @@ module.exports = function(grunt) {
             html: ['dist/release/index.html']
     	},
 
+
+        /* Bust the cache by adding timestamp to the assets url */
+        sed: {
+            version: {
+                pattern: '@@version',
+                replacement: '<%= new Date().getTime() %>',
+                path: 'dist/release/index.html'
+            }
+        },
+
 	
         /* Use rsync over ssh for deployment */
     	rsync: {
@@ -182,6 +192,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib');
     grunt.loadNpmTasks('grunt-jsvalidate');
     grunt.loadNpmTasks('grunt-usemin');
+    grunt.loadNpmTasks('grunt-sed');
     grunt.loadNpmTasks('grunt-rsync');
 
 
@@ -227,6 +238,7 @@ module.exports = function(grunt) {
         "uglify",
         "cssmin",
         "copy",
+        "sed:version",
         "usemin"
     ]);
 
@@ -258,7 +270,7 @@ function _middleware(connect, options) {
         // 3. Everything else should map to index.html (backbone router)
 	    modRewrite([
             '^.*images/(.+)$ /images/$1 [L]',
-            '(.*\\.html|\\.js|\\.css|\\.json|\\.gif|\\.jpg|\\.jpeg|\\.png)$ $1 [L]',
+            '(.*\\.html|\\.js|\\.css|\\.json|\\.gif|\\.jpg|\\.jpeg|\\.png)(\\?[0-9]+)?$ $1 [L]',
             '^/(.*)$ /index.html [L]'
 	     ]),
      	connect.static(options.base),

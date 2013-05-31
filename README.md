@@ -51,7 +51,7 @@ Just a reminder about deployment.
 	        RewriteRule (.*) /index.html [L]
 
 	        ExpiresActive On
-	        ExpiresDefault "access plus 15 minutes"
+	        ExpiresDefault "access plus 1 week"
 	        ExpiresByType image/png "access plus 1 day"
 	        ExpiresByType image/jpg "access plus 1 day"
 	        ExpiresByType image/jpeg "access plus 1 day"
