@@ -44,7 +44,7 @@ Just a reminder about deployment.
 	        RewriteEngine On
 
 	        # all images are in the same directory
-	        RewriteRule ^.*images/(.+)$ /styles/import/images/$1 [L]
+	        RewriteRule ^.*images/(.+)$ /images/$1 [L]
 
 	        # all URLs (except for assets) map to index.html and are handled by backbone router there
 	        RewriteCond %{REQUEST_FILENAME}% !^.*\.(html|js|css|png|jpg|jpeg|gif)

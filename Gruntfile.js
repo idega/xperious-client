@@ -67,9 +67,9 @@ module.exports = function(grunt) {
         	},
         	css: {
         		options: {
-        			cssIn: 'styles/main.css',
+        			cssIn: 'css/main.css',
         			out: 'dist/temp/out.css',
-        			cssPrefix: '/styles/'
+        			cssPrefix: '/css/'
         		}
         	}
         },
@@ -139,7 +139,7 @@ module.exports = function(grunt) {
     		    	  dest: 'dist/release/'
     		      },
     		      {
-    		    	  src: ['styles/import/images/*'], 
+    		    	  src: ['images/*'], 
     		    	  dest: 'dist/release/'
     		      },
     		      {
@@ -232,7 +232,6 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask("dist:run", "Run dist build", [
-        "dist",
         "connect:dist:keepalive"
     ]);
 
@@ -258,7 +257,7 @@ function _middleware(connect, options) {
         // 2. Do not rewrite URL for html, js and css
         // 3. Everything else should map to index.html (backbone router)
 	    modRewrite([
-            '^.*images/(.+)$ /styles/import/images/$1 [L]',
+            '^.*images/(.+)$ /images/$1 [L]',
             '(.*\\.html|\\.js|\\.css|\\.json|\\.gif|\\.jpg|\\.jpeg|\\.png)$ $1 [L]',
             '^/(.*)$ /index.html [L]'
 	     ]),
