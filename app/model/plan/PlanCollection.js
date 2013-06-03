@@ -64,7 +64,11 @@ function(
 					terminal: arrival.terminal,
 					from: app.search.pref.get('from').format('YYYY-MM-DD') + moment.utc(parseInt(arrival.time)).format('THH:mm:00'),
 					to: app.search.pref.get('to').format('YYYY-MM-DDT23:59:59'),
-					guests: app.search.pref.get('guests'),
+					guests: 
+						parseInt(app.search.pref.get('guests').adults)
+						+ parseInt(app.search.pref.get('guests').children)
+						+ parseInt(app.search.pref.get('guests').infants)
+						+ parseInt(app.search.pref.get('guests').seniors)
 				}
 			});
 			this._super(options);

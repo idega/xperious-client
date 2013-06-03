@@ -7,6 +7,7 @@ define(['app',
 	'view/index/IndexView',
 	'view/index/IndexMenuView',
 	'view/index/timeframe/TimeframeView',
+    'view/index/guests/GuestsView',
 	'view/index/event/EventSliderView',
 	'view/search/SearchView',
 	'view/search/SearchPreferencesView',
@@ -29,6 +30,7 @@ define(['app',
 	IndexView,
 	IndexMenuView,
 	TimeframeView,
+    GuestsView,
 	EventSliderView,
 	SearchView,
 	SearchPreferencesView,
@@ -47,10 +49,9 @@ define(['app',
 	return Backbone.Router.extend({
 
 	    routes: {
-	    	'search(/:query)/:country/:from/:to/:arrivalterminal/:arrivaltime/:guests(/budget/:budgetfrom/:budgetto)(/plan/:index)' : 'search',
+	    	'search(/:query)/:country/:from/:to/:arrivalterminal/:arrivaltime/:adults/:children/:infants/:seniors(/budget/:budgetfrom/:budgetto)(/plan/:index)' : 'search',
 	    	'attractions/:country/:subtype(/:region)(/:product)' : 'attractions',
 	    	'events*path' : 'events',
-            'pages*path' : 'pages',
 	    	'' : 'index'
 	    },
 
@@ -69,12 +70,6 @@ define(['app',
 	    	app.attractions.subtypes.fetch();
 	    },
 
-
-        pages: function() {
-            // TODO: remove, this temporary so users get used to new url
-            alert('This is wrong url. You should start using http://core.test.xperious.com');
-            window.location.href = "http://core.test.xperious.com/pages/admin/attractions";
-        },
 
 	    /**
 	     * Show a list of attractions or one attraction if selected.
@@ -140,7 +135,10 @@ define(['app',
 	    		to, 
 	    		arrivalterminal,
 	    		arrivaltime,
-	    		guests,
+	    		adults,
+                children,
+                infants,
+                seniors,
 	    		budgetfrom, 
 	    		budgetto, 
 	    		index) {
@@ -149,16 +147,17 @@ define(['app',
 
 	    	app.search.pref.set({
 	    		query: decodeURIComponent(query || ''),
-
 	    		country: country,
-
-    			guests: guests,
-
+    			guests: {
+                    adults: parseInt(adults),
+                    children: parseInt(children),
+                    infants: parseInt(infants),
+                    seniors: parseInt(seniors)
+                },
     			budget: {
     				from: budgetfrom,
     				to: budgetto
     			},
-
     			/* Use smart diff before setting the date.
     			 * We do not want to fire change event 
     			 * without a serious reason. */
@@ -168,7 +167,6 @@ define(['app',
     			to: this._diff(
     				app.search.pref.get('to'), 
     				moment(to, 'YYYYMMDD')),
-
     			arrival: {
     				time: arrivaltime,
     				terminal: arrivalterminal
@@ -229,7 +227,10 @@ define(['app',
 				app.search.pref.get('to').format('YYYYMMDD'),
 				app.search.pref.get('arrival').terminal,
 				app.search.pref.get('arrival').time,
-				app.search.pref.get('guests'),
+				app.search.pref.get('guests').adults,
+                app.search.pref.get('guests').children,
+                app.search.pref.get('guests').infants,
+                app.search.pref.get('guests').seniors,
 				app.search.pref.budget(),
 				app.search.pref.budgetfrom(),
 				app.search.pref.budgetto(),
@@ -246,6 +247,7 @@ define(['app',
 	    	return app.root +  this._href(arguments);
 	    },
 	    
+
 	    _href: function(args) {
 	    	return _.map(
 	    			_.without(_.toArray(args), undefined, ''),
@@ -279,6 +281,7 @@ define(['app',
     					views: {
     						'.menu-view' : new IndexMenuView(),
     						'.timeframe-view' : new TimeframeView(),
+                            '.guests-view' : new GuestsView(),
     						'.events-slider .site-block' :  new EventSliderView(),
     						'.footer-view' : new FooterView(),
     						'.bottom-view' : new BottomView({hidden: true})

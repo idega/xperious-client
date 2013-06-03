@@ -136,7 +136,7 @@ define([
 			$(window).unbind('resize', this.updatePosition);
 			$('html').unbind('click', this.empty);
 			app.trigger('change:timeframe');
-		},
+		}
 	});
 
 	

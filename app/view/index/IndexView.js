@@ -15,8 +15,6 @@ define([
 		events: {
 			'click #destination' : 'destination',
 			'click #plan' : 'plan',
-			'focus #guests' : 'guestsFocus',
-			'keypress #guests' : 'numeric',
 			'keypress #budget' : 'numeric',
 		},
 		
@@ -56,8 +54,12 @@ define([
 			
 			/* By default use 2 guests as specified in the
 			 * field placeholder. */
-			var guests = this.$('#guests').val();
-			if (!guests) guests = '2';
+			var adults = app.search.guests.get('adults');
+			var children = app.search.guests.get('children');
+			var infants = app.search.guests.get('infants');
+			var seniors = app.search.guests.get('seniors');
+			
+
 			
 
 			/* Use no budget filter if not provided by the user */
@@ -83,7 +85,12 @@ define([
 				country: country,
 				from: from,
 				to: to,
-				guests: guests,
+				guests: {
+					adults: adults,
+					children: children,
+					infants: infants,
+					seniors: seniors
+				},
 				budget: {
 					from: budgetfrom,
 					to: budgetto
@@ -211,9 +218,6 @@ define([
 		},
 
 		afterRender: function() {
-
-			var guests = app.search.pref.get('guests');
-			if (guests != 2) this.$('#guests').val(guests);
 			this.$('#query').val(app.search.pref.get('query'));
 
 	        var $window = $(window);
@@ -353,14 +357,9 @@ define([
 	
 	        this.$(".trigger-input-animation").on('focus', function(){
 	            $('#plan-inputs-container').animate({
-	                width:326
+	                width:324
 	            }, 500);
 	        });
-		},
-
-
-		guestsFocus: function(event) {
-			this.$('#guests').trigger('click');
 		},
 
 

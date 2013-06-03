@@ -36,7 +36,10 @@ define([
 					app.search.pref.get('to').format('YYYYMMDD'),
 					app.search.pref.get('arrival').terminal,
 					app.search.pref.get('arrival').time,
-					app.search.pref.get('guests'),
+					app.search.pref.get('guests').adults,
+                    app.search.pref.get('guests').children,
+                    app.search.pref.get('guests').infants,
+                    app.search.pref.get('guests').seniors,
 					app.search.pref.budget(),
 					app.search.pref.budgetfrom(),
 					app.search.pref.budgetto())

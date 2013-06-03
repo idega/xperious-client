@@ -4,6 +4,7 @@ require([
 	'model/country/CountryCollection',
 	'model/search/SearchPreferencesModel',
 	'model/search/SearchTimeframeModel',
+	'model/search/SearchGuestsModel',
 	'model/event/EventTimeline',
 	'model/plan/PlanCollection',
 	'model/product/ProductSearchResults',
@@ -20,6 +21,7 @@ require([
 	CountryCollection,
 	SearchPreferencesModel,
 	SearchTimeframeModel,
+	SearchGuestsModel,
 	EventTimeline,
 	PlanCollection,
 	ProductSearchResults,
@@ -37,6 +39,7 @@ require([
 	/* Initiate search models and collections. */
 	app.search = {};
 	app.search.timeframe = new SearchTimeframeModel();
+	app.search.guests = new SearchGuestsModel();
 	app.search.terminals = new TerminalCollection();
 	app.search.idle = new SearchTimeframeModel();
 	app.search.pref = new SearchPreferencesModel();

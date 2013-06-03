@@ -16,7 +16,7 @@ define([
 	var TerminalView = TimeframeTerminalView.extend({
 		close: function() {
 			this.empty();
-			$('#guests').focus();
+			$('#adults').focus();
 		}
 	});
 
@@ -94,9 +94,6 @@ define([
 
 
 		init: _.debounce(function(e) {
-			// stop event propagation because calendar
-			// closes on any click outside the dialog
-			// e.stopPropagation();
 			if (e.originalEvent !== undefined) {
 				new CalendarFromView({model: this.model}).render().then(_.bind(function() {
 					this.$('.ico-calendar .placeholder').focus();
@@ -105,9 +102,6 @@ define([
 		}, 200, true),
 	
 		to: _.debounce(function(e) {
-			// stop event propagation because calendar
-			// closes on any click outside the dialog
-			// e.stopPropagation();
 			if (e.originalEvent  !== undefined) {
 				new TimeframeCalendarView.to({model: this.model}).render().then(_.bind(function() {
 					this.$('.day-month.to').focus();
@@ -116,9 +110,6 @@ define([
 		}, 200, true),
 
 		from: _.debounce(function(e) {
-			// stop event propagation because calendar
-			// closes on any click outside the dialog
-			// e.stopPropagation();
 			if (e.originalEvent  !== undefined) {
 				this._from = new TimeframeCalendarView.from({model: this.model}).render().then(_.bind(function() {
 					this.$('.day-month.from').focus();
