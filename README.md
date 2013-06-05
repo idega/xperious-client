@@ -1,8 +1,18 @@
-xperious-client
-===============
+# xperious-client
+
+This is single-page javascript application for xperious.
 
 
-## Running locally
+# Development
+
+
+## Code guide
+
+1. Use `Soft Tabs` - `4 spaces`.
+2. Prefix classes with `js-` whenever you use them from javascript code. Do not use classes with `js-` prefix for styling.
+
+
+## Running
 
 1. You will need `Node.js`. Download and install it.
 
@@ -16,6 +26,8 @@ xperious-client
 
 		grunt init
 
+ Make sure grunt is on your path (in OSX use `export PATH=$PATH:/usr/local/share/npm/bin`, in windows use `npm install grunt-cli -g`).
+
 4. Start server using `grunt`.
 
 		grunt run
@@ -23,7 +35,7 @@ xperious-client
 5. Go to `http://localhost:8000`. You should see xperious portal.
 
 
-## Deployment
+# Deployment
 
 Just a reminder about deployment.
 
