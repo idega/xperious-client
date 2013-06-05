@@ -1,5 +1,7 @@
-xperious-client
-===============
+# xperious-client
+
+This is single-page javascript application for xperious.
+
 
 # Development
 
@@ -33,7 +35,7 @@ xperious-client
 5. Go to `http://localhost:8000`. You should see xperious portal.
 
 
-## Deployment
+# Deployment
 
 Just a reminder about deployment.
 
