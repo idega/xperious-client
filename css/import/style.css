@@ -228,9 +228,9 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 .chose-destination.hovered {color: #fff;}
 
 /*Planner*/
-.planner {position: absolute; height: 200px; top: 50%; margin-top: -110px; left: 22px; font-weight: 300;}
-.planner h1 {font-size: 36px; margin-top: 0; font-weight: 300; margin-bottom: 3px;} 
-.planner h2 {font-size: 18px; line-height: 22px; font-weight: 300; margin: 3px 0;}
+.planner {position: absolute; height: 200px; top: 50%; margin-top: -110px; left: 22px; font-weight: 300; width: 880px;}
+.planner h1 {font-size: 36px; margin-top: 0; font-weight: 300; margin-bottom: 3px; text-align: center;} 
+.planner h2 {font-size: 18px; line-height: 22px; font-weight: 300; margin: 3px 0; text-align: center;}
 .planner .info {font-size: 16px; line-height: 22px; padding-left: 16px; font-style: italic; margin: 0;}
 
 .buttoned {padding-top: 0; padding-bottom: 0; display: inline-block; border-radius: 4px; background: #fff; padding-right: 10px; padding-left: 35px; height: 40px; line-height: 40px; color: #a6a49f; font-size: 14px; border: none; margin-right: 7px; float: left; position: relative;}
@@ -239,12 +239,12 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 .ico-guest {background-image: url(../images/guest-ico.png); background-repeat: no-repeat; background-position: 9px 10px;}
 .ico-event {background-image: url(../images/event-ico.png); background-repeat: no-repeat; background-position: 9px 10px;}
 
-.planner input[type="text"] {padding: 10px 16px; margin-right: 7px; width: 435px; font-size: 14px;}
-.planner .button {line-height: 40px; height: 40px; background-color: #86c543; width: 135px; text-align: left; padding-bottom: 1px; font-size: 14px;}
+.planner input[type="text"] {padding: 10px 16px; width: 414px; font-size: 14px; border-radius: 4px 0 0 4px;}
+.planner .button {line-height: 40px; height: 40px; background: #86c543 url(../images/search-ico-white.png) no-repeat center center; width: 45px; text-align: left; padding-bottom: 1px; font-size: 14px; border-radius: 0 4px 4px 0; overflow: hidden; text-indent: -999px;}
 .no-js .planner .button:hover, .planner .button.hovered{background-color: #53762b;}
 
 /*Planer form*/
-.planner-form {padding-top: 27px; padding-bottom: 6px;}
+.planner-form {padding-top: 27px; padding-bottom: 6px; margin: 0 auto; width: 492px;}
 .planner-form .form-row {overflow: hidden; margin-bottom: 0px; position: relative;}
 .planner-form .lang {display: inline-block; position: absolute; bottom: 10px; padding: 2px 0; color: #fff; font-size: 12px; background: #5d760f; width: 28px; text-align: center; right: 10px; z-index: 10;}
 .planner-form .lang-1 {right: 38px; border-radius: 3px 0 0 3px;}
@@ -272,6 +272,11 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 .qtip-light .qtip-contentWrapper {border: none !important; background: #a6a49f !important; color: #333333;}
 .qtip-light .qtip-title {font-weight: 400 !important;}
 .qtip-light .qtip-content {font-size: 14px; line-height: 18px;}
+
+/*Video button*/
+.video-button-wrap {padding-top: 50px; padding-bottom: 30px;}
+.button__show-video {display: inline-block; padding: 10px 8px; border-radius: 4px; background: url(../images/button-transp.png); color: #fff; font-size: 16px;}
+.button__show-video span {display: inline-block; padding-right: 57px; background: url(../images/video-ico.png) no-repeat right center; line-height: 20px;}
 
 /*Site bottom menu*/
 .site-bottom-menu {position: absolute; bottom: 0px; left: 0; width: 100%; z-index: 10; background: url(../images/bottom-rep.png);}
