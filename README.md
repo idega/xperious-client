@@ -1,8 +1,16 @@
 xperious-client
 ===============
 
+# Development
 
-## Running locally
+
+## Code guide
+
+1. Use `Soft Tabs` - `4 spaces`.
+2. Prefix classes with `js-` whenever you use them from javascript code. Do not use classes with `js-` prefix for styling.
+
+
+## Running
 
 1. You will need `Node.js`. Download and install it.
 
@@ -15,6 +23,8 @@ xperious-client
 3. Initialize application properties file using `grunt` (it should be available after you install all the dependecies).
 
 		grunt init
+
+ Make sure grunt is on your path (in OSX use `export PATH=$PATH:/usr/local/share/npm/bin`, in windows use `npm install grunt-cli -g`).
 
 4. Start server using `grunt`.
 
