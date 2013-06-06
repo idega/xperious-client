@@ -243,6 +243,10 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 .planner .button {line-height: 40px; height: 40px; background: #86c543 url(../images/search-ico-white.png) no-repeat center center; width: 45px; text-align: left; padding-bottom: 1px; font-size: 14px; border-radius: 0 4px 4px 0; overflow: hidden; text-indent: -999px;}
 .no-js .planner .button:hover, .planner .button.hovered{background-color: #53762b;}
 
+/*When form expands css of some elements changes, .form-expanded generadet in IndexView.js*/
+.form-expanded input[type="text"] {border-radius: 4px; margin-right: 8px;}
+.form-expanded .button {width: 100px; text-indent: 0; border-radius: 4px; background-image: url(../images/button-ico.png); background-position: right center;}
+
 /*Planer form*/
 .planner-form {padding-top: 27px; padding-bottom: 6px; margin: 0 auto; width: 492px;}
 .planner-form .form-row {overflow: hidden; margin-bottom: 0px; position: relative;}

@@ -355,10 +355,35 @@ define([
 	            }
 	        });
 	
+
+	        /*TODO class selector ineffective*/
+
+	        var formWasFocused = false;
+
 	        this.$(".trigger-input-animation").on('focus', function(){
-	            $('#plan-inputs-container').animate({
-	                width:324
-	            }, 500);
+	            
+
+	        	if (!formWasFocused) {
+
+	        		$('#plan').fadeOut(100, function() {
+
+						$('#js-travel-planner-form').addClass('form-expanded').animate({
+			                width:880
+			            }, 500);
+			            $('#plan-inputs-container').animate({
+			                width:324
+			            }, 500, function() {
+							$('#plan').fadeIn(300);
+						});
+
+					});
+
+	        		formWasFocused = true;
+
+	        	}
+		
+
+	            
 	        });
 		},
 
