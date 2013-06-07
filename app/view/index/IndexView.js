@@ -362,20 +362,12 @@ define([
 
 	        this.$(".trigger-input-animation").on('focus', function(){
 	            
-
 	        	if (!formWasFocused) {
-
-	        		$('#plan').fadeOut(100, function() {
-
-						$('#js-travel-planner-form').addClass('form-expanded').animate({
-			                width:880
-			            }, 500);
-			            $('#plan-inputs-container').animate({
-			                width:324
-			            }, 500, function() {
-							$('#plan').fadeIn(300);
-						});
-
+					$('#js-travel-planner-form').animate({width: 880}, 200, function() {
+		            	$('#js-travel-planner-form').addClass('form-expanded')
+						$('#plan-inputs-container').animate({width: 324}, 500, function() {
+							$('#plan').switchClass(undefined, 'animated', 200);
+		            	});
 					});
 
 	        		formWasFocused = true;
