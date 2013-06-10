@@ -357,7 +357,22 @@ define([
 
 			    });
 
+			    /*Mobile menu open/close */
 
+	            $("#js-show-mobile-menu").on('click', function(){
+	            	$("#home").animate({marginLeft: 240}, 500);
+	            	$("#home").css("width", $("#home").outerWidth());
+	            	$("#js-mobile-menu").animate({width: 240}, 500);
+	            });
+
+	            $("#js-close-mobile-menu").on('click', function(){
+	            	$("#js-mobile-menu").animate({width: 0}, 500);
+	            	$("#home").animate({marginLeft: 0}, 500, function(){
+	            		$("#home").css("width", 'auto');
+	            	});
+	            });
+
+	            
 
 	        }
 	
@@ -365,12 +380,35 @@ define([
 
 		        var windowWidth = $window.width();
 
-		        if (windowWidth > 880){
+		        if (windowWidth > 980)
+		        {
+		        	$("#js-mobile-menu").css("width", '990px');
+		        	$("#home").css("width", 'auto');
+		    	} else if (windowWidth > 880){
+
 		        	$('#query').attr("placeholder", "Your type of interest e.g.: horses, hiking, whale watching");
-		        	animateSearchFormHorisontal = true;
+		        	
+		        	/*Home section and bottom menu if page is resized to wide and menu is opened*/
+		        	$("#home").css("width", 'auto');
+		        	$("#home").css('margin-left', '0px');
+		        	$("#js-mobile-menu").css("width", 'auto');
+
+
 		        }else{
+
 		        	$('#query').attr("placeholder", "Your type of interest");
-		        	animateSearchFormVertical = true;
+
+		        	/*Reset menu size only when menu is not opened*/
+		        	var menuWidth = parseInt($("#js-mobile-menu").outerWidth(), 10);
+		        	var openedMenuWidth = 240;
+
+		        	if (menuWidth != openedMenuWidth){
+		        		$("#js-mobile-menu").css("width", '0px');
+		        	}		        		
+
+		        	/*Home section width when mobile menu is opened*/
+		        	$("#home").css("width", windowWidth);
+
 		        }
 
 	        }

@@ -19,7 +19,7 @@
 
 
 /*980----------------------------------------------------*/
-@media only screen and (max-width: 979px) {
+@media only screen and (max-width: 980px) {
 
 .site {margin-bottom: 0;}
 
@@ -73,6 +73,7 @@
 
 
 @media only screen and (max-width: 880px){
+.site {overflow: hidden;}
 
 .home-section {overflow: visible;}
 
@@ -95,8 +96,8 @@
 .planner-form input[type="text"],
 .planner-form .ico-calendar,
 .planner-form .guest #adults,
-.planner-form .budget input[type="text"] {margin-right: 0; width: 94%; margin-bottom: 15px; padding-left: 3%; padding-right: 3%; border-radius: 0; float: none; text-align: center;}
-.planner .button {display: block; border-radius: 0; width: 100%; text-align: center; float: none; background-image: none; padding: 0; text-indent: 0;}
+.planner-form .budget input[type="text"] {margin-right: 0; width: 94%; margin-bottom: 15px; padding-left: 3%; padding-right: 3%; border-radius: 2px; float: none; text-align: center;}
+.planner .button {display: block; border-radius: 2px; width: 100%; text-align: center; float: none; background-image: none; padding: 0; text-indent: 0;}
 .planner .info {display: none;}
 
 .video-button-wrap {padding-top: 20px; padding-bottom: 40px;}
@@ -119,16 +120,31 @@
 .guests .ui-dialog-content {background-position: 52px 0 !important;}
 
 /*Bottom menu travels to top */
+.show-mobile-menu,
+.close-mobile-menu {display: inline-block;}
 .bottom-menu {padding: 0;}
-.site-bottom-menu {word-wrap: break-word; position: absolute; left: 0px; top: 0px; background: url(../images/mobile-menu-ico.png) no-repeat 18px 18px; width: 65px; height: 65px;}
-.site-bottom-menu:hover {width: 55%;}
+.bottom-menu .submenu {width: auto !important;}
+.site-bottom-menu {word-wrap: break-word; position: absolute; left: 0px; top: 0px; width: 65px; height: 65px; background: none;}
+.site-bottom-menu {width: 240px;}
 .site-bottom-menu .bottom-menu .special {display: none;}
-.site-bottom-menu .site-block-in { margin-top: 65px; padding: 6px 18px; background: #000; display: none;}
-.site-bottom-menu:hover .site-block-in {display: block; z-index: 100;}
+.site-bottom-menu .site-block-in {background: #a6a49f; padding: 0; left: -240px; position: absolute; width: 0px; overflow: hidden;}
 
 .site-bottom-menu .bottom-menu li {width: auto !important; float: none; display: block; text-align:  left;}
 .site-bottom-menu .bottom-menu ul {display: block !important; opacity: 1 !important; position: static; height: auto;}
 .bottom-menu .small {display: none;}
+
+.site-bottom-menu a {line-height: normal; padding: 8px 20px;}
+.site-bottom-menu li {border-bottom: 1px solid #565450; border-top: 1px solid #e9e8e7;}
+.site-bottom-menu li:first-child,
+.site-bottom-menu .submenu li:first-child {border-top: none;}
+.site-bottom-menu li:last-child,
+.site-bottom-menu .submenu li:last-child {border-bottom: none;}
+.site-bottom-menu .submenu {background: #7e7d79; padding: 0; border-top: 1px solid #dfdedd;}
+.site-bottom-menu .submenu li {border-top: 1px solid #afaeab; border-bottom: 1px solid #646460; padding: 0;}
+.site-bottom-menu .submenu a {padding: 5px 20px; padding-left: 25px; line-height: normal; display: block;}
+
+/*Hidden because is useless on mobile*/
+.site-bottom-menu li.tar:last-child {display: none;}
 
 }
 

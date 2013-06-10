@@ -308,6 +308,9 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 li:hover .convert-form .ui-selectmenu, 
 li:hover .convert-form input[type='text'] {zoom: 1;}
 
+.close-mobile-menu {display: inline-block; width: 20px; height: 20px; background: url(../images/close-mobile-menu.png) no-repeat center center; position: absolute; right: 10px; top: 15px; z-index: 100; cursor: pointer; display: none;}
+.show-mobile-menu {position: absolute; left: 0px; top: 0px; display: inline-block; background: url(../images/mobile-menu-ico.png) no-repeat 18px 18px; width: 65px; height: 65px; z-index: 100; cursor: pointer; display: none;}
+
 /*Map popup*/
 #fancybox-outer {background: none;}
 .fancybox-bg {background: none !important;}
