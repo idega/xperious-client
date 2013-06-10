@@ -289,9 +289,11 @@ define([
 	                }
 	                this.$el.find('.grid').height(windowHeight-$(".site-header").height());
 	                this.$el.find('.landing-page').data('initialized', 'initialized');
+	                onResize();
 	            }, this)).trigger('resize');
 	        }else{
 	            onInit();
+	            onResize();
 	        }
 	
 	        function onInit() {
@@ -326,8 +328,66 @@ define([
 	                    PIE.attach(this);
 	                });
 	            }
+
 	        }
 	
+	        function onResize() {
+
+	        	/*TODO class selector ineffective*/
+
+		        var animateSearchFormHorisontal = false;
+		        var animateSearchFormVertical = false;
+		        var windowWidth = $window.width();
+
+		        if (windowWidth > 880){
+		        	$('#query').attr("placeholder", "Your type of interest e.g.: horses, hiking, whale watching");
+		        	animateSearchFormHorisontal = true;
+		        }else{
+		        	$('#query').attr("placeholder", "Your type of interest");
+		        	animateSearchFormVertical = true;
+		        }
+
+		        $(".trigger-input-animation").on('touchstart click', function(){
+
+
+		        	if (animateSearchFormHorisontal ) {
+
+		        		$('#plan').fadeOut(100, function() {
+
+							$('#js-travel-planner-form').addClass('form-expanded').animate({
+				                width:880
+				            }, 500);
+				            $('#plan-inputs-container').animate({
+				                width:324
+				            }, 500, function() {
+								$('#plan').fadeIn(300);
+								$('#js-travel-planner-form').addClass('this-has-expanded');
+							});
+
+						});
+
+		        		animateSearchFormHorisontal = false;
+		        		animateSearchFormVertical = false;
+
+		        	}
+
+		        	if (animateSearchFormVertical){
+
+		        		$('#js-travel-planner-form').addClass('form-expanded');
+	        			$('#plan-inputs-container').animate({
+			                height:165
+			            }, 500, function() {
+								$('#plan').fadeIn(300);
+								$('#js-travel-planner-form').addClass('this-has-expanded');
+							});
+
+	        			animateSearchFormHorisontal = false;
+				        animateSearchFormVertical = false;
+		        	}
+		            
+		        });
+	        }
+
 	
 	        /* Top slider */
 	        initSlider('.home-section .next', '.home-section .prev', '.slider-container');
@@ -356,35 +416,7 @@ define([
 	        });
 	
 
-	        /*TODO class selector ineffective*/
 
-	        var formWasFocused = false;
-
-	        this.$(".trigger-input-animation").on('focus', function(){
-	            
-
-	        	if (!formWasFocused) {
-
-	        		$('#plan').fadeOut(100, function() {
-
-						$('#js-travel-planner-form').addClass('form-expanded').animate({
-			                width:880
-			            }, 500);
-			            $('#plan-inputs-container').animate({
-			                width:324
-			            }, 500, function() {
-							$('#plan').fadeIn(300);
-						});
-
-					});
-
-	        		formWasFocused = true;
-
-	        	}
-		
-
-	            
-	        });
 		},
 
 

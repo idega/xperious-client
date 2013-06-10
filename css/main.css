@@ -3,7 +3,6 @@
 @import url('import/fancybox/jquery.fancybox.css');
 @import url('import/jquery.jcarousel.skin.css');
 @import url('import/style.css');
-@import url('import/responsive.css');
 @import url('import/plan.css');
 @import url('import/search.css');
 @import url('import/attraction.css');
@@ -14,3 +13,4 @@
 @import url('override/search.css');
 @import url('override/attraction.css');
 @import url('override/attractions.css');
+@import url('import/responsive.css');
