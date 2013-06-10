@@ -329,30 +329,14 @@ define([
 	                });
 	            }
 
-	        }
-	
-	        function onResize() {
 
-	        	/*TODO class selector ineffective*/
+	            /*Animate planer form once*/
+	            var windowWidth = $window.width();
 
-		        var animateSearchFormHorisontal = false;
-		        var animateSearchFormVertical = false;
-		        var windowWidth = $window.width();
+	            $(".trigger-input-animation").one('click', function(){
+			        if (windowWidth > 880){
 
-		        if (windowWidth > 880){
-		        	$('#query').attr("placeholder", "Your type of interest e.g.: horses, hiking, whale watching");
-		        	animateSearchFormHorisontal = true;
-		        }else{
-		        	$('#query').attr("placeholder", "Your type of interest");
-		        	animateSearchFormVertical = true;
-		        }
-
-		        $(".trigger-input-animation").on('touchstart click', function(){
-
-
-		        	if (animateSearchFormHorisontal ) {
-
-		        		$('#plan').fadeOut(100, function() {
+			        	$('#plan').fadeOut(100, function() {
 
 							$('#js-travel-planner-form').addClass('form-expanded').animate({
 				                width:880
@@ -366,26 +350,35 @@ define([
 
 						});
 
-		        		animateSearchFormHorisontal = false;
-		        		animateSearchFormVertical = false;
+			        }else{
 
-		        	}
-
-		        	if (animateSearchFormVertical){
-
-		        		$('#js-travel-planner-form').addClass('form-expanded');
+			        	$('#js-travel-planner-form').addClass('form-expanded');
 	        			$('#plan-inputs-container').animate({
 			                height:165
 			            }, 500, function() {
 								$('#plan').fadeIn(300);
 								$('#js-travel-planner-form').addClass('this-has-expanded');
 							});
+			        }
 
-	        			animateSearchFormHorisontal = false;
-				        animateSearchFormVertical = false;
-		        	}
-		            
-		        });
+			    });
+
+
+
+	        }
+	
+	        function onResize() {
+
+		        var windowWidth = $window.width();
+
+		        if (windowWidth > 880){
+		        	$('#query').attr("placeholder", "Your type of interest e.g.: horses, hiking, whale watching");
+		        	animateSearchFormHorisontal = true;
+		        }else{
+		        	$('#query').attr("placeholder", "Your type of interest");
+		        	animateSearchFormVertical = true;
+		        }
+
 	        }
 
 	
