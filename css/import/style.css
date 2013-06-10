@@ -236,9 +236,7 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 
 /*When form expands css of some elements changes, .form-expanded generadet in IndexView.js*/
 .form-expanded input[type="text"] {border-radius: 4px; margin-right: 8px;}
-.form-expanded .button {width: 100px; text-indent: 0; border-radius: 4px; background-image: url(../images/button-ico.png); background-position: right center;}
 .form-expanded .button { border-radius: 4px; }
-.form-expanded .button.animated {}
 
 
 /*Planer form*/
@@ -246,7 +244,7 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 .planner-form .form-row {overflow: hidden; margin-bottom: 0px; position: relative;}
 
 .this-has-expanded {width: 880px;}
-.this-has-expanded #plan-inputs-container {width: 324px; height: 40px !important;}
+.this-has-expanded #plan-inputs-container {width: 380px; height: 40px !important;}
 
 
 /*Planner tooltip*/
@@ -733,7 +731,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .js.no-touch .landing-page {visibility:hidden;}
 
 #plan-inputs-container{overflow: hidden; width:0px;display:inline-block; float: left; }
-#plan-inputs-container .inner{width:350px;}
+#plan-inputs-container .inner{width:380px;}
 
 /*Media gallery*/
 .media-gallery {border: 1px solid #5c5c5c; border-radius: 4px;}

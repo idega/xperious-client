@@ -74,6 +74,8 @@
 
 @media only screen and (max-width: 880px){
 
+.home-section {overflow: visible;}
+
 .site-header {height: 65px;}
 .site-header .logo {margin-top: 4px;}
 .site-header .logo img {height: 55px; width: auto;}
@@ -119,14 +121,14 @@
 /*Bottom menu travels to top */
 .bottom-menu {padding: 0;}
 .site-bottom-menu {word-wrap: break-word; position: absolute; left: 0px; top: 0px; background: url(../images/mobile-menu-ico.png) no-repeat 18px 18px; width: 65px; height: 65px;}
-.site-bottom-menu:hover {width: 100%;}
+.site-bottom-menu:hover {width: 55%;}
 .site-bottom-menu .bottom-menu .special {display: none;}
 .site-bottom-menu .site-block-in { margin-top: 65px; padding: 6px 18px; background: #000; display: none;}
-.site-bottom-menu:hover .site-block-in {display: block;}
+.site-bottom-menu:hover .site-block-in {display: block; z-index: 100;}
 
 .site-bottom-menu .bottom-menu li {width: auto !important; float: none; display: block; text-align:  left;}
 .site-bottom-menu .bottom-menu ul {display: block !important; opacity: 1 !important; position: static; height: auto;}
-
+.bottom-menu .small {display: none;}
 
 }
 
