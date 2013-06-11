@@ -194,6 +194,7 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 /*Prev-next*/
 .home-section .prev, .home-section .next,
 .popup-gallery-fader .prev, .popup-gallery-fader .next {display: inline-block; width: 30px; height: 30px; position: absolute; top: 50%; margin-top: -15px; cursor: pointer;}
+.home-section .prev, .home-section .next {margin-top: 15px;}
 .home-section .prev, .popup-gallery-fader .prev {background: url(../images/arrow-left.png) no-repeat center center; left: 3%;}
 .home-section .next, .popup-gallery-fader .next {background: url(../images/arrow-right.png) no-repeat center center; right: 3%;}
 

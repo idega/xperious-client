@@ -16,6 +16,7 @@ define([
 			'click #destination' : 'destination',
 			'click #plan' : 'plan',
 			'keypress #budget' : 'numeric',
+			'click #js-show-mobile-menu' : 'clickShowMobileMenu',
 		},
 		
 
@@ -106,6 +107,22 @@ define([
 			e.preventDefault();
 		},
 
+
+ 		clickShowMobileMenu: function() {
+	           
+        	$("#home").animate({marginLeft: 240}, 500);
+        	$("#home").css("width", $("#home").outerWidth());
+        	$("#js-mobile-menu").animate({width: 240}, 500);
+        
+
+            $("#js-close-mobile-menu").on('click', function(){
+            	$("#js-mobile-menu").animate({width: 0}, 500);
+            	$("#home").animate({marginLeft: 0}, 500, function(){
+            		$("#home").css("width", 'auto');
+            	});
+            });
+
+        },
 
 		parse: function(query) {
 //			var numberRegexp = new RegExp('[1-9]+(?= *(month|week|day))', 'gi');
@@ -356,22 +373,6 @@ define([
 			        }
 
 			    });
-
-			    /*Mobile menu open/close */
-
-	            $("#js-show-mobile-menu").on('click', function(){
-	            	$("#home").animate({marginLeft: 240}, 500);
-	            	$("#home").css("width", $("#home").outerWidth());
-	            	$("#js-mobile-menu").animate({width: 240}, 500);
-	            });
-
-	            $("#js-close-mobile-menu").on('click', function(){
-	            	$("#js-mobile-menu").animate({width: 0}, 500);
-	            	$("#home").animate({marginLeft: 0}, 500, function(){
-	            		$("#home").css("width", 'auto');
-	            	});
-	            });
-
 	            
 
 	        }
@@ -412,7 +413,6 @@ define([
 		        }
 
 	        }
-
 	
 	        /* Top slider */
 	        initSlider('.home-section .next', '.home-section .prev', '.slider-container');
