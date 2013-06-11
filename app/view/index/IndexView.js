@@ -314,7 +314,7 @@ define([
 	        }
 	
 	        function onInit() {
-	            $('select.selectmenu').selectmenu({
+	            /*$('select.selectmenu').selectmenu({
 	                create: function() {
 	                    if (window.PIE) {
 	                        $('.ui-selectmenu, .ui-selectmenu-menu ul').each(function() {
@@ -333,7 +333,69 @@ define([
 	                    }
 	                },
 	                appendTo: 'form.convert-form'
+	            });*/
+
+				var $selectMenu = $('select.selectmenu'),
+                	$selectMenuInPopup = $('select.selectmenu-in-popup');
+
+				function initSelectMenus() {
+	                $selectMenu.each(function(){
+	                    var $selectM = $(this);
+	                    $selectM.selectmenu({
+	                        create: function() {
+	                            if (window.PIE) {
+	                                $('.ui-selectmenu, .ui-selectmenu-menu ul').each(function() {
+	                                    PIE.attach(this);
+	                                });
+	                            }
+	                        },
+	                        open: function(p) {
+	                            var $select = $(this),
+	                                $menu_button = $select.parent().find('a.ui-selectmenu'),
+	                                toTop = $menu_button.offset().top > $('.ui-selectmenu-menu').offset().top;
+
+	                            $menu_button.toggleClass('to-top', toTop);
+	                            $(".ui-selectmenu-menu-dropdown").toggleClass('to-top', toTop);
+	                            if (Modernizr.touch){
+	                                $(p.currentTarget).parent().siblings('select').show().focus().trigger('mousedown').on('change', function(){
+	                                    //$selectM.selectmenu('value', $this.val());
+	                                    initSelectMenus();
+	                                });
+	                                $('.ui-selectmenu').hide();
+	                            }
+	                        },
+	                        close: function(p) {
+	                            var $select = $(this),
+	                                $menu_button = $select.parent().find('a.ui-selectmenu');
+	                            $menu_button.removeClass('to-top');
+	                            $(".ui-selectmenu-menu-dropdown").removeClass('to-top');
+	                            if (Modernizr.touch){
+	                                $(p.currentTarget).parent().siblings('select').hide();
+	                                $('.ui-selectmenu').show();
+	                            }
+	                        }
+	                    });
+	                });
+
+	                $selectMenuInPopup.selectmenu({
+	                    create: function() {
+	                        if (window.PIE) {
+	                            $('.ui-selectmenu, .ui-selectmenu-menu ul').each(function() {
+	                                PIE.attach(this);
+	                            });
+	                        }
+	                    },
+	                    appendTo: 'form.convert-form'
+	                });
+	            }
+				initSelectMenus();
+
+				$window.resize(function() {
+	                $selectMenu.selectmenu('destroy');
+	                $selectMenuInPopup.selectmenu('destroy');
+	                initSelectMenus();
 	            });
+
 	
 	            $(".convert-form .ui-widget").mouseout(function(e) {
 	                e.stopPropagation();

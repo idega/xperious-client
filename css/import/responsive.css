@@ -7,7 +7,7 @@
     .hide-on-mobile {display: none !important;}
     .touch-only {display: block;}
     .home-section .grid {display: none;}
-    .site {min-width: 240px; background: #565450;}
+    .site {min-width: 240px;}
     .home-section .prev, 
     .home-section .next,
     .events-section .prev, 
@@ -73,7 +73,7 @@
 
 
 @media only screen and (max-width: 880px){
-.site {overflow: hidden;}
+.site {overflow: hidden; background-color: #565450;}
 
 .home-section {overflow: visible;}
 
@@ -249,7 +249,7 @@
 
 .footer-section .col {float: none; margin-right: 0; width: auto; margin-bottom: 10px;}
 .footer-section h4 {margin-bottom: 15px;}
-.footer-links {padding-top: 0; border-bottom: 1px solid #e9e9e7; border-top: 1px solid #242321;}
+.footer-links {padding-top: 0; border-bottom: 1px solid #e9e9e7; border-top: 1px solid #242321; width: auto;}
 
 .footer-links a,
 .footer-links a:nth-child(2n) {width: auto; float: none; margin: 0; line-height: 22px; padding: 0 8px; border-bottom: 1px solid #242321; border-top: 1px solid #e9e9e7; display: block; line-height: 31px;}
