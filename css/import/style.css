@@ -135,7 +135,8 @@ body {margin: 0; font-family: 'Ubuntu', sans-serif; font-weight: 300; font-size:
 .site-block,
 .site-block-in {margin: 0 auto; width: 990px; padding: 1px 0;}
 
-.site {margin-bottom: 295px; z-index: 100; position: relative;}
+.site {margin-bottom: 295px; z-index: 100; position: relative; }
+.layout {min-width: 320px;}
 .bottom-shadow {position: absolute; width: 100%; height: 19px; bottom: -19px; background: url(../images/footer-cover-shadow.png) repeat-x left bottom;}
 
 
@@ -492,7 +493,7 @@ li:hover .convert-form input[type='text'] {zoom: 1;}
 .team-list .element {position: relative; width: 30%; /*height: 290px;*/ float: left; margin-right: 3%; margin-bottom: 22px; overflow: hidden;}
 .team-list .element:nth-child(3n) {margin-right: 0;}
 .team-list .element img {width: 100%; height: auto;}
-.team-list .cover {width: 270px; padding: 20px 15px; background: url(../images/name-bg.png);} 
+.team-list .cover {padding: 20px 15px; background: url(../images/name-bg.png);} 
 
 .team-list .name {font-size: 16px; font-weight: bold;}
 .team-list .position {font-size: 14px;}

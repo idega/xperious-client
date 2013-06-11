@@ -385,6 +385,7 @@ define([
 		        {
 		        	$("#js-mobile-menu").css("width", '990px');
 		        	$("#home").css("width", 'auto');
+		        	$("#home").css('margin-left', '0px');
 		    	} else if (windowWidth > 880){
 
 		        	$('#query').attr("placeholder", "Your type of interest e.g.: horses, hiking, whale watching");
