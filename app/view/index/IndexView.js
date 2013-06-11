@@ -17,6 +17,7 @@ define([
 			'click #plan' : 'plan',
 			'keypress #budget' : 'numeric',
 			'click #js-show-mobile-menu' : 'clickShowMobileMenu',
+			'click #js-close-mobile-menu' : 'clickHideMobileMenu',
 		},
 		
 
@@ -113,14 +114,15 @@ define([
         	$("#home").animate({marginLeft: 240}, 500);
         	$("#home").css("width", $("#home").outerWidth());
         	$("#js-mobile-menu").animate({width: 240}, 500);
-        
 
-            $("#js-close-mobile-menu").on('click', function(){
-            	$("#js-mobile-menu").animate({width: 0}, 500);
-            	$("#home").animate({marginLeft: 0}, 500, function(){
-            		$("#home").css("width", 'auto');
-            	});
-            });
+        },
+
+        clickHideMobileMenu: function() {
+	           
+        	$("#js-mobile-menu").animate({width: 0}, 500);
+        	$("#home").animate({marginLeft: 0}, 500, function(){
+        		$("#home").css("width", 'auto');
+        	});
 
         },
 
@@ -415,9 +417,9 @@ define([
 	            $(".trigger-input-animation").one('click', function(){
 			        if (windowWidth > 880){
 
-			        	$('#js-travel-planner-form').animate({width: 880}, 200, function() {
+			        	$('#js-travel-planner-form').animate({width: 822}, 200, function() {
 							$('#js-travel-planner-form').addClass('form-expanded')
-							$('#plan-inputs-container').animate({width: 380}, 500, function() {
+							$('#plan-inputs-container').animate({width: 322}, 500, function() {
 								$('#plan').switchClass(undefined, 'animated', 200);
 								$('#js-travel-planner-form').addClass('this-has-expanded');
 							});

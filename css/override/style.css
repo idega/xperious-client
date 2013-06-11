@@ -245,7 +245,7 @@
 
 
 .budget input[type=text] {
-    width: 95px;
+    width: 48px;
     padding-left: 15px;
     /*background-image: url(../images/budget-ico.png); */
     background-image: none;
@@ -808,7 +808,7 @@
 
 .guest {
     display: inline-block;
-    width: 130px;
+    width: 120px;
     background-color: white;
     margin-right: 10px;
     float: left;
@@ -821,9 +821,8 @@
     }
 
     .guest #more {
-        margin-top: 3px;
-        background-image: url('images/select-down.png');
-        background-repeat: no-repeat;
+        margin-top: 5px;
+        background: url('images/select-down.png')  no-repeat left center;
         height: 30px;
         width: 30px;
         float: left; 

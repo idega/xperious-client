@@ -239,7 +239,7 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 /*When form expands css of some elements changes, .form-expanded generadet in IndexView.js*/
 .form-expanded input[type="text"] {border-radius: 4px; margin-right: 8px;}
 .form-expanded .button { border-radius: 4px; }
-
+.form-expanded .guest input[type="text"] {margin-right: 0;}
 
 /*Planer form*/
 .planner-form {padding-top: 27px; padding-bottom: 6px; margin: 0 auto; width: 492px;}
