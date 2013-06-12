@@ -7,6 +7,11 @@ define([
 	DestinationPopupView) {
 
 
+    function extractLast(term) {
+		return term.split(' ').pop();
+    }
+
+
 	return Backbone.View.extend({
 
 		template: 'index/index',
@@ -22,12 +27,14 @@ define([
 		
 
 		initialize: function() {
+			_.bindAll(this);
 			app.on('change:country', this.render, this);
 		},
 		
 
 		cleanup: function() {
 			app.off('change:country', this.render, this);
+			$(window).off('resize', this.onResize);
 		},
 
 
@@ -127,51 +134,7 @@ define([
         },
 
 		parse: function(query) {
-//			var numberRegexp = new RegExp('[1-9]+(?= *(month|week|day))', 'gi');
-//			var periodRegexp = new RegExp('(months|weeks|days|month|week|day)', 'gi');
-//
-//			var number = query.match(numberRegexp);
-//			var period = query.match(periodRegexp);
-//
-//			if (number || period) {
-//				// number not given, assume it's 1
-//				if (!number) number = [1]; 
-//
-//				return {
-//					from: moment()
-//						.startOf('day')
-//						.add('days', 1),
-//
-//					to: moment()
-//						.startOf('day')
-//						.add(this.toUnits(period[0]), number[0]),
-//
-//					query: this.reduce(query
-//						.replace(numberRegexp, '')
-//						.replace(periodRegexp, ''))
-//				};
-//
-//			} else {
-//				// default period is always one
-//				// week  starting from tomorrow
-//				return {
-//					from: moment()
-//						.startOf('day')
-//						.add('days', 1),
-//
-//					to: moment()
-//						.startOf('day')
-//						.add('days', 7),
-//
-//					query: this.reduce(query
-//						.replace(numberRegexp, '')
-//						.replace(periodRegexp, ''))
-//				};
-//			}
-
-			
 			return {
-
 				from: moment()
 					.startOf('day')
 					.add('days', 1),
@@ -242,243 +205,64 @@ define([
 	        var $window = $(window);
             var $bottom = $('#bottom');
 
-	        /*Placeholder for old browsers*/
+	        /* Placeholder for old browsers */
 	        $('input[placeholder], textarea[placeholder]').placeholder();
 	
 
-            function extractLast(term) {
-        		return term.split(' ').pop();
-            }
-            
+			/* Autocomplete configuration for query field */
 	        $('input.autocomplete-search-input')
-	        .bind('keydown', function(event) {
-		        if (event.keyCode === $.ui.keyCode.TAB 
-	        		&& $(this).data('ui-autocomplete').menu.active) {
-		          event.preventDefault();
-		        }
-		    })
-		    .autocomplete({
-	        	delay: 0, 
+	        	.bind('keydown', function(event) {
+				        if (event.keyCode === $.ui.keyCode.TAB 
+			        		&& $(this).data('ui-autocomplete').menu.active) {
+				          event.preventDefault();
+				        }
+			    	})
+			    .autocomplete({
 
-	        	source: function(request, response) {
-	                  $.getJSON(app.apihost + '/api/v1/keywords/suggest?country=' + app.country(), {
-	                    term: extractLast(request.term)
-	                  }, response );
-	            },
-	            
-	            search: function() {
-	                  var term = extractLast(this.value);
-	                  if (term.length < 1) {
-	                    return false;
-	                  }
+		        	delay: 0, 
+
+		        	source: function(request, response) {
+		                  $.getJSON(app.apihost + '/api/v1/keywords/suggest?country=' + app.country(), {
+		                    term: extractLast(request.term)
+		                  }, response );
+		            },
+		            
+		            search: function() {
+		                  var term = extractLast(this.value);
+		                  if (term.length < 1) {
+		                    return false;
+		                  }
+		                },
+
+	                focus: function() {
+	                  return false;
 	                },
 
-                focus: function() {
-                  return false;
-                },
+	                select: function(event, ui) {
+	                  var terms = this.value.split(' ');
+	                  terms.pop();
+	                  terms.push(ui.item.value);
+	                  this.value = terms.join(' ');
+	                  return false;
+	                },
 
-                select: function(event, ui) {
-                  var terms = this.value.split(' ');
-                  terms.pop();
-                  terms.push(ui.item.value);
-                  this.value = terms.join(' ');
-                  return false;
-                },
-
-	        	response: function(event, ui) {
-	        		ui.content.splice(8, ui.content.length);
-	        	}
+		        	response: function(event, ui) {
+		        		ui.content.splice(8, ui.content.length);
+		        	}
 	        });
 	
+
 	        $(".slider-container").imagesLoaded(centerSliderImages);
 	
 	
-	        /* Calculate Section Height */
 	        if (!Modernizr.touch) {
-	            $window.resize(_.bind(function() {
-	                var windowHeight = $window.height(),
-	                    windowWidth = $window.width();
-	                this.$('#article').height(windowHeight);
-	                this.$('.full-height-section .site-block').height(windowHeight);
-	                if (!this.$el.find('.landing-page').data('initialized')) {
-	                    this.$el.find('.landing-page').css({
-	                        display: 'none',
-	                        visibility: 'visible'
-	                    }).fadeIn(200, onInit);
-	                }
-	                this.$el.find('.grid').height(windowHeight-$(".site-header").height());
-	                this.$el.find('.landing-page').data('initialized', 'initialized');
-	                onResize();
-	            }, this)).trigger('resize');
-	        }else{
-	            onInit();
-	            onResize();
+	            $window.resize(this.onResize).trigger('resize');
+	        } else {
+	            this.onInit();
+	            this.handleMenu();
 	        }
 	
-	        function onInit() {
-	            /*$('select.selectmenu').selectmenu({
-	                create: function() {
-	                    if (window.PIE) {
-	                        $('.ui-selectmenu, .ui-selectmenu-menu ul').each(function() {
-	                            PIE.attach(this);
-	                        });
-	                    }
-	                }
-	            });
-	
-	            $('select.selectmenu-in-popup').selectmenu({
-	                create: function() {
-	                    if (window.PIE) {
-	                        $('.ui-selectmenu, .ui-selectmenu-menu ul').each(function() {
-	                            PIE.attach(this);
-	                        });
-	                    }
-	                },
-	                appendTo: 'form.convert-form'
-	            });*/
 
-				var $selectMenu = $('select.selectmenu'),
-                	$selectMenuInPopup = $('select.selectmenu-in-popup');
-
-				function initSelectMenus() {
-	                $selectMenu.each(function(){
-	                    var $selectM = $(this);
-	                    $selectM.selectmenu({
-	                        create: function() {
-	                            if (window.PIE) {
-	                                $('.ui-selectmenu, .ui-selectmenu-menu ul').each(function() {
-	                                    PIE.attach(this);
-	                                });
-	                            }
-	                        },
-	                        open: function(p) {
-	                            var $select = $(this),
-	                                $menu_button = $select.parent().find('a.ui-selectmenu'),
-	                                toTop = $menu_button.offset().top > $('.ui-selectmenu-menu').offset().top;
-
-	                            $menu_button.toggleClass('to-top', toTop);
-	                            $(".ui-selectmenu-menu-dropdown").toggleClass('to-top', toTop);
-	                            if (Modernizr.touch){
-	                                $(p.currentTarget).parent().siblings('select').show().focus().trigger('mousedown').on('change', function(){
-	                                    //$selectM.selectmenu('value', $this.val());
-	                                    initSelectMenus();
-	                                });
-	                                $('.ui-selectmenu').hide();
-	                            }
-	                        },
-	                        close: function(p) {
-	                            var $select = $(this),
-	                                $menu_button = $select.parent().find('a.ui-selectmenu');
-	                            $menu_button.removeClass('to-top');
-	                            $(".ui-selectmenu-menu-dropdown").removeClass('to-top');
-	                            if (Modernizr.touch){
-	                                $(p.currentTarget).parent().siblings('select').hide();
-	                                $('.ui-selectmenu').show();
-	                            }
-	                        }
-	                    });
-	                });
-
-	                $selectMenuInPopup.selectmenu({
-	                    create: function() {
-	                        if (window.PIE) {
-	                            $('.ui-selectmenu, .ui-selectmenu-menu ul').each(function() {
-	                                PIE.attach(this);
-	                            });
-	                        }
-	                    },
-	                    appendTo: 'form.convert-form'
-	                });
-	            }
-				initSelectMenus();
-
-				$window.resize(function() {
-	                $selectMenu.selectmenu('destroy');
-	                $selectMenuInPopup.selectmenu('destroy');
-	                initSelectMenus();
-	            });
-
-	
-	            $(".convert-form .ui-widget").mouseout(function(e) {
-	                e.stopPropagation();
-	            });
-	
-	            /*JS PIE. Fetures and usage: http://css3pie.com/documentation/supported-css3-features/*/
-	            if (window.PIE) {
-	                $('.button, .buttoned, input[type="text"], input[type="password"], textarea, .ui-selectmenu').each(function() {
-	                    PIE.attach(this);
-	                });
-	            }
-
-
-	            /*Animate planer form once*/
-	            var windowWidth = $window.width();
-
-	            $(".trigger-input-animation").one('click', function(){
-			        if (windowWidth > 880){
-
-			        	$('#js-travel-planner-form').animate({width: 822}, 200, function() {
-							$('#js-travel-planner-form').addClass('form-expanded')
-							$('#plan-inputs-container').animate({width: 322}, 500, function() {
-								$('#plan').switchClass(undefined, 'animated', 200);
-								$('#js-travel-planner-form').addClass('this-has-expanded');
-							});
-			           	});
-
-			        }else{
-
-			        	$('#js-travel-planner-form').addClass('form-expanded');
-	        			$('#plan-inputs-container').animate({
-			                height:165
-			            }, 500, function() {
-								$('#plan').fadeIn(300);
-								$('#js-travel-planner-form').addClass('this-has-expanded');
-							});
-			        }
-
-			    });
-	            
-
-	        }
-	
-	        function onResize() {
-
-		        var windowWidth = $window.width();
-
-		        if (windowWidth > 980)
-		        {
-		        	$("#js-mobile-menu").css("width", '990px');
-		        	$("#home").css("width", 'auto');
-		        	$("#home").css('margin-left', '0px');
-		    	} else if (windowWidth > 880){
-
-		        	$('#query').attr("placeholder", "Your type of interest e.g.: horses, hiking, whale watching");
-		        	
-		        	/*Home section and bottom menu if page is resized to wide and menu is opened*/
-		        	$("#home").css("width", 'auto');
-		        	$("#home").css('margin-left', '0px');
-		        	$("#js-mobile-menu").css("width", 'auto');
-
-
-		        }else{
-
-		        	$('#query').attr("placeholder", "Your type of interest");
-
-		        	/*Reset menu size only when menu is not opened*/
-		        	var menuWidth = parseInt($("#js-mobile-menu").outerWidth(), 10);
-		        	var openedMenuWidth = 240;
-
-		        	if (menuWidth != openedMenuWidth){
-		        		$("#js-mobile-menu").css("width", '0px');
-		        	}		        		
-
-		        	/*Home section width when mobile menu is opened*/
-		        	$("#home").css("width", windowWidth);
-
-		        }
-
-	        }
-	
 	        /* Top slider */
 	        initSlider('.home-section .next', '.home-section .prev', '.slider-container');
 
@@ -493,6 +277,7 @@ define([
                 interval: 0
             });
 
+
 	        this.$("#team").waypoint(function(dir) {
 	            if (dir == 'down') {
 	                $bottom.css({
@@ -506,6 +291,171 @@ define([
 	        });
 	
 		},
+
+
+		onResize: function() {
+			var $window = $(window);
+            var windowHeight = $window.height(), windowWidth = $window.width();
+
+            this.$('#article').height(windowHeight);
+            this.$('.full-height-section .site-block').height(windowHeight);
+            if (!this.$el.find('.landing-page').data('initialized')) {
+                this.$el.find('.landing-page').css({
+                    display: 'none',
+                    visibility: 'visible'
+                }).fadeIn(200, this.onInit);
+            }
+
+            this.$el.find('.grid').height(windowHeight-$(".site-header").height());
+            this.$el.find('.landing-page').data('initialized', 'initialized');
+
+			// var $selectMenu = $('select.selectmenu'), $selectMenuInPopup = $('select.selectmenu-in-popup');
+			// $selectMenu.selectmenu('destroy');
+			// $selectMenuInPopup.selectmenu('destroy');
+            this.initSelectMenus();
+
+            this.handleMenu();
+		},
+
+
+		handleMenu: function() {
+
+			var $window = $(window);
+	        var windowWidth = $window.width();
+
+	        if (windowWidth > 980) {
+	        	$("#js-mobile-menu").css("width", '990px');
+	        	$("#home").css("width", 'auto');
+	        	$("#home").css('margin-left', '0px');
+
+	    	} else if (windowWidth > 880) {
+
+	        	$('#query').attr("placeholder", "Your type of interest e.g.: horses, hiking, whale watching");
+	        	
+	        	/*Home section and bottom menu if page is resized to wide and menu is opened*/
+	        	$("#home").css("width", 'auto');
+	        	$("#home").css('margin-left', '0px');
+	        	$("#js-mobile-menu").css("width", 'auto');
+
+	        } else {
+
+	        	$('#query').attr("placeholder", "Your type of interest");
+
+	        	/*Reset menu size only when menu is not opened*/
+	        	var menuWidth = parseInt($("#js-mobile-menu").outerWidth(), 10);
+	        	var openedMenuWidth = 240;
+
+	        	if (menuWidth != openedMenuWidth){
+	        		$("#js-mobile-menu").css("width", '0px');
+	        	}		        		
+
+	        	/*Home section width when mobile menu is opened*/
+	        	$("#home").css("width", windowWidth);
+
+	        }
+        },
+	
+
+		initSelectMenus: function() {
+
+			var $selectMenu = $('select.selectmenu'), $selectMenuInPopup = $('select.selectmenu-in-popup');
+
+            $selectMenu.each(function(){
+                var $selectM = $(this);
+                $selectM.selectmenu({
+                    create: function() {
+                        if (window.PIE) {
+                            $('.ui-selectmenu, .ui-selectmenu-menu ul').each(function() {
+                                PIE.attach(this);
+                            });
+                        }
+                    },
+                    open: function(p) {
+                        var $select = $(this),
+                            $menu_button = $select.parent().find('a.ui-selectmenu'),
+                            toTop = $menu_button.offset().top > $('.ui-selectmenu-menu').offset().top;
+
+                        $menu_button.toggleClass('to-top', toTop);
+                        $(".ui-selectmenu-menu-dropdown").toggleClass('to-top', toTop);
+                        if (Modernizr.touch){
+                            $(p.currentTarget).parent().siblings('select').show().focus().trigger('mousedown').on('change', function(){
+                                //$selectM.selectmenu('value', $this.val());
+                                initSelectMenus();
+                            });
+                            $('.ui-selectmenu').hide();
+                        }
+                    },
+                    close: function(p) {
+                        var $select = $(this),
+                            $menu_button = $select.parent().find('a.ui-selectmenu');
+                        $menu_button.removeClass('to-top');
+                        $(".ui-selectmenu-menu-dropdown").removeClass('to-top');
+                        if (Modernizr.touch){
+                            $(p.currentTarget).parent().siblings('select').hide();
+                            $('.ui-selectmenu').show();
+                        }
+                    }
+                });
+            });
+
+
+		    $selectMenuInPopup.selectmenu({
+                create: function() {
+                    if (window.PIE) {
+                        $('.ui-selectmenu, .ui-selectmenu-menu ul').each(function() {
+                            PIE.attach(this);
+                        });
+                    }
+                },
+                appendTo: 'form.convert-form'
+            });
+        },
+
+
+ 		onInit: function() {
+
+ 			this.initSelectMenus();
+
+
+            $(".convert-form .ui-widget").mouseout(function(e) {
+                e.stopPropagation();
+            });
+
+            /*JS PIE. Fetures and usage: http://css3pie.com/documentation/supported-css3-features/*/
+            if (window.PIE) {
+                $('.button, .buttoned, input[type="text"], input[type="password"], textarea, .ui-selectmenu').each(function() {
+                    PIE.attach(this);
+                });
+            }
+
+
+            /*Animate planer form once*/
+            var windowWidth = $window.width();
+
+            $(".trigger-input-animation").one('click', function(){
+		        if (windowWidth > 880){
+
+		        	$('#js-travel-planner-form').animate({width: 822}, 200, function() {
+						$('#js-travel-planner-form').addClass('form-expanded')
+						$('#plan-inputs-container').animate({width: 322}, 500, function() {
+							$('#plan').switchClass(undefined, 'animated', 200);
+							$('#js-travel-planner-form').addClass('this-has-expanded');
+						});
+		           	});
+
+		        }else{
+
+		        	$('#js-travel-planner-form').addClass('form-expanded');
+        			$('#plan-inputs-container').animate({
+		                height:165
+		            }, 500, function() {
+							$('#plan').fadeIn(300);
+							$('#js-travel-planner-form').addClass('this-has-expanded');
+						});
+		        }
+
+		    });
+        },
 
 
 		numeric: function(e) {
