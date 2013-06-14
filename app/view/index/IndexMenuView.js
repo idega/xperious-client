@@ -12,12 +12,12 @@ define([
 		
 
 		initialize: function() {
-			app.attractions.category.on('reset', this.render, this);
+			app.attractions.categories.on('reset', this.render, this);
 		},
 		
 
 		cleanup: function() {
-			app.attractions.category.off('reset', this.render, this);
+			app.attractions.categories.off('reset', this.render, this);
 		},
 
 		
