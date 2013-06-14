@@ -29,7 +29,7 @@ define([
 				baseUrl: app.router.href(
 					'attractions',
 					app.attractions.country.get('code'),
-					app.attractions.subtype.get('id'),
+					app.attractions.category.get('id'),
 					app.attractions.region.get('id'))
 			};
 		},
@@ -39,7 +39,7 @@ define([
 				app.router.go(
 					'attractions',
 					app.attractions.country.get('code'),
-					app.attractions.subtype.get('id'),
+					app.attractions.category.get('id'),
 					app.attractions.region.get('id'),
 					$(e.currentTarget).data('id'),
 					{trigger: true}

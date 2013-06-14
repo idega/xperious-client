@@ -11,11 +11,11 @@ define([
 		template: 'attractions/attractions',
 		
 		initialize: function() {
-			app.attractions.subtype.on('change', this.title, this);
+			app.attractions.category.on('change', this.title, this);
 		},
 		
 		cleanup: function() {
-			app.attractions.subtype.off('change', this.title, this);
+			app.attractions.category.off('change', this.title, this);
 		},
 		
 		beforeRender: function() {
@@ -23,8 +23,8 @@ define([
 		},
 		
 		title: function() {
-			if (app.attractions.subtype.has('title')) {
-				app.trigger('change:title', '{0} - xperious'.format(app.attractions.subtype.get('title').capitalize()));
+			if (app.attractions.category.has('title')) {
+				app.trigger('change:title', '{0} - xperious'.format(app.attractions.category.get('title').capitalize()));
 			}
 		},
 		

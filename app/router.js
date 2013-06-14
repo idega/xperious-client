@@ -17,7 +17,7 @@ define(['app',
 	'view/plan/day/PlanDayProductView',
 	'view/event/EventsView',
 	'view/attractions/AttractionsView',
-	'view/attractions/AttractionsSubtypeView',
+	'view/attractions/AttractionsCategoryView',
 	'view/attractions/AttractionsRegionsView',
 	'view/attraction/AttractionView',
 	'view/attraction/AttractionGalleryView',
@@ -40,7 +40,7 @@ define(['app',
 	PlanDayProductView,
 	EventsView,
 	AttractionsView,
-	AttractionsSubtypeView,
+	AttractionsCategoryView,
 	AttractionsRegionsView,
 	AttractionView,
 	AttractionGalleryView) {
@@ -50,7 +50,7 @@ define(['app',
 
 	    routes: {
 	    	'search(/:query)/:country/:from/:to/:arrivalterminal/:arrivaltime/:adults/:children/:infants/:seniors(/budget/:budgetfrom/:budgetto)(/plan/:index)' : 'search',
-	    	'attractions/:country/:subtype(/:region)(/:product)' : 'attractions',
+	    	'attractions/:country/:category(/:region)(/:product)' : 'attractions',
 	    	'events*path' : 'events',
 	    	'' : 'index'
 	    },
@@ -67,19 +67,19 @@ define(['app',
 	    	// initialize attractions types and regions in the 
 	    	// constructor because they appear in the header and
 	    	// are required for almost all pages
-	    	app.attractions.subtypes.fetch();
+	    	app.attractions.categories.fetch();
 	    },
 
 
 	    /**
 	     * Show a list of attractions or one attraction if selected.
 	     */
-	    attractions: function(country, subtype, region, product) {
+	    attractions: function(country, category, region, product) {
     		app.attractions.country = app.countries.get(country);
-    		app.attractions.subtype.set('id', subtype, {silent: true}).fetch();
+    		app.attractions.category.set('id', category, {silent: true}).fetch();
     		app.attractions.regions.fetch({data: {
 				country: country, 
-				subtype: subtype
+				category: category
     		}}).done(_.bind(function() {
 				if (app.attractions.regions.size()) {
 
@@ -98,7 +98,7 @@ define(['app',
 
 			    	app.attractions.products.data({
 			    		country: country,
-			    		subtype: subtype,
+			    		category: category,
 			    		region: app.attractions.region.get('id')
 
 			    	}).done(_.bind(function() {
@@ -353,7 +353,7 @@ define(['app',
 	    		    	layout.setView(new AttractionsView({
 	    		    		views: {
 	    						'.header-view' : new HeaderView(),
-	    						'.subtype-view' : new AttractionsSubtypeView(),
+	    						'.category-view' : new AttractionsCategoryView(),
 	    						'.regions-view' : new AttractionsRegionsView(),
 	    						'.footer-view' : new FooterView(),
 	    						'.bottom-view' : new BottomView()
@@ -370,7 +370,7 @@ define(['app',
 	    		    	layout.setView(new AttractionView({
 	    		    		views: {
 	    						'.header-view' : new HeaderView(),
-	    						'.subtype-view' : new AttractionsSubtypeView(),
+	    						'.category-view' : new AttractionsCategoryView(),
 	    						'.regions-view' : new AttractionsRegionsView(),
 	    						'.gallery-view' : new AttractionGalleryView(),
 	    						'.footer-view' : new FooterView(),

@@ -8,8 +8,8 @@ require([
 	'model/event/EventTimeline',
 	'model/plan/PlanCollection',
 	'model/product/ProductSearchResults',
-	'model/product/ProductSubtypeCollection',
-	'model/product/ProductSubtypeModel',
+	'model/category/CategoryCollection',
+	'model/category/CategoryModel',
 	'model/product/ProductCollection',
 	'model/product/ProductModel',
 	'model/terminal/TerminalCollection',
@@ -25,8 +25,8 @@ require([
 	EventTimeline,
 	PlanCollection,
 	ProductSearchResults,
-	ProductSubtypeCollection,
-	ProductSubtypeModel,
+	CategoryCollection,
+	CategoryModel,
 	ProductCollection,
 	ProductModel,
 	TerminalCollection,
@@ -75,18 +75,18 @@ require([
 	/* Initiate attractions models and collections. */
 	app.attractions = {};
 	app.attractions.country = app.countries.get(app.country());
-	app.attractions.subtypes = new ProductSubtypeCollection();
-	app.attractions.subtype = new ProductSubtypeModel();
+	app.attractions.categories = new CategoryCollection();
+	app.attractions.category = new CategoryModel();
 	app.attractions.regions = new RegionCollection();
 	app.attractions.region = new RegionModel();
 	app.attractions.products = new ProductCollection();
 	app.attractions.product = new ProductModel();
 
-	/* Refresh subtypes whenever country is changed */
+	/* Refresh categories whenever country is changed */
 	app.on(
 		'change:country', 
-		app.attractions.subtypes.fetch, 
-		app.attractions.subtypes);
+		app.attractions.categories.fetch, 
+		app.attractions.categories);
 
 
 

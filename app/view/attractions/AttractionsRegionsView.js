@@ -27,7 +27,7 @@ define([
 				app.router.go(
 					'attractions',
 					app.attractions.country.get('code'),
-					app.attractions.subtype.get('id'),
+					app.attractions.category.get('id'),
 					region,
 					{trigger: true}
 				);
@@ -38,12 +38,12 @@ define([
 		serialize: function() {
 			return {
 				regions: app.attractions.regions.toJSON(),
-				subtype: app.attractions.subtype.toJSON(),
+				category: app.attractions.category.toJSON(),
 				selected: app.attractions.region.toJSON(),
 				baseUrl: app.router.href(
 					'attractions',
 					app.attractions.country.get('code'),
-					app.attractions.subtype.get('id'))
+					app.attractions.category.get('id'))
 			};
 		}
 		

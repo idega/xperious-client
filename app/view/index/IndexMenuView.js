@@ -12,19 +12,19 @@ define([
 		
 
 		initialize: function() {
-			app.attractions.subtypes.on('reset', this.render, this);
+			app.attractions.category.on('reset', this.render, this);
 		},
 		
 
 		cleanup: function() {
-			app.attractions.subtypes.off('reset', this.render, this);
+			app.attractions.category.off('reset', this.render, this);
 		},
 
 		
 		serialize: function() {
 			return {
 				country: app.countries.get(app.country()).toJSON(),
-				subtypes: app.attractions.subtypes.toJSON()
+				categories: app.attractions.categories.toJSON()
 			};
 		},
 		

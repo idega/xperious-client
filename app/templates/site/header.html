@@ -11,8 +11,8 @@
       <li>
         <a href="javascript:void(0)">Attractions</a>
         <ul class="menu submenu">
-            <% _.each(subtypes, function(subtype) { %>
-		        <li><a href="/attractions/<%= country.code %>/<%= subtype.id %>" style="text-transform: capitalize"><%= subtype.title %></a></li>
+            <% _.each(categories, function(category) { %>
+		        <li><a href="/attractions/<%= country.code %>/<%= category.id %>" style="text-transform: capitalize"><%= category.title %></a></li>
 	        <% }) %>
         </ul>
       </li>
