@@ -34,15 +34,11 @@ define([
                 dialogClass: 'guests',
                 modal: false,
                 resizable: false,
-                width: 130,
+                width: 120,
                 minWidth: 0,
                 minHeight: 200,
                 close: this.empty,
-                position: {
-                    my: 'top',
-                    at: 'bottom',
-                    of: $('.guest')
-                }
+                position: this.position()
             });
 
 
@@ -86,11 +82,8 @@ define([
         updatePosition: _.debounce(function() {
             this.$el.dialog(
                 "option", 
-                "position", {
-                    my: 'top',
-                    at: 'bottom',
-                    of: $('.guest')
-            });
+                "position", 
+                this.position());
         }, 100, false),
 
 
@@ -100,6 +93,14 @@ define([
             $(window).unbind('resize', this.updatePosition);
             $('html').unbind('click', this.empty);
         },
+
+        position: function() {
+            return  {
+                    my: 'top-' + $('#adults').css('margin-bottom'),
+                    at: 'bottom',
+                    of: $('.guest')
+            };
+        }
 
     });
 

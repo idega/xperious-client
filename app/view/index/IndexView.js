@@ -261,11 +261,24 @@ define([
 	            this.onInit();
 	            this.handleMenu();
 	        }
-	
+
 
 	        /* Top slider */
-	        initSlider('.home-section .next', '.home-section .prev', '.slider-container');
-
+	        initSlider(
+                '.home-section .next',
+                '.home-section .prev',
+                '.slider-container',
+                0,
+                function(src) {
+                    // A hack because jQuery does not allow to work directly with
+                    // css attributes for specified media type. This is required so
+                    // responsive background is the same as in the full version.
+                    $('#home-section-override').remove();
+                    $('<style id="home-section-override" media="screen and (max-width: 960px)">' +
+                        '.home-section {background-image: url(' + src + ');}' + 
+                      '</style>')
+                    .appendTo('head');
+                });
 
             this.$('input[type="submit"], input[type="button"], a').hoverIntent({
                 over: function() {
