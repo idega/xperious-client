@@ -21,7 +21,9 @@
 		  </div>
 		</div>
         <div class="map-wrap">
-            <div class="map-holder"></div>
+            <div class="map-holder">
+                <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= product.address.latitude %>,<%= product.address.longitude %>&zoom=14&size=440x150&maptype=roadmap&sensor=false" />
+            </div>
             <div class="map-tooltip">
             <p class="title">
                 <% if (product.address.street) { %>

@@ -102,24 +102,6 @@ define([
 			this.$el.bind('click', function(e) {
 				e.stopPropagation();
 			});
-
-
-			require(['google'], _.bind(function(google) {
-				var map = new google.maps.Map(
-					this.$('.map-holder')[0], {
-						zoom: 10,
-						center: new google.maps.LatLng(
-							this.event.product.get('address').latitude, 
-							this.event.product.get('address').longitude),
-						mapTypeId: google.maps.MapTypeId.ROADMAP,
-						mapTypeControl: false,
-						streetViewControl: false,
-						zoomControl: false,
-						draggable: false,
-					    scrollwheel: false,
-					    panControl: false
-				});
-			}, this));
 		}
 
 	});

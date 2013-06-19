@@ -59,23 +59,6 @@ define([
                     }
                 }, this)
             });
-
-			require(['google'], _.bind(function(google) {
-				var map = new google.maps.Map(
-					this.$('.map-holder')[0], {
-						zoom: 12,
-						center: new google.maps.LatLng(
-							this.model.get('address').latitude, 
-							this.model.get('address').longitude),
-						mapTypeId: google.maps.MapTypeId.ROADMAP,
-						mapTypeControl: false,
-						streetViewControl: false,
-						zoomControl: false,
-						draggable: false,
-					    scrollwheel: false,
-					    panControl: false
-				});
-			}, this));
 		}
 	});
 });
