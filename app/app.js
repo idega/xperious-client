@@ -22,41 +22,41 @@ define([
   'common'
 ], function(props, LayoutManager) {	
 
-    props = JSON.parse(props);
+  props = JSON.parse(props);
     
 
 	var JST = window.JST = window.JST || {};
 
 
-  	LayoutManager.configure({
-	  	manage: true,
+	LayoutManager.configure({
+  	manage: true,
 
-	  	prefix: "app/templates/",
+  	prefix: "app/templates/",
 
-	    fetch: function(path) {
-	      path = path + ".html";
-	      
-	      var precompilePath = app.root.substring(1) + path;
-	      if (JST[precompilePath]) {
-	        return JST[precompilePath];
-	      }
+    fetch: function(path) {
+      path = path + ".html";
+      
+      var precompilePath = app.root.substring(1) + path;
+      if (JST[precompilePath]) {
+        return JST[precompilePath];
+      }
 
-	      var done = this.async();
-	      $.get(app.root + path, function(contents) {
-	        done(_.template(contents));
-	      }, "text");
-	    }
-  	});
+      var done = this.async();
+      $.get(app.root + path, function(contents) {
+        done(_.template(contents));
+      }, "text");
+    }
+	});
   	
   	
-  	/**
-  	 * Extend string prototype with handy functions.
-  	 */
-  	String.prototype.capitalize = function () {
-  	    return this.replace(/\w\S*/g, function(txt) {
-  	    	return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-  	    });
-  	};
+	/**
+	 * Extend string prototype with handy functions.
+	 */
+	String.prototype.capitalize = function () {
+	    return this.replace(/\w\S*/g, function(txt) {
+	    	return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+	    });
+	};
   	
 	String.prototype.format = function() {
 		var args = arguments;
