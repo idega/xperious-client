@@ -261,11 +261,24 @@ define([
 	            this.onInit();
 	            this.handleMenu();
 	        }
-	
+
 
 	        /* Top slider */
-	        initSlider('.home-section .next', '.home-section .prev', '.slider-container');
-
+	        initSlider(
+                '.home-section .next',
+                '.home-section .prev',
+                '.slider-container',
+                0,
+                function(src) {
+                    // A hack because jQuery does not allow to work directly with
+                    // css attributes for specified media type. This is required so
+                    // responsive background is the same as in the full version.
+                    $('#home-section-override').remove();
+                    $('<style id="home-section-override" media="screen and (max-width: 960px)">' +
+                        '.home-section {background-image: url(' + src + ');}' + 
+                      '</style>')
+                    .appendTo('head');
+                });
 
             this.$('input[type="submit"], input[type="button"], a').hoverIntent({
                 over: function() {
@@ -293,7 +306,8 @@ define([
 		},
 
 
-		onResize: function() {
+		onResize: _.debounce(function() {
+
 			var $window = $(window);
             var windowHeight = $window.height(), windowWidth = $window.width();
 
@@ -309,13 +323,21 @@ define([
             this.$el.find('.grid').height(windowHeight-$(".site-header").height());
             this.$el.find('.landing-page').data('initialized', 'initialized');
 
-			// var $selectMenu = $('select.selectmenu'), $selectMenuInPopup = $('select.selectmenu-in-popup');
-			// $selectMenu.selectmenu('destroy');
-			// $selectMenuInPopup.selectmenu('destroy');
+			var $selectMenu = $('select.selectmenu'), $selectMenuInPopup = $('select.selectmenu-in-popup');
+
+            if ($selectMenu.data('selectmenu')) {
+				$selectMenu.selectmenu('destroy');
+            }
+
+            if ($selectMenuInPopup.data('selectmenu')) {
+            	$selectMenuInPopup.selectmenu('destroy');
+            }
+
             this.initSelectMenus();
 
             this.handleMenu();
-		},
+
+		}, 100, false),
 
 
 		handleMenu: function() {

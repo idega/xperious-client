@@ -46,11 +46,11 @@ button, input, select, textarea {font-size: 100%; margin: 0; vertical-align: bas
     font-weight: 300;
 }
 :-moz-placeholder {
-    color: #aba9a2;
+    color: #63615E;
     font-weight: 300;
 }
 ::-moz-placeholder {
-    color: #aba9a2;
+    color: #63615E;
     font-weight: 300;
 }
 :-ms-input-placeholder {  
@@ -134,7 +134,6 @@ button, input, select, textarea {font-size: 100%; margin: 0; vertical-align: bas
         color: #fff;
         background: #86c543 !important; 
     }
-
 
 
 /*---Helpers---*/
@@ -392,7 +391,7 @@ li:hover .convert-form input[type='text'] {zoom: 1;}
 .events-slider .day {font-size: 40px; font-weight: bold; color: #00a0d6; line-height: 32px; display: block;}
 .events-slider .month {font-size: 24px; color: #605f5c; line-height: 20px; display: block; font-weight: bold;}
 .events-slider .year {font-size: 20px; color: #605f5c; line-height: 16px; display: block;}
-.events-slider .name {font-weight: bold; color: #303030; font-size: 16px; line-height: 16px; margin: 0; font-weight: 500;}
+.events-slider .name {font-weight: bold; color: #303030; font-size: 15px; line-height: 16px; margin: 0; font-weight: 500; -ms-word-break: break-all; word-break: break-all;}
 .events-slider .time {font-size: 12px; color: #303030; margin: 0; margin-bottom: 10px; font-weight: 500;}
 .events-slider .text {margin: 0; font-size: 12px; color: #303030; line-height: 14px;}
 

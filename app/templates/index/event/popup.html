@@ -8,7 +8,7 @@
                 <img style="background-image: url('<%= image %>?w=500'); display: none;" />
             <% } %>
         <% }); %>
-        <% if (event.images.length > 1) { %>
+        <% if (event.images && event.images.length > 1) { %>
 	        <span class="prev"><br/></span>
 	        <span class="next"><br/></span>
         <% } %>
@@ -21,7 +21,9 @@
        </div>
      </div>
      <div class="map-wrap">
-       <div class="map-holder"></div>
+       <div class="map-holder">
+          <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= event.address.latitude %>,<%= event.address.longitude %>&zoom=14&size=440x150&maptype=roadmap&sensor=false" />
+       </div>
        <div class="map-tooltip">
          <p class="title">
             <%= event.address.street %> <%= event.address.streetNumber %>
