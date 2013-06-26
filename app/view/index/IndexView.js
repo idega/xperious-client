@@ -120,13 +120,13 @@ define([
 	           
         	$("#home").animate({marginLeft: 240}, 500);
         	$("#home").css("width", $("#home").outerWidth());
-        	$("#js-mobile-menu").animate({width: 240}, 500);
+        	//$("#js-mobile-menu").animate({width: 240}, 500);
 
         },
 
         clickHideMobileMenu: function() {
 	           
-        	$("#js-mobile-menu").animate({width: 0}, 500);
+        	//$("#js-mobile-menu").animate({width: 0}, 500);
         	$("#home").animate({marginLeft: 0}, 500, function(){
         		$("#home").css("width", 'auto');
         	});
