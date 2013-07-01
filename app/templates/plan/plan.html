@@ -26,10 +26,30 @@
 	        <div class="col col-1">
 	          <h3>Vacation details</h3>
 	          <table>
+              <% if (prefs.guests.adults) { %>
 	            <tr>
-	              <td style="width: 75px;">Guests:</td>
-	              <td> <strong><%= prefs.guests %></strong></td>
+	              <td style="width: 75px;">Adults:</td>
+	              <td><strong><%= prefs.guests.adults %></strong></td>
 	            </tr>
+              <% } %>
+              <% if (prefs.guests.children) { %>
+              <tr>
+                <td style="width: 75px;">Children:</td>
+                <td><strong><%= prefs.guests.children %></strong></td>
+              </tr>
+              <% } %>
+              <% if (prefs.guests.infants) { %>
+              <tr>
+                <td style="width: 75px;">Infants:</td>
+                <td><strong><%= prefs.guests.infants %></strong></td>
+              </tr>
+              <% } %>
+              <% if (prefs.guests.infants) { %>
+              <tr>
+                <td style="width: 75px;">Seniors:</td>
+                <td><strong><%= prefs.guests.seniors %></strong></td>
+              </tr>
+              <% } %>
 	          </table><br>
 	          <table>
 	            <tr>
