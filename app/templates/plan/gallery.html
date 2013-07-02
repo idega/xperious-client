@@ -2,7 +2,7 @@
 <div class="gallery">
   <div class="media-holder">
     <% for (var i = 0; i < plan.items.length; i++) { %>
-        <% if (plan.items[i].type === 'PRODUCT' && plan.items[i].images.length > 0) { %>
+        <% if (plan.items[i].type === 'PRODUCT' && plan.items[i].images && plan.items[i].images.length > 0) { %>
             <img style="background-image: url('<%= plan.items[i].images[0] %>');" />
             <% break %>
         <% } %>

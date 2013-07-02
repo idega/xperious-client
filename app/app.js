@@ -138,13 +138,14 @@ define([
 
         	var loaded = images.imagesLoaded();
         	loaded.progress(_.bind(function(isBroken, $images, $proper, $broken) {
-        		$proper.each(_.bind(function(index, proper) {
+        		$images.each(_.bind(function(index, proper) {
         			this.$('.loader[data-src="' + $(proper).attr('src') + '"]')
         			.each(function(index, loader) {
         				$loader = $(loader);
         				$loader.siblings().css('opacity', '1');
         				$loader.remove();
         			});
+
         		}, this));
         	}, this));
   		},
