@@ -138,16 +138,15 @@ define([
 
         	var loaded = images.imagesLoaded();
         	loaded.progress(_.bind(function(isBroken, $images, $proper, $broken) {
-        		$images.each(_.bind(function(index, proper) {
-        			this.$('.loader[data-src="' + $(proper).attr('src') + '"]')
-        			.each(function(index, loader) {
-        				$loader = $(loader);
-        				$loader.siblings().css('opacity', '1');
-        				$loader.remove();
-        			});
-
-        		}, this));
-        	}, this));
+        		$proper.add($broken).each(_.bind(function(index, img) {
+        			this.$('.loader[data-src="' + $(img).attr('src') + '"]')
+          			.each(function(index, loader) {
+          				$loader = $(loader);
+          				$loader.siblings().css('opacity', '1');
+          				$loader.remove();
+          		  });
+        	 }, this));
+          }, this));
   		},
 
 
