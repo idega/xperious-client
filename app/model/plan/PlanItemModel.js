@@ -12,7 +12,7 @@ define([
 			// minutes are rounded to 15 minutes intervals
 			var minute = moment(json.on).format('m');
 			var delta = minute > 0 ? 15 - minute % 15 : 0;
-			var rounded = moment(json.on).add(delta, 'minutes');
+			var rounded = moment.utc(json.on).add(delta, 'minutes');
 
 			json.summary = {};
 			json.summary.on = rounded.format('HH:mm');
