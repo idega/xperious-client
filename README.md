@@ -41,8 +41,7 @@ Just a reminder about deployment.
 
 1. Execute the following commands:
 	
-		grunt dist
-		grunt dist:deploy
+		grunt dist:rsync
 
 	Beware that this will change your local `properties.json` if you run it from your machine. To restore them use `grunt --apihost=http://localhost:8080 init` or similar.
 
