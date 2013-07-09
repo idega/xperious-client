@@ -68,6 +68,7 @@ Just a reminder about deployment.
 	        ExpiresByType image/jpg "access plus 1 day"
 	        ExpiresByType image/jpeg "access plus 1 day"
 	        ExpiresByType image/gif "access plus 1 day"
+          	ExpiresByType text/html "now"
 
 	        AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/x-javascript application/javascript
 
