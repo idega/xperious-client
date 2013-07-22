@@ -49,24 +49,34 @@ define([
 	});
   	
   	
-	/**
-	 * Extend string prototype with handy functions.
-	 */
-	String.prototype.capitalize = function () {
-	    return this.replace(/\w\S*/g, function(txt) {
-	    	return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-	    });
-	};
-  	
-	String.prototype.format = function() {
-		var args = arguments;
-		return this.replace(/{(\d+)}/g, function(match, number) { 
-			return typeof args[number] != 'undefined'
-				? args[number]
-				: match;
-			});
-	};
-  	
+  	/**
+  	 * Extend string prototype with handy functions.
+  	 */
+  	String.prototype.capitalize = function () {
+  	    return this.replace(/\w\S*/g, function(txt) {
+  	    	return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  	    });
+  	};
+    	
+  	String.prototype.format = function() {
+  		var args = arguments;
+  		return this.replace(/{(\d+)}/g, function(match, number) { 
+  			return typeof args[number] != 'undefined'
+  				? args[number]
+  				: match;
+  			});
+  	};
+
+    String.prototype.shorten = function(maxLength) {
+      var substring = this.substring(0, maxLength);
+      var statementEnd = substring.lastIndexOf('.');
+      return (statementEnd > 0) ? substring.substring(0, statementEnd) : substring;
+    };
+
+    String.prototype.stripHtml = function() {
+      return this.replace(/<(?:.|\n)*?>/gm, '');
+    };
+
 
   	_.extend(Backbone.View.prototype, {
 

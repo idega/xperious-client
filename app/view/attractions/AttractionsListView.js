@@ -43,7 +43,7 @@ define([
 
 		serialize: function() {
 			return {
-				attractions: _.first(app.attractions.products.toJSON(), this.length),
+				attractions: _.first(app.attractions.products.serialize(), this.length),
 				loader: this.loader(),
 				baseUrl: app.router.href(
 					'attractions',

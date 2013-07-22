@@ -30,7 +30,7 @@ define([
 
 		serialize: function() {
 			return {
-				events: _.chain(this.collection.toJSON())
+				events: _.chain(this.collection.serialize())
 			};
 		},
 		

@@ -29,6 +29,14 @@ function(
 				type: 'ATTRACTION',
 				category: this.category
 			}});
+		},
+
+		serialize: function() {
+			var json = [];
+			this.each(function(item) {
+				json.push(item.serialize());
+			});
+			return json;
 		}
 	});
 
