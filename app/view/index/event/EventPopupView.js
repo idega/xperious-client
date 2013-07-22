@@ -10,7 +10,7 @@ define([
 		
 		serialize: function() {
 			return {
-				event: this.model.toJSON()
+				event: this.model.serialize()
 			};
 		},
 		

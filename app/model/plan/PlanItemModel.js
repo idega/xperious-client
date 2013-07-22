@@ -27,9 +27,10 @@ define([
 
 		summary: function() {
 			if (this.has('shortDescription')) {
-				// strip html on shortDescription
-				return this.get('shortDescription')
-					.replace(/<(?:.|\n)*?>/gm, '');
+				return this.get('shortDescription').stripHtml();
+
+			} else if (this.has('description')) {
+				return this.get('description').stripHtml().shorten(113);
 			}
 		},
 
@@ -45,9 +46,7 @@ define([
 		
 		summaryDescription: function() {
 			if (this.has('description')) {
-				// strip html on description
-				return this.get('description')
-					.replace(/<(?:.|\n)*?>/gm, '');
+				return this.get('description').stripHtml();
 			}
 		}
 	});

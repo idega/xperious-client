@@ -11,13 +11,13 @@ function(
 			return app.apihost + '/api/v1/products/' + this.get('id');
 		},
 
-		toJSON: function() {
-			var json = this._super();
+		serialize: function() {
+			var json = this.toJSON();
+			json.summary = {};
 			if (json.shortDescription) {
-				// strip html on shortDescription
-				json.summary = this
-					.get('shortDescription')
-					.replace(/<(?:.|\n)*?>/gm, '');
+				json.summary.summary = json.shortDescription.stripHtml();
+			} else if (json.description) {
+				json.summary.summary = json.description.stripHtml().shorten(113);
 			}
 			return json;
 		}

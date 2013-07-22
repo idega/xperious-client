@@ -47,7 +47,7 @@ define([
 
 		serialize: function() {
 			return {
-				product: (this.event) ? this.event.product.toJSON() : undefined,
+				product: (this.event) ? this.event.product.serialize() : undefined,
 				event: this.event
 			};
 		},
