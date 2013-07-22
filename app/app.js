@@ -70,7 +70,7 @@ define([
     String.prototype.shorten = function(maxLength) {
       var substring = this.substring(0, maxLength);
       var statementEnd = substring.lastIndexOf('.');
-      return (statementEnd > 0) ? substring.substring(0, statementEnd) : substring;
+      return (statementEnd > 0 && statementEnd + 1 < substring.length) ? substring.substring(0, statementEnd + 1) : substring;
     };
 
     String.prototype.stripHtml = function() {
