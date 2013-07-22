@@ -33,23 +33,30 @@ define([
             if (this.plan()) {
                 var plan = this.plan();
     
+                var position = 1;
                 this.$('.thumbs-holder').jcarousel({
-                    wrap: 'circular',
-                    scroll: 4,
-                    buttonNextHTML: null,
-                    buttonPrevHTML: null,
-                    itemFallbackDimension: 100,
-                    initCallback: function(carousel) {
-                        $(".controls .prev").click(function() {
-                            carousel.prev();
-                            return false;
-                        });
+                        position: 1,
+                        wrap: null,
+                        scroll: 1,
+                        buttonNextHTML: null,
+                        buttonPrevHTML: null,
+                        itemFallbackDimension: 100,
+                        initCallback: function(carousel) {
+                            $(".controls .prev").click(function() {
+                                carousel.prev();
+                                position = Math.max(1, position - 1);
+                                return false;
+                            });
 
-                        $(".controls .next").click(function() {
-                            carousel.next();
-                            return false;
-                        });
-                    }
+                            $(".controls .next").click(function() {
+                                carousel.next();
+                                position = Math.min(carousel.last, position + 1);
+                                return false;
+                            });
+                        },
+                        itemLoadCallback: function(carousel) {
+                            carousel.get(position).find('a').trigger('click');
+                        }
                 });
     
 
