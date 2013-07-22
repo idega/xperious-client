@@ -87,12 +87,12 @@
 .gallery-section h2 {font-size: 57px; text-align: center; font-weight: 300; color: #fff; margin: 0; padding-top: 24px;}
 .gallery-section h3 {font-weight: 400; color: #fff; font-size: 18px; text-align: center; margin: 0; padding-bottom: 48px;}
 
-.gallery {margin-left: 110px;}
+.gallery {margin-left: 110px; position: relative;}
 .gallery .media-holder {width: 780px; height: 380px; position: relative; background: #004290 url(../images/preload.gif) no-repeat center center;}
 .media-holder .video-wrap,
 .media-holder img {position: absolute; left: 0; top: 0;}
 
-.gallery .thumbs-holder {width: 780px;}
+.gallery .thumbs-holder {width: 780px; padding-bottom: 24px;}
 .thumbs-holder a {display: inline-block; position: relative; float: left; width: 156px; height: 100px;}
 .thumbs-holder .zoom,
 .thumbs-holder .video {width: 100%; height: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute;}
@@ -101,11 +101,11 @@
 .thumbs-holder a:hover .zoom,
 .thumbs-holder a:hover .video {display: inline-block;}
 
-.gallery .controls {width: 780px; padding-top: 15px; padding-bottom: 10px;}
+.gallery .controls {width: 780px; position: absolute; left: 0px; top: 50%; margin-top: -105px;}
 .gallery .prev,
-.gallery .next {display: inline-block; color: #fff; line-height: 24px; font-size: 14px;}
-.gallery .prev {padding-left: 24px; background: url(../images/arrow-left.png) no-repeat left top; float: left;}
-.gallery .next {padding-right: 24px; background: url(../images/arrow-right.png) no-repeat right top; float: right;}
+.gallery .next {display: inline-block; color: #fff; width: 50px; height: 66px; text-indent: -999px; overflow: hidden;}
+.gallery .prev {background: url(../images/arrow-left-gallery.png) no-repeat left top; float: left;}
+.gallery .next {background: url(../images/arrow-right-gallery.png) no-repeat right top; float: right; }
 .gallery .controls a:hover {color: #86c543;}
 
 .gallery-skin {position: relative;}
