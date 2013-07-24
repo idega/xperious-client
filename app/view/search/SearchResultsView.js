@@ -27,7 +27,7 @@ define([
 
         serialize: function() {
         	return {
-        		results: this.collection.toJSON(),
+        		results: this.collection.serialize(),
         		baseUrl: app.router.href(
 					'search',
 					app.search.pref.get('query'),

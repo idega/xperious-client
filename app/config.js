@@ -157,6 +157,7 @@ require.config({
        'backbone.queryparams' : '../lib/backbone/backbone.queryparams',
        'backbone.super' : '../lib/backbone/backbone.super',
        'moment' : '../lib/moment/moment',
+       'accounting' : '../lib/accounting/accounting',
        'google' : '../lib/google/maps'
    }
 

@@ -9,7 +9,6 @@ function(
 
 		model: PlanModel,
 
-		
 		url: function() {
 			return app.apihost + '/api/v1/plans/search';
 		},
@@ -73,6 +72,14 @@ function(
 			});
 			this._super(options);
 			return this;
+		},
+
+		serialize: function() {
+			var json = [];
+			this.each(function(item) {
+				json.push(item.serialize());
+			});
+			return json;
 		}
 	});
 

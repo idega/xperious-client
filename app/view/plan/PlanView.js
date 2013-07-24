@@ -45,7 +45,7 @@ define([
 			if (this.plan()) {
 				return {
 					prefs: app.search.pref.toJSON(),
-					plan: this.plan().toJSON(), 
+					plan: this.plan().serialize(), 
 				};
 			}
 		},

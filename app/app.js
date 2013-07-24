@@ -5,6 +5,7 @@ define([
   'backbone.queryparams',
   'backbone.super',
   'moment',
+  'accounting',
   'jquery.cookie',
   'jquery.fancybox',
   'jquery.hoverIntent',

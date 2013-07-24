@@ -18,7 +18,11 @@ function(
 			relatedModel: PlanItemModel,
 			collectionType: PlanItemCollection,
 			includeInJSON: true,
-			parse: true
+			parse: true,
+			reverseRelation: {
+				key: 'plan',
+				includeInJSON: false
+			}
 		}],
 
 		
@@ -39,6 +43,23 @@ function(
 				this.daysCached = _.values(days);
 			}
 			return this.daysCached;
+		},
+
+		serialize: function() {
+			var json = this.toJSON();
+
+			var country = app.countries.get(this.get('country'));
+            json.price = _.extend({}, json.price);
+            json.pricePerPerson = _.extend({}, json.pricePerPerson);
+			json.price.price = country.formatMoney(json.price.price);
+			json.pricePerPerson.price = country.formatMoney(json.pricePerPerson.price);
+
+			json.items = [];
+			this.get('items').each(function(item) {
+				json.items.push(item.serialize());
+			});
+
+			return json;
 		}
 	});
 
