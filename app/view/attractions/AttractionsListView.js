@@ -43,7 +43,9 @@ define([
 
 		serialize: function() {
 			return {
-				attractions: _.first(app.attractions.products.serialize(), this.length),
+				attractions: _.filter(_.first(app.attractions.products.serialize(), this.length), function(attraction) {
+				   return attraction.images;
+				}),
 				loader: this.loader(),
 				baseUrl: app.router.href(
 					'attractions',

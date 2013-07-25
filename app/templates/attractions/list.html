@@ -17,13 +17,9 @@
         <% if (index % 4 == 0) { %>
           <tr>
         <% } %>
-          
-          <% if (attraction.images) { %>
-            <td>
-              <% attractionHtml(attraction, index, baseUrl) %>
-            </td>  
-          <% } %>
-
+	        <td>
+	          <% attractionHtml(attraction, index, baseUrl) %>
+	        </td>
         <% if ((index % 4 == 3) && (index > 1)) { %>
           </tr>
         <% } %>
