@@ -87,7 +87,7 @@
 .gallery-section h2 {font-size: 57px; text-align: center; font-weight: 300; color: #fff; margin: 0; padding-top: 24px;}
 .gallery-section h3 {font-weight: 400; color: #fff; font-size: 18px; text-align: center; margin: 0; padding-bottom: 48px;}
 
-.gallery {margin-left: 110px; position: relative;}
+.gallery {margin-left: 110px; position: relative; margin-right: 110px;}
 .gallery .media-holder {width: 780px; height: 380px; position: relative; background: #004290 url(../images/preload.gif) no-repeat center center;}
 .media-holder .video-wrap,
 .media-holder img {position: absolute; left: 0; top: 0;}
@@ -101,7 +101,8 @@
 .thumbs-holder a:hover .zoom,
 .thumbs-holder a:hover .video {display: inline-block;}
 
-.gallery .controls {width: 780px; position: absolute; left: 0px; top: 50%; margin-top: -105px;}
+.gallery .controls {width: 780px; position: absolute; left: 0px; top: 50%; margin-top: -105px; visibility: hidden;}
+.gallery:hover .controls {visibility: visible;}
 .gallery .prev,
 .gallery .next {display: inline-block; color: #fff; width: 50px; height: 66px; text-indent: -999px; overflow: hidden;}
 .gallery .prev {background: url(../images/arrow-left-gallery.png) no-repeat left top; float: left;}

@@ -1,12 +1,5 @@
 <% var length = ((product.images ? product.images.length : 0) + (product.video ? product.video.length : 0)) %>
 <div class="site-block">
-	<% if (length > 1) { %>
-	   <h2>Image gallery</h2>
-	   <h3>Use the arrow keys to scroll through the images/videos and click on an image to enlarge it or to watch the video.</h3>
-    <% } else { %>
-       <h2>Image gallery</h2>
-       <h3></h3>
-    <% } %>
 	<% if (product.images) { %>
 		<div class="gallery">
 		  <div class="media-holder">
