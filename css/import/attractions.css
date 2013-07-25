@@ -40,3 +40,8 @@
 .attractions-section .element:hover h4 {color: #fff;}
 .attractions-section .element:hover p {color: #fff;}
 .attractions-section .element:hover p span {color: #fff;}
+
+
+.attractions-list-table {width: 943px;}
+.attractions-list-table td {width: 226px; padding-right: 13px;}
+.attractions-list-table td:last-child {padding-right: 0px;};

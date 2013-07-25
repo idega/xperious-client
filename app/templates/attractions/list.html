@@ -12,6 +12,25 @@
 
 <div class="attractions-list clearfix">
    <% if (attractions.length > 0) { %>
+   <table cellspacing="0" cellpadding="0" class="attractions-list-table">
+      <% _.each(attractions, function(attraction, index) { %>
+        <% if (index % 4 == 0) { %>
+          <tr>
+        <% } %>
+          
+          <% if (attraction.images) { %>
+            <td>
+              <% attractionHtml(attraction, index, baseUrl) %>
+            </td>  
+          <% } %>
+
+        <% if ((index % 4 == 3) && (index > 1)) { %>
+          </tr>
+        <% } %>
+
+      <% }) %>
+   </table>
+   <!-- 
    <div class="col">
     <% _.each(attractions, function(attraction, index) { %>
         <% if (index % 4 == 0 && attraction.images) { %>
@@ -40,6 +59,7 @@
            <% } %>
        <% }) %>
    </div>
+   -->
 
    <% } else { %>
          <div class="loading"><img src="<%= loader %>" /></div>
