@@ -18,11 +18,7 @@ function(
 			relatedModel: PlanItemModel,
 			collectionType: PlanItemCollection,
 			includeInJSON: true,
-			parse: true,
-			reverseRelation: {
-				key: 'plan',
-				includeInJSON: false
-			}
+			parse: true
 		}],
 
 		
@@ -48,11 +44,11 @@ function(
 		serialize: function() {
 			var json = this.toJSON();
 
-			var country = app.countries.get(this.get('country'));
+			var currency = app.currencies.get(json.price.currency);
             json.price = _.extend({}, json.price);
             json.pricePerPerson = _.extend({}, json.pricePerPerson);
-			json.price.price = country.formatMoney(json.price.price);
-			json.pricePerPerson.price = country.formatMoney(json.pricePerPerson.price);
+			json.price.price = currency.format(json.price.price);
+			json.pricePerPerson.price = currency.format(json.pricePerPerson.price);
 
 			json.items = [];
 			this.get('items').each(function(item) {

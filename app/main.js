@@ -2,6 +2,7 @@ require([
 	'app',
 	'router',
 	'model/country/CountryCollection',
+    'model/currency/CurrencyCollection',
 	'model/search/SearchPreferencesModel',
 	'model/search/SearchTimeframeModel',
 	'model/search/SearchGuestsModel',
@@ -19,6 +20,7 @@ require([
 	app,
 	Router,
 	CountryCollection,
+	CurrencyCollection,
 	SearchPreferencesModel,
 	SearchTimeframeModel,
 	SearchGuestsModel,
@@ -33,7 +35,9 @@ require([
 	RegionCollection,
 	RegionModel) {
 
+
 	app.countries = new CountryCollection();
+    app.currencies = new CurrencyCollection();
 
 
 	/* Initiate search models and collections. */
