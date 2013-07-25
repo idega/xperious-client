@@ -6,18 +6,18 @@
 	        <img style="background-image: url('<%= product.images[0] %>');" />
 		  </div>
 		  <div>
+		  	<% if (length > 1) { %>
 		    <div class="thumbs-holder gallery-skin">
 		      <ul>
-	            <% if (length > 1) { %>
-		               <% _.each(product.images, function(img) { %>
-		                   <li><a href="<%= img %>"><img style="background-image: url('<%= img %>?w=300');"/></a></li>
-		               <% }); %>
-		               <% _.each(product.video, function(url) { %>
-		                   <li><a href="<%= url %>"><img /></a></li>
-		               <% }); %>
-	            <% } %>
+	               <% _.each(product.images, function(img) { %>
+	                   <li><a href="<%= img %>"><img style="background-image: url('<%= img %>?w=300');"/></a></li>
+	               <% }); %>
+	               <% _.each(product.video, function(url) { %>
+	                   <li><a href="<%= url %>"><img /></a></li>
+	               <% }); %>
 		      </ul>
 		    </div>
+		    <% } %>
 		    <% if (length > 1) { %>
 		       <div class="controls clearfix"><a href="#" class="prev">Previous image</a><a href="#" class="next">Next image</a></div>
 		    <% } %>

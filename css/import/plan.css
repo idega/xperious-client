@@ -87,12 +87,12 @@
 .gallery-section h2 {font-size: 57px; text-align: center; font-weight: 300; color: #fff; margin: 0; padding-top: 24px;}
 .gallery-section h3 {font-weight: 400; color: #fff; font-size: 18px; text-align: center; margin: 0; padding-bottom: 48px;}
 
-.gallery {margin-left: 110px; position: relative; margin-right: 110px;}
+.gallery {margin-left: 110px; position: relative; margin-right: 100px; padding-bottom: 24px;}
 .gallery .media-holder {width: 780px; height: 380px; position: relative; background: #004290 url(../images/preload.gif) no-repeat center center;}
 .media-holder .video-wrap,
 .media-holder img {position: absolute; left: 0; top: 0;}
 
-.gallery .thumbs-holder {width: 780px; padding-bottom: 24px;}
+.gallery .thumbs-holder {width: 780px;}
 .thumbs-holder a {display: inline-block; position: relative; float: left; width: 156px; height: 100px;}
 .thumbs-holder .zoom,
 .thumbs-holder .video {width: 100%; height: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute;}
@@ -119,6 +119,8 @@
 .gallery-skin .jcarousel-next-horizontal {position: absolute; top: 200px; right: 0; width: 16px; height: 41px; cursor: pointer; background: transparent url(../images/arrow-right.png) no-repeat center center;}
 .gallery-skin .jcarousel-prev-horizontal {position: absolute; top: 200px; left: 0; width: 16px; height: 41px; cursor: pointer; background: transparent url(../images/arrow-left.png) no-repeat center center;}
 
+
+.plan-gallery-view {padding-top: 40px;}
 
 /*Rout on map section -------------------------------------------------------------------------- */
 .rout-on-map-section {background: #e5e5e5; color: #605f5c;}
