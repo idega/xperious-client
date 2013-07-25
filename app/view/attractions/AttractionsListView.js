@@ -56,6 +56,10 @@ define([
 		afterRender: function() {
         	this.loadImages('.attractions-list .element .img');
 			$(window).scroll(this.loadMore);
+			$('.attractions-list-table tr').each(function(){
+				$(this).find('.details').height($(this).height() - 160 - 12);
+			})
+
 		},
 
 		loadMore: function() {

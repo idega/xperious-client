@@ -30,36 +30,6 @@
 
       <% }) %>
    </table>
-   <!-- 
-   <div class="col">
-    <% _.each(attractions, function(attraction, index) { %>
-        <% if (index % 4 == 0 && attraction.images) { %>
-            <% attractionHtml(attraction, index, baseUrl) %>
-        <% } %>
-    <% }) %>
-   </div>
-   <div class="col">
-       <% _.each(attractions, function(attraction, index) { %>
-           <% if (index % 4 == 1 && attraction.images) { %>
-               <% attractionHtml(attraction, index, baseUrl) %>
-           <% } %>
-       <% }) %>
-   </div>
-   <div class="col">
-       <% _.each(attractions, function(attraction, index) { %>
-           <% if (index % 4 == 2 && attraction.images) { %>
-               <% attractionHtml(attraction, index, baseUrl) %>
-           <% } %>
-       <% }) %>
-   </div>
-   <div class="col">
-       <% _.each(attractions, function(attraction, index) { %>
-           <% if (index % 4 == 3 && attraction.images) { %>
-               <% attractionHtml(attraction, index, baseUrl) %>
-           <% } %>
-       <% }) %>
-   </div>
-   -->
 
    <% } else { %>
          <div class="loading"><img src="<%= loader %>" /></div>
