@@ -21,8 +21,23 @@
           <% if (attraction.images) { %>
             <td>
               <% attractionHtml(attraction, index, baseUrl) %>
+              
             </td>  
           <% } %>
+          
+
+          <% if (attractions.length == (index + 1)) { %>
+            <% if (index % 4 == 2) { %>
+               <td>&nbsp;</td>
+            <% } %>
+            <% if (index % 4 == 1) { %>
+               <td>&nbsp;</td><td>&nbsp;</td>
+            <% } %>
+            <% if (index % 4 == 0) { %>
+               <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+            <% } %>
+          <% } %>
+
 
         <% if ((index % 4 == 3) && (index > 1)) { %>
           </tr>
