@@ -55,14 +55,7 @@ define([
 		        		'/images/home-bg-is3.jpg',
 		        		'/images/home-bg-is4.jpg',
 		        		'/images/home-bg-is5.jpg'
-		        	],
-		            formatMoneySymbols: {
-		                delimiter: {
-		                    thousands: '.',
-		                    decimal: ','
-		                },
-		                decimalPoint: 0
-		            }
+		        	]
 				}),
 
 				new CountryModel({

@@ -8,11 +8,11 @@ define([
 		serialize: function() {
 			var json = this.toJSON();
 
-			var country = app.countries.get(this.get('plan').get('country'));
+			var currency = app.currencies.get(json.price.currency);
             json.price = _.extend({}, json.price);
             json.unitPrice = _.extend({}, json.unitPrice);
-			json.price.price = country.formatMoney(json.price.price);
-			json.unitPrice.price = country.formatMoney(json.unitPrice.price);
+			json.price.price = currency.format(json.price.price);
+			json.unitPrice.price = currency.format(json.unitPrice.price);
 
 			// display only nicely rounded minutes to the user
 			// minutes are rounded to 15 minutes intervals
