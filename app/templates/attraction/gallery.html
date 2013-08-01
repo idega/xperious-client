@@ -3,14 +3,14 @@
 	<% if (product.images) { %>
 		<div class="gallery">
 		  <div class="media-holder">
-	        <img style="background-image: url('<%= product.images[0] %>');" />
+	        <img style="background-image: url('<%= product.images[0].large %>');" />
 		  </div>
 		  <div>
 		  	<% if (length > 1) { %>
 		    <div class="thumbs-holder gallery-skin">
 		      <ul>
 	               <% _.each(product.images, function(img) { %>
-	                   <li><a href="<%= img %>"><img style="background-image: url('<%= img %>?w=300');"/></a></li>
+	                   <li><a href="<%= img.large %>"><img style="background-image: url('<%= img.small %>');"/></a></li>
 	               <% }); %>
 	               <% _.each(product.video, function(url) { %>
 	                   <li><a href="<%= url %>"><img /></a></li>
