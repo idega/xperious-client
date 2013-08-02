@@ -42,7 +42,7 @@ define([
 						.reverse();
 
 					for (var i = 0; i < items.length; i++) {
-						if (items[i].get('type') === 'PRODUCT') {
+						if (items[i].get('type') === 'PRODUCT' && items[i].get('images')) {
 							days.push({
 								description: items[i].summary(),
 								image: items[i].summaryImage()
