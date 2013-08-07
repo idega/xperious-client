@@ -79,6 +79,44 @@ define([
 		        		'/images/home-bg-lt4.jpg',
 		        		'/images/home-bg-lt5.jpg'
 		        	]
+				}),
+                
+				new CountryModel({
+		        	code: 'fo',
+		        	title: 'Faroe Islands',
+		        	icon: '/images/map-fo.png',
+		        	email: 'faroe@xperious.travel',
+		        	zoom: 7,
+		        	pin: {
+                        lat: 61.750,
+                        lng: -4.87
+		        	},
+		        	center: {
+                        lat: 61.750,
+                        lng: -4.87
+		        	},
+		        	background: [
+		        		'/images/home-bg-fo1.jpg'
+		        	]
+				}),
+                
+				new CountryModel({
+		        	code: 'gl',
+		        	title: 'Greenland',
+		        	icon: '/images/map-gl.png',
+		        	email: 'greenland@xperious.travel',
+		        	zoom: 7,
+		        	pin: {
+		        		lat: 63.26, 
+                        lng: -44.30
+		        	},
+		        	center: {
+		        		lat: 63.26, 
+                        lng: -44.30
+		        	},
+		        	background: [
+		        		'/images/home-bg-gl1.jpg'
+		        	]
 				})
 
 			]);

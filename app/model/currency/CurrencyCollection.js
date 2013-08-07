@@ -19,6 +19,17 @@ define([
 				new CurrencyModel({
 		        	code: 'LTL'
 				}),
+                
+				new CurrencyModel({
+		        	code: 'DKK',
+		            formatSymbols: {
+		                delimiter: {
+		                    thousands: '.',
+		                    decimal: ','
+		                },
+		                decimalPoint: 0
+		            }
+				}),
 
 				new CurrencyModel({
                     code: 'ISK',
