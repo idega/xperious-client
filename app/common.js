@@ -57,6 +57,12 @@ function initSlider(nextSelector, prevSelector, imagesSelector, startingZIndex, 
         $nextButton = $(nextSelector),
         $prevButton = $(prevSelector);
 
+    if ($images.find('img').length < 2) {
+        $nextButton.hide();
+        $prevButton.hide();
+        return;
+    }
+
     function sliderCallback(direction) {
 
         $nextButton.off();
