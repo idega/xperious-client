@@ -17,7 +17,7 @@ function(
 			if (json.shortDescription) {
 				json.summary.summary = json.shortDescription.stripHtml();
 			} else if (json.description) {
-				json.summary.summary = json.description.stripHtml().shorten(113);
+				json.summary.summary = json.description.text.stripHtml().shorten(113);
 			}
 			return json;
 		}

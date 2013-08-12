@@ -35,7 +35,8 @@ define([
 				return this.get('shortDescription').stripHtml();
 
 			} else if (this.has('description')) {
-				return this.get('description').stripHtml().shorten(113);
+                console.log(this.get('description'));
+				return this.get('description').text.stripHtml().shorten(113);
 			}
 		},
 
@@ -51,7 +52,7 @@ define([
 		
 		summaryDescription: function() {
 			if (this.has('description')) {
-				return this.get('description').stripHtml();
+				return this.get('description').text.stripHtml();
 			}
 		}
 	});

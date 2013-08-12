@@ -33,7 +33,14 @@
 	           <% } %>
 	        </div>
 	        <div class="description">
-	            <p><%= product.description %></p>
+	            <p><%= product.description.text %></p>
+				<% if (product.description.attribution) {%>
+					<% if (product.description.attribution.referenceUrl) {%>
+						<a class="attribution" href="<%= product.description.attribution.referenceUrl %>" target="_blank"><%= product.description.attribution.author ? product.description.attribution.author : 'More' %></a>
+					<% } else {%>
+						<span class="attribution"><%= product.description.attribution.author %></span>
+					<% } %>
+				<% } %>
 	        </div>
 	      </div>
 	      <div class="col-2">

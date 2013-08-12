@@ -16,7 +16,7 @@ define([
 			if (this.has('shortDescription')) {
 				json.summary = json.shortDescription.stripHtml();
 			} else {
-				json.summary = json.description.stripHtml().shorten(113);
+				json.summary = json.description.text.stripHtml().shorten(113);
 			}
 			return json;
 		}
