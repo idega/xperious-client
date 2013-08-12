@@ -12,7 +12,7 @@ function(
 		
 		
 		url: function() {
-			return app.apihost + '/api/v1/products/search';
+			return app.apihost + '/v1/products/search';
 		},
 		
 

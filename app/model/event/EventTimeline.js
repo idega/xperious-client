@@ -11,7 +11,7 @@ define([
 		model: EventModel,
 		
 		url: function() {
-			return app.apihost + '/api/v1/events/timeline';
+			return app.apihost + '/v1/events/timeline';
 		},
 
 		initialize: function() {

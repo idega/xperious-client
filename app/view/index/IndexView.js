@@ -220,7 +220,7 @@ define([
 		        	delay: 0, 
 
 		        	source: function(request, response) {
-		                  $.getJSON(app.apihost + '/api/v1/keywords/suggest?country=' + app.country(), {
+		                  $.getJSON(app.apihost + '/v1/keywords/suggest?country=' + app.country(), {
 		                    term: extractLast(request.term)
 		                  }, response );
 		            },

@@ -11,7 +11,7 @@ function(
 		model: RegionModel,
 				
 		url: function() {
-			return app.apihost + '/api/v1/regions/list';
+			return app.apihost + '/v1/regions/list';
 		}
 
 	});

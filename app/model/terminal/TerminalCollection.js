@@ -11,7 +11,7 @@ define([
 		model: TerminalModel,
 
 		url: function() {
-			return app.apihost + '/api/v1/terminals/list';
+			return app.apihost + '/v1/terminals/list';
 		},
 
 		fetch: function(country) {

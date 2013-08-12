@@ -10,7 +10,7 @@ function(
 		model: PlanModel,
 
 		url: function() {
-			return app.apihost + '/api/v1/plans/search';
+			return app.apihost + '/v1/plans/search';
 		},
 		
 		refetch: function() {

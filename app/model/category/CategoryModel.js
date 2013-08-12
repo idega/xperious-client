@@ -7,7 +7,7 @@ define([
 		idAttribute: 'id',
 
 		url: function() {
-			return app.apihost + '/api/v1/categories/' + this.get('id');
+			return app.apihost + '/v1/categories/' + this.get('id');
 		}
 	});
 

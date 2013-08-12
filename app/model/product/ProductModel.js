@@ -8,7 +8,7 @@ function(
 		idAttribute: 'id',
 		
 		url: function() {
-			return app.apihost + '/api/v1/products/' + this.get('id');
+			return app.apihost + '/v1/products/' + this.get('id');
 		},
 
 		serialize: function() {

@@ -198,7 +198,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask("init", "Initialize environment", function(apihost) {
         var properties = {
-            apihost: grunt.option('apihost') || 'http://core.test.xperious.com'
+            apihost: grunt.option('apihost') || 'http://api.test.xperious.com'
         };
 
         var file = "properties.json";
