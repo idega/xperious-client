@@ -20,7 +20,7 @@
   background-size: cover;}
 
 
-
+refrence_writer.pngre
 /*Package info section -------------------------------------------------------------------------- */
 .package-info-section h2.green {font-size: 57px; color: #86c543; margin-bottom: 4px;}
 .attractions-place-page .package-info-section p {margin-top: 4px; margin-bottom: 3px;}
@@ -42,7 +42,7 @@
 .attractions-place-info-section .bordered p {margin: 0; padding: 8px 0; padding-bottom: 7px; border-bottom: 1px solid #a6a49f;}
 .attractions-place-info-section .description p {line-height: 19px; margin: 17px 0;}
 .attractions-place-info-section .description .attribution {display: inline-block; margin-top: 50px; font-size: 12px; border-bottom: 1px solid #eee;}
-.attractions-place-info-section .description a.attribution:hover {color: #8D8D8C;}
+.attractions-place-info-section .description img {margin-bottom: 3px;}
 .attractions-place-info-section h3 {text-transform: uppercase; margin: 0; color: #605f5c; font-size: 20px; font-weight: 300; margin-bottom: 2px;}
 .attractions-place-info-section .list {margin-bottom: 38px;}
 .attractions-place-info-section .list li {width: 186px; padding-right: 10px; margin-bottom: 0px; float: left; padding-left: 6px; background: url(../images/list-li.png) no-repeat left 10px; font-size: 14px; line-height: 19px;}
