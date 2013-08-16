@@ -103,6 +103,7 @@ define([
 
 
 		empty: function() {
+            this.change();
 			this.$el.dialog('close');
 			this.$el.remove();
 			$(window).unbind('resize', this.updatePosition);
