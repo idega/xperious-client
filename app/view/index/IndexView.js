@@ -205,7 +205,24 @@ define([
 
 	        /* Placeholder for old browsers */
 	        $('input[placeholder], textarea[placeholder]').placeholder();
-	
+			
+			$('.location-indetify__close').click(function(){
+				$('.location-indetify').animate({height: 0}, 250).fadeOut(50);
+			});
+
+
+			$('.site-header__sign-in').click(function(){
+				var signInSection = $('.sign-in-section');
+				var signInSectionHeight = 155;
+				if (signInSection.hasClass('opened')){
+					signInSection.removeClass('opened');
+					signInSection.stop().animate({height: 0}, 250);
+				}else{
+					signInSection.addClass('opened');
+					signInSection.stop().animate({height: signInSectionHeight}, 250);
+				}
+				
+			});
 
 			/* Autocomplete configuration for query field */
 	        $('input.autocomplete-search-input')

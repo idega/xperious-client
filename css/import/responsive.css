@@ -15,11 +15,12 @@
     .jcarousel-container .jcarousel-prev, 
     .jcarousel-container .jcarousel-next {display: none !important;}
     .bottom-shadow {display: none;}
+
 }
 
 
 /*980----------------------------------------------------*/
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1025px) {
 
 .site {margin-bottom: 0;}
 
@@ -29,8 +30,10 @@
 .site-bottom-menu .site-block-in,
 .site-header .site-block-in {overflow: visible;}
 
-.article-content {left: 5%;}
-.article-section .logo {position: static; right: auto;}
+.article-section {height: auto !important;}
+.article-section .site-block {height: auto;}
+.article-content {padding-left: 5%; padding-top: 80px; padding-bottom: 80px; position: static;}
+.article-section .logo {position: static; right: auto; margin-bottom: 15px;}
 
 .subscribe-form input[type="text"] {width: 82%; margin-bottom: 15px;}
 
@@ -47,7 +50,6 @@
 .footer-section {word-wrap: break-word;}
 
 .bottom-section {visibility: visible; position: static; height: auto;}
-
 
 }
 

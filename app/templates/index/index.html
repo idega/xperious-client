@@ -12,24 +12,89 @@
 	<div id="home" class="section home-section full-height-section">
 	<div class="grid" style="background-image: none;"></div>
 	<div class="site-header">
-	  <div class="site-block-in">
-	   <span href="#" class="logo"><img src="images/logo.png"></span>
-	    <div class="top-menu clearfix"> <a href="javascript:void(0)" id="destination" class="chose-destination">Choose your <br/><strong>destination</strong></a>
-	      <ul class="menu lang-menu clearfix">
-	        <li><a href="#" class="en active"><br></a></li>
-	        <li><a href="#" class="ice"><br></a></li>
-	      </ul>
-	    </div>
+		<div class="location-indetify">
+			<div class="site-block-in">
+				<p>
+					We have indentified that your country of orgin is <strong>Japan</strong>. You can change that by click on the country name on the top of the site.
+				</p>
+			</div>
+			<span class="location-indetify__close"><br/></span>
+		</div>
+	  <div class="site-header__top">
+	  	<div class="site-block-in clearfix">
+	  		<span href="#" class="logo">
+		   		<img src="images/logo.png">
+		   </span>
+		   <span class="logo-text">
+	   			|  &nbsp;&nbsp;<em>Enrich your travel experience</em>
+	   	   </span>
+		   <span class="site-header__sign-in">Sign in</span>
+	  	</div>
+	  </div>
+	  <div class="section sign-in-section">
+	  	<div class="site-block-in">
+		  	<form class="header-signin-form">
+		  		<h2>SIGN IN <span>(Not a member? <a href="#">Sign Up</a>)</span></h2>
+		  		<div class="clearfix">
+		  			<a href="#" class="fb-login">Login with <img src="images/fb-text.png" alt=""/></a>
+		  			<input type="text" placeholder="Your email" />
+		  			<input type="password" placeholder="Password" />
+		  			<input type="submit" value="Sign in" class="button" />
+		  		</div>
+		  		<div class="clearfix">
+		  			<p class="signin-info">We never automatically post anything to your facebook or use your email</p>
+		  			<div class="signin-links tar">
+		  				<a href="#">Forgot your password?</a><br/>
+		  				Not a member? <a href="#">Sign Up</a>
+		  			</div>
+		  		</div>
+		  	</form>
+		  </div>
+	  </div>
+	  <div class="site-header__bottom">
+	  	<div class="clearfix site-block-in">
+		  	<ul class="menu top-menu clearfix">
+		  		<li>
+		  	 	  <a href="#">Discover Iceland</a>
+		  		</li>
+		  		<li>
+		  	 	  <a href="#">Attraction</a>
+		  		</li>
+		  		<li>
+		  	 	  <a href="#">To do</a>
+		  		</li>
+		  		<li>
+		  	 	  <a href="#">Food &amp; drink</a>
+		  		</li>
+		  		<li>
+		  	 	  <a href="#">Event calendar</a>
+		  		</li>
+		  	</ul>
+		  	<div class="site-header__selected-location fr">
+		  		Country of origin: <strong>Japan</strong>
+		  	</div>
+		  	<a href="javascript:void(0)" id="destination" class="chose-destination fr">Destinations</a>
+		</div>
+	  </div>
+	  <div class="header-destination-section">
+	  		<div class="destination-section__title">
+	  			We have awesome destinations for you!
+	  			<span class="destination-section__close"><br/></span>
+	  		</div>
+	  		
+	  		<div class="destination-section__map">
+	  			zemelapis
+	  		</div>
 	  </div>
 	</div>
 	<div class="site-block">
 	  <div class="planner">
-	    <h1>Plan your dream vacation</h1>
-	    <h2>You can plan your own vacation based on what you like to do, <br>how many you are, budget and more.</h2>
+	    <h1>Enrich your <br>travel experience <br/>in <a href="#">Iceland</a></h1>
+	    <h2>Tell us what your interest are</h2>
 	    <form id="js-travel-planner-form" class="planner-form">
 	      <div class="form-row">
 	        <div class="hidden">
-	          <input type="text" id="query" placeholder="Your type of interest e.g.: horses, hiking, whale watching" data-tooltiptitle="What is your interest" data-tooltipcontent="Here you type what you want to do in your dream vacation. &lt;br&gt;&lt;br&gt;e.g. whale watching, hicking, glacier tour, river rafting, horses" class="autocomplete-search-input tooltip trigger-input-animation" tabIndex="1">
+	          <input type="text" id="query" placeholder="I'd like to play golf, see whales and go horseback riding" data-tooltiptitle="What is your interest" data-tooltipcontent="Here you type what you want to do in your dream vacation. &lt;br&gt;&lt;br&gt;e.g. whale watching, hicking, glacier tour, river rafting, horses" class="autocomplete-search-input tooltip trigger-input-animation" tabIndex="1">
 	          <div id="plan-inputs-container">
 	            <div class="inner clearfix">
 	                <span class="timeframe-view"></span>
@@ -41,6 +106,10 @@
 	        </div>
 	      </div>
 	    </form>
+	    <div class="palanner-additional">
+	    	<h3>Are you attending an event?</h3>
+	    	<p>Not shure what to do during your free time? <a href="#">Plan your free time!</a></p>
+	    </div>
 	    <div class="video-button-wrap tac">
 	    	<a href="#" class="button__show-video"><span>WATCH VIDEO</span></a>
 	    </div>

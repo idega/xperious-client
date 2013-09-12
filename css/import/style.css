@@ -146,7 +146,7 @@ button, input, select, textarea {font-size: 100%; margin: 0; vertical-align: bas
 .vat {vertical-align: top;} 
 .vac {vertical-align: center;}
 .date {color: #ccc;} 
-.touch-only {display: none;}
+/*.touch-only {display: none;}*/
 
 .clearfix:before, .clearfix:after , .form-row:before, .form-row:after {content: ""; display: table;}
 .clearfix:after, .form-row:after {clear: both;}
@@ -214,6 +214,12 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 
 
 /*Home section ---------------------------------------------*/
+.location-indetify {background: #86c543; position: relative; border-bottom: 3px solid #333; text-align: left; overflow: hidden;}
+.location-indetify .site-block-in {}
+.location-indetify p {font-size: 14px; color: #fff; line-height: 17px; padding: 12px 0; padding-bottom: 17px; padding-left: 42px; background: url(../images/location-ico.png) no-repeat left 13px; margin: 0;}
+.location-indetify__close {position: absolute; cursor: pointer; width: 19px; height: 19px; position: absolute; right: 15px; top: 14px; background: url(../images/location-close.png) no-repeat center center;}
+
+
 .home-section .site-block-in,
 .home-section .site-block {position: relative;}
 .home-section .grid {position: absolute; left: 0px; top: 123px; width: 100%; background: url(../images/grid.png) repeat scroll 0 0 transparent;}
@@ -236,11 +242,50 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 
 
 /*Site header*/
-.site-header {background: url(../images/bottom-rep.png); text-align: center; height: 122px; padding-top: 1px; position: absolute; top: 0; right: 0; width: 100%; z-index: 10;}
+.site-header { text-align: center; padding-top: 1px; position: absolute; top: 0; right: 0; width: 100%; z-index: 10;}
+.site-header__top {background: url(../images/header-top-bg-rep.png);}
+.site-header__top .site-block-in {padding-top: 2px;}
 .site-header .site-block {position: relative;}
-.site-header .logo {margin-top: 19px; display: inline-block;}
+.site-header .logo {display: inline-block; float: left;}
+.site-header .logo-text {float: left; padding-top: 20px; font-size: 15px; color: #e5e5e5; }
 
-.top-menu {position: absolute; right: 30px; top: 10px;}
+.site-header__sign-in {float: right; margin-top: 20px; font-size: 14px; cursor: pointer;}
+
+/*Top menu*/
+.site-header__bottom {background: url(../images/top-menu-grad.png); border-top: 1px solid #506639;}
+
+.top-menu {float: left;}
+.top-menu li {float: left; margin-right: 24px;}
+.top-menu a {display: inline-block; font-size: 14px; color: #fff; line-height: 40px;}
+
+.site-header__selected-location {line-height: 40px; font-size: 14px; padding-left: 15px;}
+
+
+/*Signin section*/
+.header-signin-form {width: 774px;}
+
+.sign-in-section {background: #333; border-top: 1px solid #7e9566; margin: 0; overflow: hidden; height: 0px;}
+.sign-in-section .site-block-in {padding: 9px 0;}
+.sign-in-section h2 {text-transform: uppercase; font-weight: 300; color: #86c543; text-align: left;}
+.sign-in-section h2 span {text-transform: none; color: #a6a49f; font-size: 14px;}
+
+.signin-info {font-size: 14px; color: #a6a49f; margin: 0; padding-top: 9px; width: 500px; float: left; text-align: left;}
+.signin-links {width: 250px; float: right; font-size: 14px; padding-top: 7px; padding-bottom: 7px;}
+
+.fb-login {display: inline-block; float: left; color: #fff; padding-left: 37px; line-height: 34px; padding-right: 8px; border-radius: 4px; background: #4466a9 url(../images/fb-button.png) no-repeat left top; font-size: 14px; margin-right: 5px;}
+.fb-login img {vertical-align: baseline;}
+
+.sign-in-section input[type="text"], 
+.sign-in-section input[type="password"] {font-size: 14px; padding: 7px 12px; width: 220px; margin-right: 5px;}
+.sign-in-section .button {background: #86c543; width: 110px; float: left; height: 34px; font-size: 14px; text-transform: none; text-align: center; padding: 0 10px; line-height: 34px;}
+
+/*Header desination selection*/
+.header-destination-section {overflow: hidden; height: 0px;}
+.destination-section__title {background: #86c543; font-size: 36px; color: #333; padding-top: 20px; padding-bottom: 20px; position: relative;}
+.destination-section__close {display: inline-block; position: absolute; cursor: pointer; width: 32px; height: 32px; background: url(../images/destination-close.png) no-repeat center center; bottom: -16px; right: 65px;}
+.destination-section__map {}
+
+
 
 /*Langiage menu*/
 .lang-menu {float: right; padding-right: 6px; padding-top:6px;}
@@ -251,15 +296,24 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 .lang-menu .active,
 .lang-menu a:hover {background-position: left bottom;}
 
-.chose-destination {float: right; padding-left: 25px; background: url(../images/destination-ico.png) no-repeat left top; color: #ddd; line-height: 12px; font-size: 12px; text-transform: uppercase; padding-bottom: 12px;}
+.chose-destination {float: right; color: #fff; line-height: 40px; font-size: 14px; padding: 0 18px; background: #3b3a3a;}
 .no-js .chose-destination:hover,
 .chose-destination.hovered {color: #fff;}
 
 /*Planner*/
-.planner {position: absolute; height: 200px; top: 50%; margin-top: -110px; width: 880px; left: 50%; margin-left: -440px;}
-.planner h1 {font-size: 36px; margin-top: 0; margin-bottom: 3px; text-align: center;} 
-.planner h2 {font-size: 18px; line-height: 22px; margin: 3px 0; text-align: center;}
+.planner {position: absolute; height: 200px; top: 50%; margin-top: -198px; width: 880px; left: 50%; margin-left: -440px;}
+.planner h1 {font-size: 52px; margin-top: 0; margin-bottom: 3px; width: 480px; margin-left: auto; margin-right: auto; text-align: left; font-weight: 600; line-height: 52px; } 
+.planner h1 a {color: #86c543; border-bottom: 1px dashed #fff;} 
+.planner h1 a:hover {border-bottom: 1px solid #fff;}
+.planner h2 {font-size: 19px; line-height: 22px; margin: 3px 0; text-align: left;  width: 480px; margin-left: auto; margin-right: auto; padding-top: 20px;}
 .planner .info {font-size: 16px; line-height: 22px; padding-left: 16px; font-style: italic; margin: 0;}
+
+
+.palanner-additional {padding-top: 40px; width: 480px; margin: 0 auto;}
+.palanner-additional h3 {font-size: 20px; margin: 0; font-weight: 600;}
+.palanner-additional p {font-size: 14px; margin: 0;}
+.palanner-additional a {text-decoration: underline;}
+.palanner-additional a:hover {text-decoration: none;}
 
 .buttoned {padding-top: 0; padding-bottom: 0; display: inline-block; border-radius: 4px; background: #fff; padding-right: 10px; padding-left: 35px; height: 40px; line-height: 40px; color: #a6a49f; font-size: 14px; border: none; margin-right: 7px; float: left; position: relative;}
 
@@ -277,7 +331,7 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 .form-expanded .guest input[type="text"] {margin-right: 0;}
 
 /*Planer form*/
-.planner-form {padding-top: 27px; padding-bottom: 6px; margin: 0 auto; width: 492px;}
+.planner-form {padding-top: 5px; padding-bottom: 6px; margin: 0 auto; width: 492px;}
 .planner-form .form-row {overflow: hidden; margin-bottom: 0px; position: relative;}
 
 .this-has-expanded {width: 880px;}
