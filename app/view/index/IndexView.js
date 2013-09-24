@@ -64,11 +64,10 @@ define([
 			/* By default use 2 guests as specified in the
 			 * field placeholder. */
 			var adults = app.search.guests.get('adults');
+            var teenagers = app.search.guests.get('teenagers');
 			var children = app.search.guests.get('children');
 			var infants = app.search.guests.get('infants');
 			var seniors = app.search.guests.get('seniors');
-			
-
 			
 
 			/* Use no budget filter if not provided by the user */
@@ -96,6 +95,7 @@ define([
 				to: to,
 				guests: {
 					adults: adults,
+                    teenagers: teenagers,
 					children: children,
 					infants: infants,
 					seniors: seniors
