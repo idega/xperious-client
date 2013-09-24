@@ -55,11 +55,11 @@
 
 /*.site-block {height: auto !important;}*/
 
-.home-section {background: url(../images/home-bg-is1.jpg) no-repeat center center;}
-.article-section {background: url(../images/bg-2.jpg) no-repeat center center;}
-.events-section {background: url(../images/bg-3.jpg) no-repeat center center;}
+.home-section {background: url(/images/home-bg-is1.jpg) no-repeat center center;}
+.article-section {background: url(/images/bg-2.jpg) no-repeat center center;}
+.events-section {background: url(/images/bg-3.jpg) no-repeat center center;}
 .contact-form-section {background: #e9e9e9;}
-.team-section {background: #6d7f89 url(../images/bg-4.jpg) no-repeat center top;}
+.team-section {background: #6d7f89 url(/images/bg-4.jpg) no-repeat center top;}
 
 
 /*.site-bottom-menu {display: none;}*/
