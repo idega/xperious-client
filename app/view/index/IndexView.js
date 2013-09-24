@@ -68,7 +68,7 @@ define([
 			var children = app.search.guests.get('children');
 			var infants = app.search.guests.get('infants');
 			var seniors = app.search.guests.get('seniors');
-			
+
 
 			/* Use no budget filter if not provided by the user */
 			var budgetfrom = '0';

@@ -37,6 +37,7 @@ define([
 					app.search.pref.get('arrival').terminal,
 					app.search.pref.get('arrival').time,
 					app.search.pref.get('guests').adults,
+					app.search.pref.get('guests').teenagers,
                     app.search.pref.get('guests').children,
                     app.search.pref.get('guests').infants,
                     app.search.pref.get('guests').seniors,
