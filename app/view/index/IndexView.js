@@ -202,6 +202,12 @@ define([
 
 	        var $window = $(window);
             var $bottom = $('#bottom');
+            var isIphone = false;
+
+            if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+				 isIphone = true;
+			}
+
 
 	        /* Placeholder for old browsers */
 	        $('input[placeholder], textarea[placeholder]').placeholder();
@@ -222,6 +228,13 @@ define([
 					signInSection.stop().animate({height: signInSectionHeight}, 250);
 				}
 				
+			});
+
+			$('.destination-section__close').click(function(){
+				$('.destination-section__title').animate({height:0}, 300);
+				$('.destination-section__map').animate({height:0}, 300, function(){
+					$('.header-destination-section').addClass('closed');
+				});
 			});
 
 			/* Autocomplete configuration for query field */
@@ -270,7 +283,7 @@ define([
 	        $(".slider-container").imagesLoaded(centerSliderImages);
 	
 	
-	        if (!Modernizr.touch) {
+	        if (!isIphone) {
 	            $window.resize(this.onResize).trigger('resize');
 	        } else {
 	            this.onInit();
@@ -414,7 +427,7 @@ define([
 
                         $menu_button.toggleClass('to-top', toTop);
                         $(".ui-selectmenu-menu-dropdown").toggleClass('to-top', toTop);
-                        if (Modernizr.touch){
+                        if (isIphone){
                             $(p.currentTarget).parent().siblings('select').show().focus().trigger('mousedown').on('change', function(){
                                 //$selectM.selectmenu('value', $this.val());
                                 initSelectMenus();
@@ -427,7 +440,7 @@ define([
                             $menu_button = $select.parent().find('a.ui-selectmenu');
                         $menu_button.removeClass('to-top');
                         $(".ui-selectmenu-menu-dropdown").removeClass('to-top');
-                        if (Modernizr.touch){
+                        if (isIphone){
                             $(p.currentTarget).parent().siblings('select').hide();
                             $('.ui-selectmenu').show();
                         }

@@ -229,6 +229,10 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 .slider-container {text-align: center; position:relative;}
 .slider-container img {position: absolute; top: 50%; left: 50%; visibility:hidden;}
 
+.slider-container .cover-author {position: absolute; background: url(../images/top-menu-grad.png); bottom: 65px; left: 0; color: #e5e5e5; padding: 11px 13px; padding-left: 116px; }
+.cover-author a {color: #e5e5e5; text-decoration: underline;}
+.cover-author a:hover {text-decoration: none;}
+
 .background {display: none !important;}
 .background img {position: absolute; top: 50%; left: 50%; visibility:hidden;}
 
@@ -280,10 +284,12 @@ background: url(../images/bg-4.jpg) no-repeat center center fixed;
 .sign-in-section .button {background: #86c543; width: 110px; float: left; height: 34px; font-size: 14px; text-transform: none; text-align: center; padding: 0 10px; line-height: 34px;}
 
 /*Header desination selection*/
-.header-destination-section {overflow: hidden; height: 0px;}
-.destination-section__title {background: #86c543; font-size: 36px; color: #333; padding-top: 20px; padding-bottom: 20px; position: relative;}
-.destination-section__close {display: inline-block; position: absolute; cursor: pointer; width: 32px; height: 32px; background: url(../images/destination-close.png) no-repeat center center; bottom: -16px; right: 65px;}
-.destination-section__map {}
+.header-destination-section.closed {overflow: hidden; height: 0px;}
+.header-destination-section {position: relative;}
+.destination-section__title {background: #86c543; font-size: 36px; color: #333; overflow: hidden;}
+.destination-section__title-in {padding-top: 20px; padding-bottom: 20px;}
+.destination-section__close {display: inline-block; position: absolute; cursor: pointer; width: 32px; height: 32px; background: url(../images/destination-close.png) no-repeat center center; top: 65px; right: 65px; z-index: 10;}
+.destination-section__map {overflow: hidden;}
 
 
 

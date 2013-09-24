@@ -3,6 +3,9 @@
 	<% _.each(country.background, function(bg, index) { %>
 		<img src="<%= bg %>" <%= (index != randomPick) ? 'style="display: none"' : '' %> />
 	<% }) %>
+	<div class="cover-author">
+		<strong>Solarfarid in Reykjavik</strong> by <a ahref="#">Anders Peter</a>
+	</div>
 
 		<style id="home-section-override" media="screen and (max-width: 960px)">
             	.home-section {background-image: url('<%= country.background[randomPick] %>');}
@@ -77,13 +80,14 @@
 		</div>
 	  </div>
 	  <div class="header-destination-section">
+	  		<span class="destination-section__close"><br/></span>
 	  		<div class="destination-section__title">
-	  			We have awesome destinations for you!
-	  			<span class="destination-section__close"><br/></span>
+	  			<div class="destination-section__title-in">
+	  				We have awesome destinations for you!
+	  			</div>	
 	  		</div>
-	  		
-	  		<div class="destination-section__map">
-	  			zemelapis
+	  		<div class="destination-section__map" id="map-holder">
+	  			<img src="images/ex-map.jpg" style="width: 100%;" />
 	  		</div>
 	  </div>
 	</div>
