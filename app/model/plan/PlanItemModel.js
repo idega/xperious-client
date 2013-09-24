@@ -35,7 +35,6 @@ define([
 				return this.get('shortDescription').stripHtml();
 
 			} else if (this.has('description')) {
-                console.log(this.get('description'));
 				return this.get('description').text.stripHtml().shorten(113);
 			}
 		},

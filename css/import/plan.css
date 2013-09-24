@@ -1,4 +1,4 @@
-.selected-package-page .inner-home-section {background: url(../images/selected-bg.jpg) no-repeat fixed center top; 
+.selected-package-page .inner-home-section {background: url(/images/selected-bg.jpg) no-repeat fixed center top; 
   -webkit-background-size: auto 250px;
   -moz-background-size: auto 250px;
   -o-background-size: auto 250px;
@@ -10,7 +10,7 @@
 
 
 /*Day info section -------------------------------------------------------------------------- */
-.day-info-section {background: url(../images/days-bg.jpg) no-repeat center center; 
+.day-info-section {background: url(/images/days-bg.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -24,14 +24,14 @@
 .days-list {padding-bottom: 39px;}
 .day-element {margin-bottom: 20px; display: block;}
 .day-element img {border-radius: 3px 3px 0 0;}
-.day-element .description {padding: 15px; padding-left: 55px; background: url(../images/day-grad-2.png); position: relative;}
-.day-element .day {position: absolute; color: #fff; font-size: 35px; font-weight: bold; padding-left: 14px; background: url(../images/day-text.png) no-repeat left 5px; left: 15px; top: 14px; line-height: 35px;}
+.day-element .description {padding: 15px; padding-left: 55px; background: url(/images/day-grad-2.png); position: relative;}
+.day-element .day {position: absolute; color: #fff; font-size: 35px; font-weight: bold; padding-left: 14px; background: url(/images/day-text.png) no-repeat left 5px; left: 15px; top: 14px; line-height: 35px;}
 .day-element p {color: #fff; font-size: 14px; font-weight: 300; margin: 0;}
 
 
 
 /*Details and prices section -------------------------------------------------------------------------- */
-.details-prices-section {background: url(../images/details-bg.png);}
+.details-prices-section {background: url(/images/details-bg.png);}
 .details-prices-section .site-block {padding-bottom: 25px;}
 .details-prices-section h2 {font-weight: 300; font-size: 57px; color: #fff; margin-bottom: 25px;}
 .details-prices-section h2 strong {color: #53762b; font-weight: 400;}
@@ -51,7 +51,7 @@
 .details-prices-section td {padding: 0px 0 0px 0;}
 .details-prices-section .zebra {width: 100%;}
 .details-prices-section .zebra td {padding: 3px 5px 3px 5px;}
-.details-prices-section .zebra tr:nth-child(2n) td {background: url(../images/zebra-bg.png);}
+.details-prices-section .zebra tr:nth-child(2n) td {background: url(/images/zebra-bg.png);}
 
 .details-prices-section .price {font-size: 28px; color: #fff; font-weight: 400; padding-bottom: 4px;}
 .details-prices-section .price sup {font-size: 18px;}
@@ -78,7 +78,7 @@
 
 
 /*Gallery section -------------------------------------------------------------------------- */
-.gallery-section {background: url(../images/gallery-bg.jpg) no-repeat center center;
+.gallery-section {background: url(/images/gallery-bg.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -88,7 +88,7 @@
 .gallery-section h3 {font-weight: 400; color: #fff; font-size: 18px; text-align: center; margin: 0; padding-bottom: 48px;}
 
 .gallery {margin-left: 110px; position: relative; margin-right: 100px; padding-bottom: 24px;}
-.gallery .media-holder {width: 780px; height: 380px; position: relative; background: #004290 url(../images/preload.gif) no-repeat center center;}
+.gallery .media-holder {width: 780px; height: 380px; position: relative; background: #004290 url(/images/preload.gif) no-repeat center center;}
 .media-holder .video-wrap,
 .media-holder img {position: absolute; left: 0; top: 0;}
 
@@ -96,8 +96,8 @@
 .thumbs-holder a {display: inline-block; position: relative; float: left; width: 156px; height: 100px;}
 .thumbs-holder .zoom,
 .thumbs-holder .video {width: 100%; height: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute;}
-.thumbs-holder .zoom {background: url(../images/gallery-zoom.png) no-repeat center center; display: none;}
-.thumbs-holder .video {background: url(../images/gallery-video.png) no-repeat center center;}
+.thumbs-holder .zoom {background: url(/images/gallery-zoom.png) no-repeat center center; display: none;}
+.thumbs-holder .video {background: url(/images/gallery-video.png) no-repeat center center;}
 .thumbs-holder a:hover .zoom,
 .thumbs-holder a:hover .video {display: inline-block;}
 
@@ -105,8 +105,8 @@
 .gallery:hover .controls {visibility: visible;}
 .gallery .prev,
 .gallery .next {display: inline-block; color: #fff; width: 50px; height: 66px; text-indent: -999px; overflow: hidden;}
-.gallery .prev {background: url(../images/arrow-left-gallery.png) no-repeat left top; float: left;}
-.gallery .next {background: url(../images/arrow-right-gallery.png) no-repeat right top; float: right; }
+.gallery .prev {background: url(/images/arrow-left-gallery.png) no-repeat left top; float: left;}
+.gallery .next {background: url(/images/arrow-right-gallery.png) no-repeat right top; float: right; }
 .gallery .controls a:hover {color: #86c543;}
 
 .gallery-skin {position: relative;}
@@ -116,8 +116,8 @@
 .gallery-skin .jcarousel-item {width: 156px; height: 100px;}
 .gallery-skin .jcarousel-item:hover {cursor: pointer;}
 .gallery-skin .jcarousel-item-horizontal {margin-left: 0;}
-.gallery-skin .jcarousel-next-horizontal {position: absolute; top: 200px; right: 0; width: 16px; height: 41px; cursor: pointer; background: transparent url(../images/arrow-right.png) no-repeat center center;}
-.gallery-skin .jcarousel-prev-horizontal {position: absolute; top: 200px; left: 0; width: 16px; height: 41px; cursor: pointer; background: transparent url(../images/arrow-left.png) no-repeat center center;}
+.gallery-skin .jcarousel-next-horizontal {position: absolute; top: 200px; right: 0; width: 16px; height: 41px; cursor: pointer; background: transparent url(/images/arrow-right.png) no-repeat center center;}
+.gallery-skin .jcarousel-prev-horizontal {position: absolute; top: 200px; left: 0; width: 16px; height: 41px; cursor: pointer; background: transparent url(/images/arrow-left.png) no-repeat center center;}
 
 
 .plan-gallery-view {padding-top: 40px;}
@@ -132,14 +132,14 @@
 .rout-on-map-section .map-holder {margin-left: 110px; padding-top: 40px;}
 
 /*Day popup ----------------------------------------*/
-.day-popup {background: #e5e5e5 url(../images/day-popup-grad.png) repeat-y left top; width: 986px; border-radius: 4px; position: relative;}
-.day-popup .lefter {width: 270px; float: left; padding: 15px 0px 15px 0px; padding-top: 112px; background: url(../images/add-hand.png) no-repeat 120px 40px;}
+.day-popup {background: #e5e5e5 url(/images/day-popup-grad.png) repeat-y left top; width: 986px; border-radius: 4px; position: relative;}
+.day-popup .lefter {width: 270px; float: left; padding: 15px 0px 15px 0px; padding-top: 112px; background: url(/images/add-hand.png) no-repeat 120px 40px;}
 .day-popup .righter {width: 715px; float: right;}
 .day-popup .righter strong {font-weight: 500;}
 .day-popup .lefter h4 {font-size: 18px; color: #fff; font-weight: 400; margin: 0; padding-left: 22px; text-transform: uppercase; margin-bottom: 19px; margin-left: 10px; margin-right: 10px;}
 .day-popup .lefter > p {font-size: 14px; color: #fff; padding-left: 22px; margin-left: 10px; margin-right: 10px; margin-bottom: 73px;}
-.day-popup .activities-block h4 {background: url(../images/day-group-title.png) no-repeat left 6px;}
-.day-popup .activities-block {background: url(../images/day-activities-dots.png) no-repeat 32px bottom; padding-bottom: 26px; margin-bottom: 23px;}
+.day-popup .activities-block h4 {background: url(/images/day-group-title.png) no-repeat left 6px;}
+.day-popup .activities-block {background: url(/images/day-activities-dots.png) no-repeat 32px bottom; padding-bottom: 26px; margin-bottom: 23px;}
 .day-popup .lefter li {padding-bottom: 1px; position: relative;}
 .day-popup .lefter li > a {color: #fff; text-transform: uppercase; font-size: 14px; padding-left: 32px; padding-right: 10px; display: block; line-height: 20px;}
 .day-popup .lefter li > a:hover,
@@ -162,31 +162,31 @@
 .activities-element__time {margin: 0; font-size: 24px; color: #86c543; font-weight: bold; margin-top: 6px;}
 .activities-element__name {font-size: 22px; margin: 3px 0;}
 .activities-element__text {font-size: 14px; line-height: 19px; margin: 0;}
-.activities-element__more {display: inline-block; padding-left: 11px; background: url(../images/more-arrow.png) no-repeat left 7px; margin-left: 5px;}
+.activities-element__more {display: inline-block; padding-left: 11px; background: url(/images/more-arrow.png) no-repeat left 7px; margin-left: 5px;}
 .activities-element__info {position: absolute; top: 14px; right: 28px; width: 125px; text-align: right; margin: 0;}
 
 .activities-element__repostion,
 .activities-element__remove {display: inline-block; position: absolute; right: 0px; width: 12px; height: 12px;}
-.activities-element__repostion {top: 16px; background: url(../images/reposition-ico.png) no-repeat left top; cursor: ns-resize;}
-.activities-element__remove {top: 33px; background: url(../images/remove-ico.png) no-repeat left top;}
+.activities-element__repostion {top: 16px; background: url(/images/reposition-ico.png) no-repeat left top; cursor: ns-resize;}
+.activities-element__remove {top: 33px; background: url(/images/remove-ico.png) no-repeat left top;}
 
 
 .day-popup .day-map h4 {font-size: 24px; color: #86c543; font-weight: 300; margin: 0;}
 .day-popup .day-map h5 {font-size: 16px; font-weight: 300; color: #333; margin: 0; padding-bottom: 10px;}
 
 .day-map__top {padding: 0 20px;}
-.day-map__time-ico {display: inline-block; padding-left: 27px; background: url(../images/time-ico-2.png) no-repeat left 4px; margin-left: 4px;}
+.day-map__time-ico {display: inline-block; padding-left: 27px; background: url(/images/time-ico-2.png) no-repeat left 4px; margin-left: 4px;}
 
 
 
-.day-lightbox #fancybox-close {color: #a6a49f; right: 10px; top: 3px; background-image: url(../images/close-2.png); display: inline-block; position: absolute;}
-.day-popup .event-tooltip .close {top: auto; bottom: 4px; right: 12px; color: #a6a49f; background: url(../images/close-2.png) no-repeat right center; display: inline-block; position: absolute; font-size: 10px; line-height: 28px; padding-right: 20px; text-transform: uppercase; cursor: pointer;}
+.day-lightbox #fancybox-close {color: #a6a49f; right: 10px; top: 3px; background-image: url(/images/close-2.png); display: inline-block; position: absolute;}
+.day-popup .event-tooltip .close {top: auto; bottom: 4px; right: 12px; color: #a6a49f; background: url(/images/close-2.png) no-repeat right center; display: inline-block; position: absolute; font-size: 10px; line-height: 28px; padding-right: 20px; text-transform: uppercase; cursor: pointer;}
 
 
 .day-popup .event-tooltip {position: absolute; left: 270px; top: -285px; box-shadow: 0 0 15px #333333; z-index: 30;}
-.day-popup .event-tooltip > .nip {position: absolute; display: inline-block; left: -12px; top: 285px; background: url(../images/tooltip-nip.png) no-repeat left top; width: 12px; height: 20px;}
+.day-popup .event-tooltip > .nip {position: absolute; display: inline-block; left: -12px; top: 285px; background: url(/images/tooltip-nip.png) no-repeat left top; width: 12px; height: 20px;}
 .day-popup .place-description {padding: 0 5px;}
 .day-popup .place-description p {font-size: 14px; color: #333; line-height: 18px; margin-top: 0; margin-bottom: 5px;}
 .day-popup .event-tooltip h6 {margin-bottom: 7px;}
 .day-popup .event-tooltip .button {font-size: 14px; background-color: #86c543; padding-left: 19px; padding-right: 27px; width: 115px; line-height: 35px; height: 35px;}
-.day-popup .event-tooltip .button:hover {background: #53762b url(../images/button-ico.png) no-repeat right center; color: #fff;}
+.day-popup .event-tooltip .button:hover {background: #53762b url(/images/button-ico.png) no-repeat right center; color: #fff;}

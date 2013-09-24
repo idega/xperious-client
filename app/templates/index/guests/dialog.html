@@ -1,16 +1,20 @@
 <div class="body">
     <div class="row">
+        <input type="text" class="one-digit" placeholder="0" id="teenagers" value="<%= guests.teenagers > 0 ? guests.teenagers : '' %>" autocomplete="off" />
+        <label for="teenagers" class="label" title="12-17 years old">Teenagers</label>
+    </div>
+    <div class="row">
         <input type="text" class="one-digit" placeholder="0" id="children" value="<%= guests.children > 0 ? guests.children : '' %>" autocomplete="off" />
-        <label for="children" class="label">Children</label>
+        <label for="children" class="label" title="3-11 years old">Children</label>
     </div>
     <div class="clearfix" />
     <div class="row">
         <input type="text" class="one-digit" placeholder="0" id="infants" value="<%= guests.infants > 0 ? guests.infants : '' %>" autocomplete="off" />
-        <label for="infants" class="label">Infants</label>
+        <label for="infants" class="label" title="0-2 years old">Infants</label>
     </div>
     <div class="clearfix" />
     <div class="row">
         <input type="text" class="one-digit" placeholder="0" id="seniors" value="<%= guests.seniors > 0 ? guests.seniors : '' %>" autocomplete="off" />
-        <label for="seniors" class="label">Seniors</label>
+        <label for="seniors" class="label" title="64+ years old">Seniors</label>
     </div>
 </div>

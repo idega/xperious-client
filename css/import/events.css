@@ -1,5 +1,5 @@
 
-.events-list-page .inner-home-section {background: url(../images/events-list-bg.jpg) no-repeat fixed center top; position: relative;
+.events-list-page .inner-home-section {background: url(/images/events-list-bg.jpg) no-repeat fixed center top; position: relative;
   -webkit-background-size: auto 250px;
   -moz-background-size: auto 250px;
   -o-background-size: auto 250px;
@@ -7,7 +7,7 @@
 }
 
 .events-list-page .inner-home-section h1 {padding-top: 120px; padding-bottom: 73px;}
-.events-list-page .inner-home-section h1 span {display: inline-block; background: url(../images/bottom-rep.png); color: #559fd3; font-weight: 500; padding-bottom: 6px; padding-left: 12px; padding-right: 12px;}
+.events-list-page .inner-home-section h1 span {display: inline-block; background: url(/images/bottom-rep.png); color: #559fd3; font-weight: 500; padding-bottom: 6px; padding-left: 12px; padding-right: 12px;}
 
 
 /*Attractions section title -------------------------------------------------------------------------- */
@@ -24,7 +24,7 @@
 
 /*Months list*/
 .events-list-section .month-list {padding-bottom: 21px; border-bottom: 1px solid #fff; margin-bottom: 32px; width: 945px; overflow: hidden;}
-.month-list li {float: left; padding-right: 31px; margin-right: 8px; background: url(../images/month-dots.png) no-repeat right center;}
+.month-list li {float: left; padding-right: 31px; margin-right: 8px; background: url(/images/month-dots.png) no-repeat right center;}
 .month-list li:last-child {padding-right: 0; margin-right: 0; background: none;}
 .month-list li a {display: inline-block; padding: 0 8px; line-height: 22px; color: #333; font-weight: 500; font-size: 12px; text-transform: uppercase;}
 .month-list li a:hover,
@@ -49,10 +49,10 @@
 .events-listing .nip-right .nip {width: 11px; height: 22px;}
 .events-listing .nip-top .nip,
 .events-listing .nip-bottom .nip {width: 22px; height: 11px;}
-.events-listing .nip-top .nip {background: url(../images/arrows-top.png) no-repeat left top; top: -11px; left: 20px;}
-.events-listing .nip-left .nip {background: url(../images/arrows-left.png) no-repeat left top; left: -11px; top: 20px;}
-.events-listing .nip-bottom .nip {background: url(../images/arrows-down.png) no-repeat left top; bottom: -11px; right: 20px;}
-.events-listing .nip-right .nip {background: url(../images/arrows-right.png) no-repeat left top; top: 20px; right: -11px;}
+.events-listing .nip-top .nip {background: url(/images/arrows-top.png) no-repeat left top; top: -11px; left: 20px;}
+.events-listing .nip-left .nip {background: url(/images/arrows-left.png) no-repeat left top; left: -11px; top: 20px;}
+.events-listing .nip-bottom .nip {background: url(/images/arrows-down.png) no-repeat left top; bottom: -11px; right: 20px;}
+.events-listing .nip-right .nip {background: url(/images/arrows-right.png) no-repeat left top; top: 20px; right: -11px;}
 
 /*Colors*/
 .events-listing .element {background: #86c543;} /*Green*/

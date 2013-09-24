@@ -32,6 +32,12 @@
 	              <td><strong><%= prefs.guests.adults %></strong></td>
 	            </tr>
               <% } %>
+              <% if (prefs.guests.teenagers) { %>
+	            <tr>
+	              <td style="width: 75px;">Teenagers:</td>
+	              <td><strong><%= prefs.guests.teenagers %></strong></td>
+	            </tr>
+              <% } %>
               <% if (prefs.guests.children) { %>
               <tr>
                 <td style="width: 75px;">Children:</td>

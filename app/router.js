@@ -49,7 +49,7 @@ define(['app',
 	return Backbone.Router.extend({
 
 	    routes: {
-	    	'search(/:query)/:country/:from/:to/:arrivalterminal/:arrivaltime/:adults/:children/:infants/:seniors(/budget/:budgetfrom/:budgetto)(/plan/:index)' : 'search',
+	    	'search(/:query)/:country/:from/:to/:arrivalterminal/:arrivaltime/:adults/:teenagers/:children/:infants/:seniors(/budget/:budgetfrom/:budgetto)(/plan/:index)' : 'search',
 	    	'attractions/:country/:category(/:region)(/:product)' : 'attractions',
 	    	'events*path' : 'events',
 	    	'' : 'index'
@@ -136,6 +136,7 @@ define(['app',
 	    		arrivalterminal,
 	    		arrivaltime,
 	    		adults,
+                teenagers,
                 children,
                 infants,
                 seniors,
@@ -150,6 +151,7 @@ define(['app',
 	    		country: country,
     			guests: {
                     adults: parseInt(adults),
+                    teenagers: parseInt(teenagers),
                     children: parseInt(children),
                     infants: parseInt(infants),
                     seniors: parseInt(seniors)
@@ -228,6 +230,7 @@ define(['app',
 				app.search.pref.get('arrival').terminal,
 				app.search.pref.get('arrival').time,
 				app.search.pref.get('guests').adults,
+				app.search.pref.get('guests').teenagers,
                 app.search.pref.get('guests').children,
                 app.search.pref.get('guests').infants,
                 app.search.pref.get('guests').seniors,

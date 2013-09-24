@@ -64,7 +64,7 @@
     }
     
     #day-popup .day-map__time-ico {
-        background: url(../images/time-ico-2.png) no-repeat left 0px;
+        background: url(/images/time-ico-2.png) no-repeat left 0px;
     }
     
     #day-popup .activities-element__repostion {
@@ -80,7 +80,7 @@
     }
     
     #day-popup .activities-element__more {
-        background: url(../images/more-arrow.png) no-repeat left 5px;
+        background: url(/images/more-arrow.png) no-repeat left 5px;
     }
 
 
