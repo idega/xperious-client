@@ -81,7 +81,7 @@
     position: absolute; 
     padding: 0 5px; 
     top: 32px;
-    background: url(../images/submenu-rep.png) repeat-x left top; 
+    background: url(/images/submenu-rep.png) repeat-x left top; 
     display: none; 
     height: 37px;
     margin-top: 2px;
@@ -181,12 +181,12 @@
 	 }
 
     .popup-gallery-fader .prev {
-        background: url(../images/arrow-left.png) no-repeat center center; 
+        background: url(/images/arrow-left.png) no-repeat center center; 
         left: 3%;
      }
 
     .popup-gallery-fader .next {
-        background: url(../images/arrow-right.png) no-repeat center center; 
+        background: url(/images/arrow-right.png) no-repeat center center; 
         right: 3%;
     }
 
@@ -196,7 +196,7 @@
 .budget input[type=text] {
     width: 48px;
     padding-left: 15px;
-    /*background-image: url(../images/budget-ico.png); */
+    /*background-image: url(/images/budget-ico.png); */
     background-image: none;
     background-repeat: no-repeat; 
     background-position: 9px 10px;
@@ -273,7 +273,7 @@
 .calendar .ui-dialog-content {
 	margin-top: 3px;
     padding: 7px 0 0 0;
-    background-image: url('../images/calendar-nip.png');
+    background-image: url('/images/calendar-nip.png');
     background-repeat: no-repeat;
     background-position: 130px 0px;
 }
@@ -315,7 +315,7 @@
     height: 18px;
     float: right;
     width: 50px;
-    background-image: url('../images/timeframe-next.png');
+    background-image: url('/images/timeframe-next.png');
     background-repeat: no-repeat;
     background-position: 35px 8px;
 }
@@ -324,7 +324,7 @@
     padding-top: 0px;
     padding-left: 0px;
     padding-right: 6px;
-    background-image: url('../images/timeframe-bg.png');
+    background-image: url('/images/timeframe-bg.png');
 }
 
 .calendar .ui-datepicker {
@@ -406,14 +406,14 @@
 }
 
 .calendar .ui-icon-circle-triangle-e {
-     background-image: url('../images/next-2.png') !important;
+     background-image: url('/images/next-2.png') !important;
      background-position: 27px 0px;  
      background-size: 6px 13px;
      text-indent: 0px;
 }
 
 .calendar .ui-icon-circle-triangle-w {
-     background-image: url('../images/prev-2.png') !important;
+     background-image: url('/images/prev-2.png') !important;
      background-position: 0px 0px;  
      background-size: 6px 13px;
      text-indent: 12px;
@@ -623,7 +623,7 @@
 .terminal {}
 
     .terminal .terminal-body {
-        background-image: url('../images/timeframe-bg.png');
+        background-image: url('/images/timeframe-bg.png');
         padding-top: 10px;
         padding-left: 10px;
         padding-right: 10px;
@@ -808,7 +808,7 @@
     .guests .ui-dialog-content {
         margin-top: 3px;
         padding: 7px 0 0 0;
-        background-image: url('../images/guests-nip.png');
+        background-image: url('/images/guests-nip.png');
         background-repeat: no-repeat;
         background-position: 93px 0px;
     }

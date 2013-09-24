@@ -56,20 +56,25 @@ function(
 		fetch: function(options) {
 			var arrival = app.search.pref.get('arrival');
 			options = _.extend(options || {}, {
-				data: {
+				data: JSON.stringify({
 					query: app.search.pref.get('query'),
 					country: app.search.pref.get('country'),
 					terminal: arrival.terminal,
 					from: app.search.pref.get('from').format('YYYY-MM-DD') + moment.utc(parseInt(arrival.time)).format('THH:mm:00'),
 					to: app.search.pref.get('to').format('YYYY-MM-DDT23:59:59'),
-					guests: 
-						parseInt(app.search.pref.get('guests').adults)
-						+ parseInt(app.search.pref.get('guests').children)
-						+ parseInt(app.search.pref.get('guests').infants)
-						+ parseInt(app.search.pref.get('guests').seniors)
-				}
+					guests: {
+						adults: parseInt(app.search.pref.get('guests').adults),
+                        teenagers: parseInt(app.search.pref.get('guests').teenagers),
+						children: parseInt(app.search.pref.get('guests').children),
+                        infants: parseInt(app.search.pref.get('guests').infants),
+                        seniors: parseInt(app.search.pref.get('guests').seniors)
+                    }
+				}),
+                processData: false,
+                contentType: 'application/json',
+                type: 'POST'
 			});
-			this._super(options);
+            this._super(options);
 			return this;
 		},
 

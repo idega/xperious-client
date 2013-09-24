@@ -176,7 +176,7 @@ module.exports = function(grunt) {
     	rsync: {
             "test.xperious.com": {
     	        src: "dist/release/",
-    	        dest: "/var/www/html/xperious",
+    	        dest: grunt.option("dest") || "/var/www/html/test.xperious.com",
     	        host: "idegaweb@test.xperious.com",
     	        recursive: true,
     	        syncDest: true

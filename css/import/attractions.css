@@ -1,5 +1,5 @@
 
-.attractions-page .inner-home-section {background: url(../images/attractions-bg.jpg) no-repeat fixed center top;  position: relative;
+.attractions-page .inner-home-section {background: url(/images/attractions-bg.jpg) no-repeat fixed center top;  position: relative;
   -webkit-background-size: auto 250px;
   -moz-background-size: auto 250px;
   -o-background-size: auto 250px;
@@ -7,7 +7,7 @@
 }
 
 .attractions-page .inner-home-section h1 {padding-top: 117px; padding-bottom: 69px;}
-.attractions-page .inner-home-section h1 span {display: inline-block; background: url(../images/bottom-rep.png); color: #559fd3; font-weight: 500; padding-bottom: 6px; padding-left: 12px; padding-right: 12px;}
+.attractions-page .inner-home-section h1 span {display: inline-block; background: url(/images/bottom-rep.png); color: #559fd3; font-weight: 500; padding-bottom: 6px; padding-left: 12px; padding-right: 12px;}
 
 
 /*Attractions section title -------------------------------------------------------------------------- */
@@ -32,7 +32,7 @@
 .attractions-section .details {margin: 6px 10px; margin-top: 3px; margin-right: 0; margin-bottom: 0; padding-bottom: 5px; border-bottom: 1px solid #a6a49f;}
 .attractions-section .element {display: block; color: #333; position: relative; margin-bottom: 11px;}
 .attractions-section .element:hover {background: #797979;}
-.attractions-section .element .cover {left: 0px; top: 0px; width: 226px; height: 155px; position: absolute; background: url(../images/zoom-attraction.png) no-repeat center center; visibility: hidden;}
+.attractions-section .element .cover {left: 0px; top: 0px; width: 226px; height: 155px; position: absolute; background: url(/images/zoom-attraction.png) no-repeat center center; visibility: hidden;}
 .attractions-section .element:hover .cover {visibility: visible;} 
 .attractions-section .element h4 {font-weight: 500; color: #559fd3; margin: 0; font-size: 16px; line-height: 18px; margin-bottom: 2px;}
 .attractions-section .element p {font-size: 12px; color: #333; line-height: 17px; margin: 0;}

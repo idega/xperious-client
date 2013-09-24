@@ -13,7 +13,10 @@
        - Guests: 
        <strong class="comma-separated">
           <% if(pref.guests.adults > 0) { %>
-            <%= pref.guests.adults + ' adults' %><%= pref.guests.children + pref.guests.infants + pref.guests.seniors > 0 ? ',' : '' %>
+            <%= pref.guests.adults + ' adults' %><%= pref.guests.teenagers + pref.guests.children + pref.guests.infants + pref.guests.seniors > 0 ? ',' : '' %>
+          <% } %>
+          <% if(pref.guests.teenagers > 0) { %>
+            <%= pref.guests.teenagers + ' teenagers' %><%= pref.guests.children + pref.guests.infants + pref.guests.seniors > 0 ? ',' : '' %>
           <% } %>
           <% if(pref.guests.children > 0) { %>
             <%= pref.guests.children + ' children' %><%= pref.guests.infants + pref.guests.seniors > 0 ? ',' : '' %>

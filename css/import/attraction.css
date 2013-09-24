@@ -1,5 +1,5 @@
 
-.attractions-place-page .inner-home-section {background: url(../images/attractions-bg-2.jpg) no-repeat fixed center top; position: relative;
+.attractions-place-page .inner-home-section {background: url(/images/attractions-bg-2.jpg) no-repeat fixed center top; position: relative;
   -webkit-background-size: auto 250px;
   -moz-background-size: auto 250px;
   -o-background-size: auto 250px;
@@ -7,13 +7,13 @@
 }
 
 .attractions-place-page .inner-home-section h1 {padding-top: 117px; padding-bottom: 69px;}
-.attractions-place-page .inner-home-section h1 span {display: inline-block; background: url(../images/bottom-rep.png); color: #559fd3; font-weight: 500; padding-bottom: 6px; padding-left: 12px; padding-right: 12px;}
+.attractions-place-page .inner-home-section h1 span {display: inline-block; background: url(/images/bottom-rep.png); color: #559fd3; font-weight: 500; padding-bottom: 6px; padding-left: 12px; padding-right: 12px;}
 
 
 
 /*Attractions section title -------------------------------------------------------------------------- */
 .attractions-place-page .gallery-section .site-block {padding-top: 50px; padding-bottom: 26px;}
-.attractions-place-page .gallery-section {background: url(../images/gallery-bg-2.jpg) no-repeat fixed center center; 
+.attractions-place-page .gallery-section {background: url(/images/gallery-bg-2.jpg) no-repeat fixed center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -45,7 +45,7 @@ refrence_writer.pngre
 .attractions-place-info-section .description img {margin-bottom: 3px;}
 .attractions-place-info-section h3 {text-transform: uppercase; margin: 0; color: #605f5c; font-size: 20px; font-weight: 300; margin-bottom: 2px;}
 .attractions-place-info-section .list {margin-bottom: 38px;}
-.attractions-place-info-section .list li {width: 186px; padding-right: 10px; margin-bottom: 0px; float: left; padding-left: 6px; background: url(../images/list-li.png) no-repeat left 10px; font-size: 14px; line-height: 19px;}
+.attractions-place-info-section .list li {width: 186px; padding-right: 10px; margin-bottom: 0px; float: left; padding-left: 6px; background: url(/images/list-li.png) no-repeat left 10px; font-size: 14px; line-height: 19px;}
 .attractions-place-info-section .list a:hover {color: #8D8D8C;}
 
 
