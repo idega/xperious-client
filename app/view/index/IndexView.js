@@ -18,7 +18,7 @@ define([
 
 
 		events: {
-			'click #destination' : 'destination',
+			//'click #destination' : 'destination',
 			'click #plan' : 'plan',
 			'keypress #budget' : 'numeric',
 			'click #js-show-mobile-menu' : 'clickShowMobileMenu',
@@ -230,10 +230,33 @@ define([
 				
 			});
 
-			$('.destination-section__close').click(function(){
-				$('.destination-section__title').animate({height:0}, 300);
-				$('.destination-section__map').animate({height:0}, 300, function(){
-					$('.header-destination-section').addClass('closed');
+			var destSection = $('.header-destination-section');
+			var destClose = $('.destination-section__close');
+			var destSectionTitle = $('.destination-section__title');
+			var destSectionMap = $('.destination-section__map');
+			var destSectionTitleHeight = 83;
+			var destSectionMapHeight = 290;
+
+			$('#destination').click(function(){
+				if(destSection.hasClass('closed')){
+					destSectionTitle.animate({height: destSectionTitleHeight}, 300);
+					destSectionMap.animate({height: destSectionMapHeight}, 300, function(){
+						destClose.fadeIn(100);
+						destSection.removeClass('closed');
+						$('#destination').toggleClass('active');
+					});
+				}else{
+					destClose.click();
+				}
+			});
+
+
+			destClose.click(function(){
+				$(this).fadeOut(100);
+				destSectionTitle.animate({height:0}, 300);
+				destSectionMap.animate({height:0}, 300, function(){
+					destSection.addClass('closed');
+					$('#destination').removeClass('active');
 				});
 			});
 

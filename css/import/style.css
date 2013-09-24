@@ -250,17 +250,30 @@ background: url(/images/bg-4.jpg) no-repeat center center fixed;
 .site-header__top {background: url(/images/header-top-bg-rep.png);}
 .site-header__top .site-block-in {padding-top: 2px;}
 .site-header .site-block {position: relative;}
-.site-header .logo {display: inline-block; float: left;}
+.site-header .logo {display: inline-block; float: left; padding-top: 1px; padding-bottom: 1px;}
 .site-header .logo-text {float: left; padding-top: 20px; font-size: 15px; color: #e5e5e5; }
 
 .site-header__sign-in {float: right; margin-top: 20px; font-size: 14px; cursor: pointer;}
+.site-header__map-ico {background: url(/images/destination-map.png) no-repeat left top; width: 116px; height: 69px; top: 0px; right: 164px; display: inline-block; position: absolute;}
+
 
 /*Top menu*/
-.site-header__bottom {background: url(/images/top-menu-grad.png); border-top: 1px solid #506639;}
+.site-header__bottom {background: url(/images/top-menu-grad.png); border-top: 1px solid #506639; position: relative;}
+.site-header__bottom .site-block-in {position: static;}
 
 .top-menu {float: left;}
 .top-menu li {float: left; margin-right: 24px;}
 .top-menu a {display: inline-block; font-size: 14px; color: #fff; line-height: 40px;}
+.top-menu a:hover {color: #86c543;}
+.top-menu > li.has-submenu > a:hover, .top-menu > li.has-submenu:hover > a {background: url(/images/top-menu-active.png) no-repeat center bottom;}
+
+.top-menu__submenu {position: absolute; left: 0px; top: 41px; text-align: center; width: 100%; background: #333; border-bottom: 1px solid #73895c; display: none;}
+.top-menu__submenu .menu {padding-left: 35px;}
+.top-menu__submenu li {margin-right: 33px; }
+li:hover .top-menu__submenu {display: block;}
+
+.submenu-cols-5 .menu {width: 175px; float: left; margin-right: 15px; padding-left: 0px;}
+.submenu-cols-5 .menu li {display: block; padding: 0; margin: 0; float: none; text-align: left}
 
 .site-header__selected-location {line-height: 40px; font-size: 14px; padding-left: 15px;}
 
@@ -284,12 +297,16 @@ background: url(/images/bg-4.jpg) no-repeat center center fixed;
 .sign-in-section .button {background: #86c543; width: 110px; float: left; height: 34px; font-size: 14px; text-transform: none; text-align: center; padding: 0 10px; line-height: 34px;}
 
 /*Header desination selection*/
-.header-destination-section.closed {overflow: hidden; height: 0px;}
+.header-destination-section.closed {overflow: hidden;}
 .header-destination-section {position: relative;}
 .destination-section__title {background: #86c543; font-size: 36px; color: #333; overflow: hidden;}
 .destination-section__title-in {padding-top: 20px; padding-bottom: 20px;}
 .destination-section__close {display: inline-block; position: absolute; cursor: pointer; width: 32px; height: 32px; background: url(/images/destination-close.png) no-repeat center center; top: 65px; right: 65px; z-index: 10;}
 .destination-section__map {overflow: hidden;}
+
+.closed .destination-section__close {display: none;}
+.closed .destination-section__title,
+.closed .destination-section__map {height: 0;}
 
 
 /*Langiage menu*/
@@ -301,7 +318,8 @@ background: url(/images/bg-4.jpg) no-repeat center center fixed;
 .lang-menu .active,
 .lang-menu a:hover {background-position: left bottom;}
 
-.chose-destination {float: right; color: #fff; line-height: 40px; font-size: 14px; padding: 0 18px; background: #3b3a3a;}
+.chose-destination {float: right; color: #fff; line-height: 40px; font-size: 14px; width: 116px; text-align: center; background: #3b3a3a;}
+.chose-destination.active {background: #86c543;}
 .no-js .chose-destination:hover,
 .chose-destination.hovered {color: #fff;}
 
@@ -324,11 +342,13 @@ background: url(/images/bg-4.jpg) no-repeat center center fixed;
 
 .ico-calendar {background-image: url(/images/calendar-ico.png); background-repeat: no-repeat; background-position: 9px 10px;}
 .ico-guest {background-image: url(/images/guest-ico.png); background-repeat: no-repeat; background-position: 9px 10px;}
-.ico-event {background-image: url(/images/event-ico.png); background-repeat: no-repeat; background-position: 9px 10px;}
+.ico-event {background-image: url(/iages/event-ico.png); background-repeat: no-repeat; background-position: 9px 10px;}
 
 .planner input[type="text"] {padding: 10px 16px; width: 414px; font-size: 14px; border-radius: 4px 0 0 4px;}
 .planner .button {line-height: 40px; height: 40px; background: #86c543 url(/images/search-ico-white.png) no-repeat center center; width: 45px; text-align: left; padding-bottom: 1px; font-size: 14px; border-radius: 0 4px 4px 0; overflow: hidden; text-indent: -999px;}
 .no-js .planner .button:hover, .planner .button.hovered{background-color: #53762b;}
+
+.planer-slide-down {display: inline-block; position: absolute; width: 32px; height: 31px; cursor: pointer; background: url(/images/icon-down.png) no-repeat left top; left: 50%; margin-left: -16px; bottom: 50px;}
 
 /*When form expands css of some elements changes, .form-expanded generadet in IndexView.js*/
 .form-expanded input[type="text"] {border-radius: 4px; margin-right: 8px;}
