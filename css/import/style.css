@@ -191,7 +191,7 @@ body {margin: 0; font-size: 12px;}
   -o-background-size: cover;
   background-size: cover;
 }
-.join-club-section {background: #e3e2e1; padding: 52px 0; color: #6d6d6d; font-size: 14px;}
+.join-club-section {background: #fff; padding: 52px 0; color: #6d6d6d; font-size: 14px;}
 .contact-info-section {background: #fff; padding: 41px 0; font-size: 26px; color: #a8a5a0; padding-bottom: 55px;}
 .contact-form-section {padding-top: 38px; padding-bottom: 25px; color: #a8a5a0;
 background: url(/images/contacts-bg.jpg) no-repeat center center; 
@@ -267,15 +267,22 @@ background: url(/images/bg-4.jpg) no-repeat center center fixed;
 .top-menu a:hover {color: #86c543;}
 .top-menu > li.has-submenu > a:hover, .top-menu > li.has-submenu:hover > a {background: url(/images/top-menu-active.png) no-repeat center bottom;}
 
-.top-menu__submenu {position: absolute; left: 0px; top: 41px; text-align: center; width: 100%; background: #333; border-bottom: 1px solid #73895c; display: none;}
+.top-menu__submenu {position: absolute; left: 0px; top: 41px; text-align: center; width: 100%; background: #333; border-bottom: 1px solid #73895c; display: none; padding-top: 4px; padding-bottom: 4px; z-index: 20;}
+.top-menu__submenu a {line-height: 32px;}
 .top-menu__submenu .menu {padding-left: 35px;}
 .top-menu__submenu li {margin-right: 33px; }
 li:hover .top-menu__submenu {display: block;}
 
 .submenu-cols-5 .menu {width: 175px; float: left; margin-right: 15px; padding-left: 0px;}
-.submenu-cols-5 .menu li {display: block; padding: 0; margin: 0; float: none; text-align: left}
+.submenu-cols-6 .menu {width: 120px; float: left; margin-right: 15px; padding-left: 0px;}
+
+.submenu-cols-5 .menu li,
+.submenu-cols-6 .menu li {display: block; padding: 0; margin: 0; float: none; text-align: left}
 
 .site-header__selected-location {line-height: 40px; font-size: 14px; padding-left: 15px;}
+
+/*Sticky top menu*/
+.sticky-top-menu-section {background: #5c5c5c; border-top: 1px solid #c4daac;}
 
 
 /*Signin section*/
@@ -455,6 +462,46 @@ li:hover .convert-form input[type='text'] {zoom: 1;}
 .article-section .logo {position: absolute; right: -425px; bottom: 0px;}
 
 
+/*Travel plan section ----------------------------------------*/
+.travel-plan-section {background: #e5e5e5; padding-bottom: 30px;}
+.travel-plan-section .section-title {font-size: 51px; text-align: center; padding-top: 10px;}
+.travel-plan-section .section-subtitle {text-align: center; font-size: 20px; padding-bottom: 35px;}
+.travel-plan-section .plan-days,
+.travel-plan-section .plan-price,
+.travel-plan-section .plan-name {position: absolute; padding: 6px 12px; background: url(/images/top-menu-grad.png); z-index: 150; color: #fff;}
+
+
+.travel-plan-section .plan-days {left: 20px; top: 20px;}
+.travel-plan-section .plan-price {left: 0px; bottom: 0px; right: 0px;}
+.travel-plan-section .plan-name {left: 20px; top: 52px;}
+
+
+.travel-plans-holder {width: 990px; height: 675px; position: relative; margin-bottom: 30px;}
+.travel-plan-block-1 {position: absolute; left: 0px; top: 0px; width: 240px; height: 465px; background: #fff; overflow: hidden;}
+.travel-plan-block-2 {position: absolute; left: 250px; top: 0px; width: 490px; height: 465px; background: #fff; border-bottom: 2px solid #e58919; overflow: hidden;}
+.travel-plan-block-3 {width: 490px; height: 200px; position: absolute; left: 0px; bottom: 0px; background: #000; overflow: hidden;}
+.travel-plan-block-4 {width: 240px; height: 200px; position: absolute; left: 500px; bottom: 0px; background: blue; overflow: hidden;}
+.travel-plan-block-5 {width: 240px; height: 200px; position: absolute; right: 0px; top: 0px; overflow: hidden;}
+.travel-plan-block-6 {width: 240px; height: 465px; position: absolute; right: 0px; bottom: 0px; background: grey; overflow: hidden;}
+.travel-plans-bottom a {font-size: 16px; color: #a8a5a0;}
+
+
+/*Inspired by Iceland section -------------------------------------*/
+.inspired-iceland-section {background: url(/images/inspired-iceland-bg.jpg) no-repeat center center fixed; padding-top: 70px; padding-bottom: 90px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
+
+.inspired-iceland-section h2 {color: #fff; font-size: 51px; padding-bottom: 50px;}
+.inspired-iceland-section .lefter {padding-left: 30px; width: 430px; float: left; color: #fff; font-size: 18px; line-height: 25px;}
+.inspired-iceland-section .righter {width: 500px; float: right;}
+
+
+
+/*Latest tweet section -------------------------------------*/
+.latest-tweet-section {background: #e58919;}
+
 
 /*Events section --------------------------------------------*/
 .events-section .title {padding-left: 35px; background: url(/images/y-2013.png) no-repeat left center; margin-top: 52px; margin-bottom: 36px;}
@@ -534,7 +581,7 @@ li:hover .convert-form input[type='text'] {zoom: 1;}
 .join-club-section .righter {float: right; width: 40%; padding-top: 14px;}
 
 .join-club-section h2 {font-weight: normal; font-size: 30px; line-height: 26px; margin: 0;} 
-.join-club-section h2 strong {font-weight: bold; color: #fff; font-size: 34px;} 
+.join-club-section h2 strong {font-weight: bold; color: #559fd3; font-size: 34px;} 
 .join-club-section .subtitle {margin: 0; font-size: 17px;}
 
 .join-club-section .title h2 {float: left; padding-right: 5px; font-size: 35px; line-height: 28px;}

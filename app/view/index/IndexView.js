@@ -341,8 +341,9 @@ define([
                 interval: 0
             });
 
-
-	        this.$("#team").waypoint(function(dir) {
+            
+            //this.$("#sticky-menu").waypoint('sticky');
+	        this.$("#footer").waypoint(function(dir) {
 	            if (dir == 'down') {
 	                $bottom.css({
 	                    visibility: 'visible'
