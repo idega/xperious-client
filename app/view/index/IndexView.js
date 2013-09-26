@@ -341,8 +341,18 @@ define([
                 interval: 0
             });
 
+            this.$('.planner-portrait-slider').cycle();
+            this.$('.planner-landscape-slider').cycle();
+            this.$('.planner-small-slider-1').cycle();
+            this.$('.planner-small-slider-2').cycle();
+
             
-            //this.$("#sticky-menu").waypoint('sticky');
+   			this.$("#sticky-menu").waypoint('sticky', {
+			  context: window,
+			  offset: '-100%'
+			});
+
+
 	        this.$("#footer").waypoint(function(dir) {
 	            if (dir == 'down') {
 	                $bottom.css({
@@ -354,6 +364,10 @@ define([
 	                });
 	            }
 	        });
+
+
+
+
 	
 		},
 

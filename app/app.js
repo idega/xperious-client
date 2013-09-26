@@ -7,6 +7,7 @@ define([
   'moment',
   'accounting',
   'jquery.cookie',
+  'jquery.cycle2',
   'jquery.fancybox',
   'jquery.hoverIntent',
   'jquery.imagesloaded',
@@ -18,6 +19,7 @@ define([
   'jquery.ui',
   'jquery.ui.selectmenu',
   'jquery.waypoints',
+  'jquery.waypointsSticky',
   'jquery.rating',
   'modernizr',
   'common'

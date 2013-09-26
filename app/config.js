@@ -58,6 +58,12 @@ require.config({
     	          'jquery'
     	  ]
        },
+
+       'jquery.cycle2': {
+         deps: [
+                'jquery'
+        ]
+       },
        
        'jquery.imagesloaded': {
     	   deps: [
@@ -113,6 +119,12 @@ require.config({
     	  ]
        },
 
+       'jquery.waypointsSticky': {
+         deps: [
+               'jquery', 'jquery.waypoints'
+        ]
+       },
+
        'jquery.cookie': {
     	   deps: [
     	          'jquery'
@@ -138,6 +150,7 @@ require.config({
        'jquery' : '../lib/jquery/jquery',
        'jquery.fancybox' : '../lib/jquery/jquery.fancybox',
        'jquery.hoverIntent' : '../lib/jquery/jquery.hoverIntent',
+       'jquery.cycle2' : '../lib/jquery/jquery.cycle2',
        'jquery.imagesloaded' : '../lib/jquery/jquery.imagesloaded',
        'jquery.jcarousel' : '../lib/jquery/jquery.jcarousel',
        'jquery.localScroll' : '../lib/jquery/jquery.localScroll',
@@ -147,6 +160,7 @@ require.config({
        'jquery.ui' : '../lib/jquery/jquery.ui.custom',
        'jquery.ui.selectmenu' : '../lib/jquery/jquery.ui.selectmenu',
        'jquery.waypoints' : '../lib/jquery/jquery.waypoints',
+       'jquery.waypointsSticky' : '../lib/jquery/jquery.waypointsSticky',
        'jquery.cookie' : '../lib/jquery/jquery.cookie',
        'jquery.rating' : '../lib/jquery/jquery.rating',
        'modernizr' : '../lib/modernizr/modernizr',

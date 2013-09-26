@@ -283,6 +283,11 @@ li:hover .top-menu__submenu {display: block;}
 
 /*Sticky top menu*/
 .sticky-top-menu-section {background: #5c5c5c; border-top: 1px solid #c4daac;}
+.stuck {position: fixed; top: 0; width: 100%;left: 0px; right: 0px; z-index: 200;}
+
+.sticky-top-menu-section .top-menu > li > a {line-height: 48px;}
+.sticky-top-menu-section .top-menu__submenu {top: 49px;}
+.sticky-top-menu-section .chose-destination {line-height: 48px;}
 
 
 /*Signin section*/
@@ -486,6 +491,35 @@ li:hover .convert-form input[type='text'] {zoom: 1;}
 .travel-plans-bottom a {font-size: 16px; color: #a8a5a0;}
 
 
+.planner-portrait-slider-prev,
+.planner-portrait-slider-next {position: absolute; width: 25px; height: 48px; top: 50%; margin-top: -24px; z-index: 150; background: #fff; cursor: pointer;}
+.planner-portrait-slider-prev {left: 0;}
+.planner-portrait-slider-next {right: 0;}
+
+.landscape-slider-slide {width: 490px; height: 310px; position: relative;}
+.landscape-slider-slide .photo-title {position: absolute; left: 0px; right: 0px; bottom: 0px; background: url(/images/top-menu-grad.png); text-align: right; color: #fff; padding: 6px 10px;}
+.landscape-slider-slide a {text-decoration: underline; color: #fff;}
+.planner-landscape-slider-prev,
+.planner-landscape-slider-next {position: absolute; width: 25px; height: 48px; top: 50%; margin-top: -24px; z-index: 150; background: #fff; cursor: pointer;}
+.planner-landscape-slider-prev {left: 0;}
+.planner-landscape-slider-next {right: 0;}
+
+.planner-small-slider-prev,
+.planner-small-slider-next {position: absolute; width: 25px; height: 48px; top: 50%; margin-top: -24px; z-index: 150; background: #fff; cursor: pointer;}
+.planner-small-slider-prev {left: 0;}
+.planner-small-slider-next {right: 0;}
+
+.travel-plan-block-2 {}
+.travel-plan-block-2 .lefter {width: 315px; float: left; padding-left: 16px;}
+.travel-plan-block-2 .righter {width: 120px; float: right; padding-right: 16px;}
+
+
+/*Instagram section ------------------------------------*/
+.instagram-section {background: #e5e5e5; padding-top: 50px; padding-bottom: 50px; border-top: 1px solid #2f598a;}
+.instagram-section .title {padding-left: 29px; padding-bottom: 25px; color: #a6a49f; font-size: 24px; text-transform: uppercase;}
+.instagram-section .title img {margin-left: 90px; margin-top: 5px;}
+.instagram-section .image-list a {display: inline-block; float: left; margin-right: 1px;}
+
 /*Inspired by Iceland section -------------------------------------*/
 .inspired-iceland-section {background: url(/images/inspired-iceland-bg.jpg) no-repeat center center fixed; padding-top: 70px; padding-bottom: 90px;
   -webkit-background-size: cover;
@@ -501,7 +535,9 @@ li:hover .convert-form input[type='text'] {zoom: 1;}
 
 /*Latest tweet section -------------------------------------*/
 .latest-tweet-section {background: #e58919;}
-
+.latest-tweet-section .site-block {background: url(/images/tw-big.png) no-repeat left top;}
+.latest-tweet-section h2 {float: left; padding-left: 185px; width: 120px; color: #8a5508;}
+.detailed-tweet {float: left; width: ; color: #fff; font-size: 16px; width: 600px; padding-top: 25px;}
 
 /*Events section --------------------------------------------*/
 .events-section .title {padding-left: 35px; background: url(/images/y-2013.png) no-repeat left center; margin-top: 52px; margin-bottom: 36px;}
@@ -597,15 +633,18 @@ li:hover .convert-form input[type='text'] {zoom: 1;}
 .subscribe-form .explain {padding-top: 15px; padding-left: 6px; width: 430px;}
 
 .social-links {padding-top: 46px;}
-.social-links a {display: inline-block; width: 27px; height: 27px; margin-right: 5px;}
+.social-links a {display: inline-block; width: 24px; height: 24px; margin-right: 5px; margin-bottom: 5px; background: url(/images/social.png) no-repeat left top;}
 .no-js .social-links a:hover, .social-links a.hovered,
 .content-page .social-links a:hover,
 .blog-page .social-links a:hover {opacity: 0.8; filter: alpha(opacity = 80);}
-.social-links .ico-fb {background: url(/images/fb-ico.png) no-repeat left top;}
-.social-links .ico-g {background: url(/images/g-ico.png) no-repeat left top;}
-.social-links .ico-tw {background: url(/images/tw-ico.png) no-repeat left top;}
-.social-links .ico-in {background: url(/images/in-ico.png) no-repeat left top;}
-
+.social-links .ico-fb {background-position: left top;}
+.social-links .ico-gp {background-position: -24px top;}
+.social-links .ico-tw {background-position: -48px top;}
+.social-links .ico-in {background-position: -72px top;}
+.social-links .ico-pi {background-position: left -24px;}
+.social-links .ico-fl {background-position: -24px -24px;}
+.social-links .ico-vi {background-position: -48px -24px;}
+.social-links .ico-yt {background-position: -72px -24px;}
 
 
 /*Contact info section --------------------------------------------*/
