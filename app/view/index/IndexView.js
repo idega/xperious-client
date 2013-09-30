@@ -208,7 +208,6 @@ define([
 				 isIphone = true;
 			}
 
-
 	        /* Placeholder for old browsers */
 	        $('input[placeholder], textarea[placeholder]').placeholder();
 			
@@ -343,8 +342,7 @@ define([
 
             this.$('.planner-portrait-slider').cycle();
             this.$('.planner-landscape-slider').cycle();
-            this.$('.planner-small-slider-1').cycle();
-            this.$('.planner-small-slider-2').cycle();
+            this.$('.planner-small-slider').cycle();
 
             
    			this.$("#sticky-menu").waypoint('sticky', {

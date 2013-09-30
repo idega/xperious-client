@@ -30,11 +30,6 @@ define([
 		
 		afterRender: function() {
 
-	        this.$('.site-bottom-menu').localScroll({
-	            duration: 300,
-	            easing: "swing"
-	        });
-
 
 	        var menuAnimationTime = 100;
 	        this.$(".site-bottom-menu li:has('.convert-form')").hoverIntent({
