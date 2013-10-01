@@ -62,7 +62,7 @@
 		  	 	  <a href="#">Discover Iceland</a>
 		  	 	  <div class="top-menu__submenu">
 		  	 	  	<div class="site-block-in">
-			  	 	  	<ul class="menu">
+			  	 	  	<ul class="menu clearfix">
 			  	 	  		<li>
 			  	 	  			<a href="#">Facts about Iceland</a>
 			  	 	  		</li>
@@ -89,7 +89,7 @@
 		  	 	  <a href="#">Attraction</a>
 		  	 	  <div class="top-menu__submenu">
 		  	 	  	<div class="site-block-in">
-			  	 	  	<ul class="menu">
+			  	 	  	<ul class="menu clearfix">
 			  	 	  		<li>
 			  	 	  			<a href="#">For the Children</a>
 			  	 	  		</li>
@@ -382,9 +382,15 @@
 	    <h1>Enrich your <br>travel experience <br/>in <a href="#">Iceland</a></h1>
 	    <h2>Tell us what your interest are</h2>
 	    <form id="js-travel-planner-form" class="planner-form">
+	      <div class="input-baloon">
+    		<span class="nip"></span>
+    		<p>
+    			Tell us what your interests are , how many are travelling and how much you’d like to spend if you have decide that yet.
+    		</p>
+    	</div>
 	      <div class="form-row">
 	        <div class="hidden">
-	          <input type="text" id="query" placeholder="I'd like to play golf, see whales and go horseback riding" data-tooltiptitle="What is your interest" data-tooltipcontent="Here you type what you want to do in your dream vacation. &lt;br&gt;&lt;br&gt;e.g. whale watching, hicking, glacier tour, river rafting, horses" class="autocomplete-search-input tooltip trigger-input-animation" tabIndex="1">
+	          <input type="text" id="query" placeholder="I'd like to play golf, see whales and go horseback riding" data-tooltiptitle="What is your interest" class="autocomplete-search-input tooltip trigger-input-animation" tabIndex="1">
 	          <div id="plan-inputs-container">
 	            <div class="inner clearfix">
 	                <span class="timeframe-view"></span>
@@ -419,7 +425,7 @@
 		  	 	  <a href="#">Discover Iceland</a>
 		  	 	  <div class="top-menu__submenu">
 		  	 	  	<div class="site-block-in">
-			  	 	  	<ul class="menu">
+			  	 	  	<ul class="menu clearfix">
 			  	 	  		<li>
 			  	 	  			<a href="#">Facts about Iceland</a>
 			  	 	  		</li>
@@ -446,7 +452,7 @@
 		  	 	  <a href="#">Attraction</a>
 		  	 	  <div class="top-menu__submenu">
 		  	 	  	<div class="site-block-in">
-			  	 	  	<ul class="menu">
+			  	 	  	<ul class="menu clearfix">
 			  	 	  		<li>
 			  	 	  			<a href="#">For the Children</a>
 			  	 	  		</li>
@@ -719,29 +725,17 @@
 		  	<a href="javascript:void(0)" class="chose-destination fr">Destinations</a>
 		</div>
 	</div>
-
-
-
-	<!-- <div id="article" class="section article-section">
-	     <div class="grid" style="background-image: none;"><br/></div>
-	     <div class="background"><img src="/images/bg-2.jpg"></div>
-	     <div class="site-block">
-	       <div class="article-content">
-	         <div class="logo"> <img src="/images/logo-ambassador.png"></div>
-	         <p class="brand">ambassador</p>
-	         <h2>whale watching in iceland</h2>
-	         <p class="subcontent">...bon voyage</p>
-	         <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet urna adipiscing tellus ultricies porttitor. <a class="button" href="#">Read more</a></p>
-	       </div>
-	     </div>
-	</div> -->
 	<div class="section travel-plan-section" id="travel-plan">
 		<div class="site-block clearfix">
-			<h2 class="section-title">Great travel plans in Iceland</h2>
-          	<p class="section-subtitle">Here are some trips that our customers have planned to Iceland. Look at them and get inspired.</p>
+			<h2 class="section-title">Plan your trip and get taste of the best Iceland has to offer</h2>
+          	<p class="section-subtitle">Among some of the amazing deals and experiences our customers have planned for their trip.</p>
           	<div class="travel-plans-holder">
           		<div class="travel-plan-block-1">
-          			<img src="images/tplan-1.png" alt="" />
+          			<a href="#" >
+          				<div class="plan-top-info">4 days/3 nights</div>
+          				<img src="images/tplan-1.png" alt="" />
+          				<div class="plan-cover"></div>
+	          		</a>
           			<p>
           				Enjoy the bright nights, whale watching, hot springs and bathing in the amazing Blue Lagoon. Truly an unforgettable weekend in Europe’s northern most capital!
           			</p>
@@ -750,13 +744,19 @@
           			</p>
           		</div>
           		<div class="travel-plan-block-2">
-          			<img src="images/tplan-2.jpg" alt="" />
-          			<div class="plan-days"><strong>2</strong> days</div>
-          			<div class="plan-name">EDGE OF THE ARCTIC</div>
-          			<div class="plan-price">Adult: <strong>81.600</strong> ISK/person</div>
+          			<a href="#" >
+          				<img src="images/tplan-2.jpg" alt="" />
+          				<div class="plan-top-info">KEF Airport to the Blue Lagoon</div>
+          				<div class="plan-bottom-info"><span>A day tour</span> Adult: 8.900 ISK/person</div>
+          				<div class="plan-cover"></div>
+	          		</a>
           		</div>
           		<div class="travel-plan-block-3">
-          			<img src="images/tplan-3.jpg" alt="" />
+          			<a href="#" >
+          				<img src="images/tplan-3.jpg" alt="" />
+          				<div class="plan-top-info">11 days/10 nights</div>
+						<div class="plan-cover"></div>
+	          		</a>  				
           			<div class="clearfix">
           				<div class="lefter">
           					<p>Enjoy the bright nights, whale watching, hot springs and bathing in the amazing Blue Lagoon. Truly an unforgettable weekend in Europe’s northernmost capital!</p>
@@ -764,41 +764,79 @@
           				</div>
           				<div class="righter">
           					<p>
-          						<strong>Highlights:</strong>
-          					</p>
-          					<p>
+          						<strong>Highlights:</strong><br/>
           						· Akureyri<br/>
-								 · Whale Watching<br/>
-								 · Bird Watching<br/>
-								 · Dettifoss<br/>
-								 · Ásbyrgi
+								· Whale Watching<br/>
+								· Bird Watching<br/>
+								· Dettifoss<br/>
+								· Ásbyrgi
           					</p>
           				</div>
           			</div>
 
           		</div>
           		<div class="travel-plan-block-4">
-          			<img src="images/tplan-4.jpg" alt="" />
-          			<div class="plan-name">Luxury Weekend in Reykjavík</div>
-          			<div class="plan-price">Adult: <strong>865.600</strong> ISK/person</div>
+          			<a href="#" >
+          				<img src="images/tplan-4.jpg" alt="" />
+          				<div class="plan-top-info">The Golden Circle</div>
+          				<div class="plan-bottom-info"><span>2 day trip</span> Adult: 81.600 ISK/person</div>
+          				<div class="plan-cover"></div>
+	          		</a>
           		</div>
           		<div class="travel-plan-block-5">
-          			listas
+          			<h3>Need to know</h3>
+          			<ul class="menu">
+          				<li>
+          					<a href="#">Before you go</a>
+          				</li>
+          				<li>
+          					<a href="#">Health &amp; Safety</a>
+          				</li>
+          				<li>
+          					<a href="#">Money &amp; Costs</a>
+          				</li>
+          				<li>
+          					<a href="#">Shopping</a>
+          				</li>
+          				<li>
+          					<a href="#">Tax free shopping</a>
+          				</li>
+          				<li>
+          					<a href="#">Climate</a>
+          				</li>
+          				<li>
+          					<a href="#">Weather/Clothing</a>
+          				</li>
+          				<li>
+          					<a href="#">Health insurance</a>
+          				</li>
+          			</ul>
           		</div>
           		<div class="travel-plan-block-6">
-          			<img src="images/tplan-5.png" alt="" />
-          			<div class="plan-name">Luxury Weekend in Reykjavík</div>
-          			<div class="plan-price">Adult: <strong>865.600</strong> ISK/person</div>
+          			<a href="#" >
+	          			<img src="images/tplan-5.png" alt="" />
+	          			<div class="plan-top-info">
+	          				<span class="dotted">Grillmarkadurinn</span>
+	          			</div>
+	          			<div class="plan-cover"></div>
+	          		</a>
           		</div>
           		<div class="travel-plan-block-7">
-          			<img src="images/tplan-6.png" alt="" />
-          			<div class="plan-name">Luxury Weekend in Reykjavík</div>
-          			<div class="plan-price">Adult: <strong>865.600</strong> ISK/person</div>
+          			<a href="#" >
+	          			<img src="images/tplan-6.png" alt="" />
+	          			<div class="plan-top-info">
+	          				<span class="dotted">Reynisdrangar</span>
+	          			</div>
+	          			<div class="plan-cover"></div>
+	          		</a>
           		</div>
           		<div class="travel-plan-block-8">
-          			<img src="images/tplan-7.jpg" alt="" />
-          			<div class="plan-name">Luxury Weekend in Reykjavík</div>
-          			<div class="plan-price">Adult: <strong>865.600</strong> ISK/person</div>
+          			<a href="#" >
+          				<img src="images/tplan-7.jpg" alt="" />
+          				<div class="plan-top-info">Elding Whale Watching</div>
+          				<div class="plan-bottom-info"><span>2-3 hours</span> Adult: 8.000 ISK/person</div>
+          				<div class="plan-cover"></div>
+	          		</a>
           		</div>
           	</div>
           	<div class="tac travel-plans-bottom">
@@ -810,53 +848,109 @@
 		<div class="site-block clearfix">
 			<h2>Choose your favorite theme and start planning your trip</h2>
 			<h3>It’s easy, just click on the theme you like and you'll get multiple suggestions for your trip.</h3>
-			<ul class="no-style trip-themes-list">
+			<ul class="menu trip-themes-list clearfix">
 				<li>
 					<a href="#">
-						<img src="images/ft-1.png" alt=""/>
-						<span>Adventure travel</span>
+						<span class="theme-image-holder">
+							<img src="images/ft-1.png" alt=""/>
+						</span>
+						<div class="theme-hover-text">
+							<div class="theme-hover-text__in tac">
+								Adventure travel
+							</div>
+						</div>
+						<span class="theme-hover-main-text">Adventure travel</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<img src="images/ft-2.png" alt=""/>
-						<span>Best in travel</span>
+						<span class="theme-image-holder">
+							<img src="images/ft-2.png" alt=""/>
+						</span>
+						<div class="theme-hover-text">
+							<div class="theme-hover-text__in tac">
+								Best in travel
+							</div>
+						</div>
+						<span class="theme-hover-main-text">Best in travel</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<img src="images/ft-3.png" alt=""/>
-						<span>Culture &amp; art</span>
+						<span class="theme-image-holder">
+							<img src="images/ft-3.png" alt=""/>
+						</span>
+						<div class="theme-hover-text">
+							<div class="theme-hover-text__in tac">
+								Culture &amp; art
+							</div>
+						</div>
+						<span class="theme-hover-main-text">Culture &amp; art</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<img src="images/ft-4.png" alt=""/>
-						<span>Family travel</span>
+						<span class="theme-image-holder">
+							<img src="images/ft-4.png" alt=""/>
+						</span>
+						<div class="theme-hover-text">
+							<div class="theme-hover-text__in tac">
+								Family travel
+							</div>
+						</div>
+						<span class="theme-hover-main-text">Family travel</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<img src="images/ft-5.png" alt=""/>
-						<span>Festive travel</span>
+						<span class="theme-image-holder">
+							<img src="images/ft-5.png" alt=""/>
+						</span>
+						<div class="theme-hover-text">
+							<div class="theme-hover-text__in tac">
+								Festive travel
+							</div>
+						</div>
+						<span class="theme-hover-main-text">Festive travel</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<img src="images/ft-6.png" alt=""/>
-						<span>Food &amp; drink</span>
+						<span class="theme-image-holder">
+							<img src="images/ft-6.png" alt=""/>
+						</span>
+						<div class="theme-hover-text">
+							<div class="theme-hover-text__in tac">
+								Food &amp; drink
+							</div>
+						</div>
+						<span class="theme-hover-main-text">Food &amp; drink</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<img src="images/ft-7.png" alt=""/>
-						<span>Gudied tour travel</span>
+						<span class="theme-image-holder">
+							<img src="images/ft-7.png" alt=""/>
+						</span>
+						<div class="theme-hover-text">
+							<div class="theme-hover-text__in tac">
+								Gudied tour travel
+							</div>
+						</div>
+						<span class="theme-hover-main-text">Gudied tour travel</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<img src="images/ft-8.png" alt=""/>
-						<span>Self drive travel</span>
+						<span class="theme-image-holder">
+							<img src="images/ft-8.png" alt=""/>
+						</span>
+						<div class="theme-hover-text">
+							<div class="theme-hover-text__in tac">
+								Self drive travel
+							</div>
+						</div>
+						<span class="theme-hover-main-text">Self drive travel</span>
 					</a>
 				</li>
 			</ul>
@@ -868,30 +962,39 @@
   			<div class="clearfix image-list">
   				<a href="#" class="fl">
   					<img src="images/instagram-1.png" alt=""/>
+  					<div class="plan-cover"></div>
   				</a>
   				<a href="#" class="fl">
   					<img src="images/instagram-2.png" alt=""/>
+  					<div class="plan-cover"></div>
   				</a>
   				<a href="#" class="fl">
   					<img src="images/instagram-3.png" alt=""/>
+  					<div class="plan-cover"></div>
   				</a>
   				<a href="#" class="fl">
   					<img src="images/instagram-4.png" alt=""/>
+  					<div class="plan-cover"></div>
   				</a>
   				<a href="#" class="fl">
   					<img src="images/instagram-5.png" alt=""/>
+  					<div class="plan-cover"></div>
   				</a>
   				<a href="#" class="fl">
   					<img src="images/instagram-6.png" alt=""/>
+  					<div class="plan-cover"></div>
   				</a>
   				<a href="#" class="fl">
   					<img src="images/instagram-7.png" alt=""/>
+  					<div class="plan-cover"></div>
   				</a>
   				<a href="#" class="fl">
   					<img src="images/instagram-8.png" alt=""/>
+  					<div class="plan-cover"></div>
   				</a>
   				<a href="#" class="fl">
   					<img src="images/instagram-9.png" alt=""/>
+  					<div class="plan-cover"></div>
   				</a>
   			</div>
       	</div>
@@ -905,11 +1008,11 @@
 	         <form class="subscribe-form">
 	           <input type="text" placeholder="Yor email address">
 	           <select style="width: 120px;" class="selectmenu">
-	          <option>Country</option>
-	          <option>Lithuania</option>
-	          <option>Latvia</option>
-	          <option>Estonia</option>
-	        </select>
+		          <option>Country</option>
+		          <option>Lithuania</option>
+		          <option>Latvia</option>
+		          <option>Estonia</option>
+		        </select>
 	        <input type="submit" value="join" class="button">
 	        <div class="explain">We promise not to weary you with too frequent emails. We also promise never to let any other provider have your email.</div>
 	      </form>
@@ -968,6 +1071,7 @@
 	 </div>
 	 <div class="events-slider">
 	  <div class="site-block"></div>
+
 	 </div>
 	</div>
 
@@ -977,18 +1081,10 @@
 			<div class="clearfix">
 				<div class="col">
 					<div class="latest-news-item">
+						<div class="latest-news-item__date"><span>26</span> SEPT<br/>2013</div>
 						<img src="images/blog-item.png" alt=""/>
 						<div class="latest-news-item__content">
-							<h3>Here is a title of the blog</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  <a href="#">[…]</a>
-							</p>
-							<p class="latest-news-item__author">by: Hilmar Halldorsson</p>
-						</div>
-					</div>
-					<div class="latest-news-item">
-						<div class="latest-news-item__content">
-							<h3>Here is a title of the blog</h3>
+							<h3><a href="#">Standard blog with an square image</a></h3>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  <a href="#">[…]</a>
 							</p>
@@ -999,7 +1095,8 @@
 				<div class="col">
 					<div class="latest-news-item">
 						<div class="latest-news-item__content">
-							<h3>Here is a title of the blog</h3>
+							<div class="latest-news-item__date"><span>26</span> SEPT<br/>2013</div>
+							<h3><a href="#">Standard blog with no image</a></h3>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  <a href="#">[…]</a>
 							</p>
@@ -1007,9 +1104,10 @@
 						</div>
 					</div>
 					<div class="latest-news-item">
-						<img src="images/blog-image.jpg" alt=""/>
+						<div class="latest-news-item__date"><span>26</span> SEPT<br/>2013</div>
+						<img src="images/blog-video.jpg" alt=""/>
 						<div class="latest-news-item__content">
-							<h3>Here is a title of the blog</h3>
+							<h3><a href="#">Here is a title of the blog</a></h3>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  <a href="#">[…]</a>
 							</p>

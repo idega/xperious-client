@@ -1,6 +1,7 @@
 /*Font declarations*/
 body,
-button, input, select, textarea {font-family: 'Ubuntu', sans-serif; font-weight: 300;}
+button, input, select, textarea,
+.ui-widget {font-family: 'Ubuntu', sans-serif; font-weight: 300;}
 
 /*---Default elements---*/
 a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; text-decoration: none; color: #86c543;}
@@ -38,23 +39,24 @@ button, input, select, textarea {font-size: 100%; margin: 0; vertical-align: bas
 
 /*Placeholders*/
 .placeholder {
-    color: #aba9a2;
+    color: #6d6d6d;
     font-weight: 300;
 }
 ::-webkit-input-placeholder {
-    color: #aba9a2;
+    color: #6d6d6d;
     font-weight: 300;
 }
 :-moz-placeholder {
-    color: #63615E;
+    color: #6d6d6d;
     font-weight: 300;
 }
 ::-moz-placeholder {
-    color: #63615E;
+    color: #6d6d6d;
     font-weight: 300;
+    opacity: 1;
 }
 :-ms-input-placeholder {  
-   color: #aba9a2;  
+   color: #6d6d6d;  
    font-weight: 300;
 }
 
@@ -70,7 +72,7 @@ button, input, select, textarea {font-size: 100%; margin: 0; vertical-align: bas
 .ui-menu .ui-menu-item a:hover {color: #333;}
 
 /*Custom Selectmenu*/
-.ui-selectmenu { display: block; display: inline-block; position: relative; height: 46px; vertical-align: middle; text-decoration: none; overflow: hidden; zoom: 1; float: left; border: none; background: #fff; border-radius: 4px; font-weight: 300;}
+.ui-selectmenu { display: block; display: inline-block; position: relative; height: 44px; vertical-align: middle; text-decoration: none; overflow: hidden; zoom: 1; float: left; border: none; background: #fff; border-radius: 4px; font-weight: 300;}
 .ui-selectmenu.ui-corner-top {border-radius: 4px 4px 0 0;}
 .ui-selectmenu.to-top {border-radius: 0 0 4px 4px;}
 .ui-selectmenu-icon { position:absolute; right:6px; margin-top:-8px; top: 50%; }
@@ -90,9 +92,9 @@ button, input, select, textarea {font-size: 100%; margin: 0; vertical-align: bas
 .ui-selectmenu-menu li .ui-selectmenu-item-footer { opacity: .8; }
 
 .ui-selectmenu-icon, 
-.ui-state-default .ui-icon {width: 38px; height: 38px; background: url(/images/select-down.png) no-repeat left top; margin: 0; right: 1px; top: 4px;}
+.ui-state-default .ui-icon {width: 38px; height: 38px; background: url(/images/select-down.png) no-repeat left top; margin: 0; right: 1px; top: 3px;}
 
-.ui-selectmenu-menu li a, .ui-selectmenu-status {font-size: 16px; color: #6D6D6D; font-weight: normal; padding-top: 0; padding-bottom: 0; line-height: 46px;}
+.ui-selectmenu-menu li a, .ui-selectmenu-status {font-size: 16px; color: #6D6D6D; font-weight: 300; padding-top: 0; padding-bottom: 0; line-height: 44px;}
 .ui-selectmenu-menu li a, .ui-selectmenu-status {padding-left: 13px; padding-right: 38px;}
 .ui-selectmenu-menu ul {background: #fff; border: none; box-shadow: 0 3px 3px #eee;}
 .ui-selectmenu-menu ul.to-top {box-shadow: none; border-radius: 4px 4px 0 0;}
@@ -191,7 +193,7 @@ body {margin: 0; font-size: 12px;}
   -o-background-size: cover;
   background-size: cover;
 }
-.join-club-section {background: #fff; padding: 52px 0; color: #6d6d6d; font-size: 14px;}
+.join-club-section {background: #fff; padding: 47px 0; color: #6d6d6d; font-size: 14px;}
 .contact-info-section {background: #fff; padding: 41px 0; font-size: 26px; color: #a8a5a0; padding-bottom: 55px;}
 .contact-form-section {padding-top: 38px; padding-bottom: 25px; color: #a8a5a0;
 background: url(/images/contacts-bg.jpg) no-repeat center center; 
@@ -267,11 +269,24 @@ background: url(/images/bg-4.jpg) no-repeat center center fixed;
 .top-menu a:hover {color: #86c543;}
 .top-menu > li.has-submenu > a:hover, .top-menu > li.has-submenu:hover > a {background: url(/images/top-menu-active.png) no-repeat center bottom;}
 
-.top-menu__submenu {position: absolute; left: 0px; top: 41px; text-align: center; width: 100%; background: #333; border-bottom: 1px solid #73895c; display: none; padding-top: 4px; padding-bottom: 4px; z-index: 20;}
+.top-menu__submenu {position: absolute; left: 0px; top: 41px; text-align: center; width: 100%; background: #333;z-index: 20; overflow: hidden;
+    -moz-transition: max-height .5s;
+    -ms-transition: max-height .5s;
+    -o-transition: max-height .5s;
+    -webkit-transition: max-height .5s;
+    transition: max-height .5s; max-height: 0px;
+
+}
+.top-menu__submenu .site-block-in {padding-top: 4px; padding-bottom: 4px;}
 .top-menu__submenu a {line-height: 32px;}
 .top-menu__submenu .menu {padding-left: 35px;}
 .top-menu__submenu li {margin-right: 33px; }
-li:hover .top-menu__submenu {display: block;}
+li:hover .top-menu__submenu {
+    -moz-transition: max-height .5s .5s;
+    -ms-transition: max-height .5s .5s;
+    -o-transition: max-height .5s .5s;
+    -webkit-transition: max-height .5s .5s;
+    transition: max-height .5s .5s; max-height: 300px;}
 
 .submenu-cols-5 .menu {width: 175px; float: left; margin-right: 15px; padding-left: 0px;}
 .submenu-cols-6 .menu {width: 120px; float: left; margin-right: 15px; padding-left: 0px;}
@@ -282,7 +297,7 @@ li:hover .top-menu__submenu {display: block;}
 .site-header__selected-location {line-height: 40px; font-size: 14px; padding-left: 15px;}
 
 /*Sticky top menu*/
-.sticky-top-menu-section {background: #5c5c5c; border-top: 1px solid #c4daac;}
+.sticky-top-menu-section {background: #5c5c5c; border-top: 1px solid #c4daac; position: relative; z-index: 30;}
 .stuck {position: fixed; top: 0; width: 100%;left: 0px; right: 0px; z-index: 200;}
 
 .sticky-top-menu-section .top-menu > li > a {line-height: 48px;}
@@ -368,8 +383,13 @@ li:hover .top-menu__submenu {display: block;}
 .form-expanded .guest input[type="text"] {margin-right: 0;}
 
 /*Planer form*/
-.planner-form {padding-top: 5px; padding-bottom: 6px; margin: 0 auto; width: 492px;}
+.planner-form {padding-top: 5px; padding-bottom: 6px; margin: 0 auto; width: 492px; position: relative; z-index: 5;}
 .planner-form .form-row {overflow: hidden; margin-bottom: 0px; position: relative;}
+
+.planner-form .input-baloon {position: absolute; padding: 10px 12px; padding-top: 8px; background: #333; border: 1px solid #75a840; border-radius: 4px; box-shadow: 0px 0px 30px rgba(0,0,0,0.8); left: 50px; top: 49px; width: 262px; z-index: 10;}
+.input-baloon p {margin: 0; color: #fff; font-size: 14px; line-height: normal;}
+.input-baloon .nip {display: inline-block; width: 22px; height: 11px; background: url(/images/nip-top.png) no-repeat left top; position: absolute; left: 50%; margin-left: -11px; top: -11px; }
+
 
 .this-has-expanded {width: 880px;}
 .this-has-expanded #plan-inputs-container {width: 380px; height: 40px !important;}
@@ -468,66 +488,111 @@ li:hover .convert-form input[type='text'] {zoom: 1;}
 
 
 /*Travel plan section ----------------------------------------*/
-.travel-plan-section {background: #e5e5e5; padding-bottom: 30px;}
-.travel-plan-section .section-title {font-size: 51px; text-align: center; padding-top: 10px;}
-.travel-plan-section .section-subtitle {text-align: center; font-size: 20px; padding-bottom: 35px;}
-.travel-plan-section .plan-days,
-.travel-plan-section .plan-price,
-.travel-plan-section .plan-name {position: absolute; padding: 6px 12px; background: url(/images/top-menu-grad.png); z-index: 150; color: #fff;}
+.travel-plan-section {background: #e5e5e5; padding-bottom: 45px;}
+.travel-plan-section .section-title {font-size: 38px; text-align: center; padding-top: 27px; margin-bottom: 1px;}
+.travel-plan-section .section-subtitle {text-align: center; font-size: 20px; padding-bottom: 40px;}
+.plan-top-info,
+.plan-bottom-info {position: absolute; padding: 6px 12px; background: url(/images/top-menu-grad.png); z-index: 20; color: #fff;}
+
+.travel-plan-section a {display: block; position: relative;}
+.travel-plan-section .plan-cover {position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; width: 100%; height: 100%; background: url(/images/image-hover-cover.png) no-repeat center center; display: none;}
+a:hover .plan-cover {display: block; z-index: 21;}
+
+.plan-top-info {left: 0px; top: 0px; right: 0px; background: url(/images/plan-grad-top.png) repeat-x left top; text-align: center; font-size: 18px; line-height: 20px; padding: 10px; padding-top: 25px; min-height: 45px; vertical-align: middle;}
+.plan-top-info .dotted {color: #fff; border-bottom: 1px dashed #fff;}
+.plan-bottom-info {left: 0px; bottom: 0px; right: 0px; background: url(/images/plan-grad-bottom.png) repeat-x left bottom; text-align: center; font-size: 14px; line-height: 20px; padding: 14px 10px; padding-top: 26px; min-height: 40px; vertical-align: middle;}
+.plan-bottom-info span {display: block; font-size: 18px;}
 
 
-.travel-plan-section .plan-days {left: 20px; top: 20px;}
-.travel-plan-section .plan-price {left: 0px; bottom: 0px; right: 0px;}
-.travel-plan-section .plan-name {left: 20px; top: 52px;}
 
-
-.travel-plan-block-2 .plan-days {background: #e58919;}
-.travel-plan-block-2 .plan-price {background: none; font-size: 20px; color: #e58919;}
-
-
-.travel-plans-holder {width: 990px; height: 770px; position: relative; margin-bottom: 30px;}
+.travel-plans-holder {width: 990px; height: 770px; position: relative; margin-bottom: 43px;}
 .travel-plan-block-1 {position: absolute; left: 0px; top: 0px; width: 240px; height: 380px; background: #fff; overflow: hidden;}
 .travel-plan-block-2 {position: absolute; left: 250px; top: 0px; width: 240px; height: 380px; background: #fff; overflow: hidden;}
-.travel-plan-block-3 {position: absolute; right: 0px; top: 0px; width: 490px; height: 380px; background: #fff; border-bottom: 2px solid #e58919; overflow: hidden;}
+.travel-plan-block-3 {position: absolute; right: 0px; top: 0px; width: 490px; height: 380px; background: #fff; overflow: hidden;}
 
 .travel-plan-block-4 {width: 240px; height: 380px; position: absolute; left: 0px; bottom: 0px; background: blue; overflow: hidden;}
-.travel-plan-block-5 {width: 240px; height: 380px; position: absolute; left: 250px; bottom: 0px; overflow: hidden;}
+.travel-plan-block-5 {width: 240px; height: 380px; position: absolute; left: 250px; bottom: 0px; overflow: hidden; background: #fff;}
 .travel-plan-block-6 {width: 240px; height: 185px; position: absolute; right: 250px; bottom: 195px; background: grey; overflow: hidden;}
 .travel-plan-block-7 {width: 240px; height: 185px; position: absolute; right: 250px; bottom: 0px; background: grey; overflow: hidden;}
 .travel-plan-block-8 {width: 240px; height: 380px; position: absolute; right: 0px; bottom: 0px; background: grey; overflow: hidden;}
 .travel-plans-bottom a {font-size: 16px; color: #a8a5a0;}
 
-/*Gallery sliders*/
-.gallery-prev,
-.gallery-next {position: absolute; width: 25px; height: 48px; top: 50%; margin-top: -24px; z-index: 150; background: #fff; cursor: pointer; background: url(/images/gallery-arrows-1.png) no-repeat left top; display: none;}
-.gallery-slider:hover .gallery-prev,
-.gallery-slider:hover .gallery-next {display: block;}
-.gallery-prev {left: 0;}
-.gallery-next {right: 0; background-position: right top;}
+/*Travel block 1*/
+.travel-plan-block-1 p {margin: 10px 16px; font-size: 14px; line-height: 20px;}
+
+/*Travel block 3*/
+.travel-plan-block-3 .lefter {width: 315px; float: left; padding-left: 16px; font-size: 14px; line-height: 20px;}
+.travel-plan-block-3 p {font-size: 14px; line-height: 20px;}
+.travel-plan-block-3 .righter {width: 120px; float: right; padding-right: 16px; font-size: 14px; line-height: 20px;}
+.travel-plan-block-3 strong {font-weight: 500;}
+
+/*Travel block 5*/
+.travel-plan-block-5 {}
+.travel-plan-block-5 h3 {padding-right: 41px; display: inline-block; padding-top: 48px; background: url(/images/info-ico-green.png) no-repeat right 20px; font-size: 18px; color: #333; padding-left: 15px; font-weight: 400; margin: 0;}
+.travel-plan-block-5 ul {padding: 15px;}
+.travel-plan-block-5 li {margin-bottom: 10px; display: block;}
+.travel-plan-block-5 a {display: inline-block; font-size: 14px; text-decoration: none; border-bottom: 1px dashed #333;}
+.travel-plan-block-5 a:hover {border-bottom: none; padding-bottom: 1px;}
 
 
-.planner-landscape-slider .gallery-prev,
-.planner-landscape-slider .gallery-next {width: 37px; background-image: url(/images/gallery-arrows-2.png);}
+/*Favorite theme section ----------------------------*/
+.favorite-theme-section {background: url(/images/themes-section-bg.jpg) no-repeat center center fixed; padding-top:30px; padding-bottom: 39px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
+.favorite-theme-section h2 {color: #fff; font-size: 36px; text-align: center; margin-bottom: 4px;}
+.favorite-theme-section h3 {font-size: 18px; color: #fff; margin-bottom: 48px; text-align: center; margin-top: 4px;}
 
-.landscape-slider-slide {width: 490px; height: 310px; position: relative;}
-.landscape-slider-slide .photo-title {position: absolute; left: 0px; right: 0px; bottom: 0px; background: url(/images/top-menu-grad.png); text-align: right; color: #fff; padding: 6px 10px;}
-.landscape-slider-slide .photo-title strong {color: #fff;}
-.landscape-slider-slide a {text-decoration: underline; color: #fff;}
+.trip-themes-list {}
+.trip-themes-list li {float: left; width: 240px; height: 185px; margin-right: 10px; margin-bottom: 10px;}
+.trip-themes-list li:nth-child(4n) {margin-right: 0;}
+.trip-themes-list a {display: block; width: 240px; height: 185px; overflow: hidden; position: relative;}
+.trip-themes-list img {position: absolute; z-index: 0; left: 0px; top: 50%; margin-top: -92.5px;}
+.trip-themes-list .theme-hover-main-text {width: 240px; height: 185px; display: table-cell; vertical-align: middle; text-align: center; color: #fff; font-size: 36px; font-weight: 400; position: relative; padding: 0 20px; line-height: 34px;}
+.trip-themes-list a:hover .theme-hover-main-text {display: none;}
 
+.theme-hover-text__in {padding-top: 14px; font-size: 18px; padding-bottom: 36px; background: url(/images/more-ico.png) no-repeat center bottom;}
 
+.theme-image-holder {display: block; position: absolute; left: 0px; top: 0px; right: 0px; width: 100%;
+    -moz-transition: height .3s;
+    -ms-transition: height .3s;
+    -o-transition: height .3s;
+    -webkit-transition: height .3s;
+    transition: height .3s; height: 185px;
+}
+.theme-hover-text {position: absolute; left: 0px; bottom: 0px; right: 0px; color: #fff; width: 100%; background: grey; text-align: center;
+  -moz-transition: height .3s;
+    -ms-transition: height .3s;
+    -o-transition: height .3s;
+    -webkit-transition: height .3s;
+    transition: height .3s; height: 0px;
+}
 
-
-.travel-plan-block-2 {}
-.travel-plan-block-2 .lefter {width: 315px; float: left; padding-left: 16px; font-size: 14px; line-height: 20px;}
-.travel-plan-block-2 p {font-size: 14px; line-height: 20px;}
-.travel-plan-block-2 .righter {width: 120px; float: right; padding-right: 16px; font-size: 14px; line-height: 20px;}
-.travel-plan-block-2 strong {color: #e58919; font-weight: 500;}
+a:hover .theme-image-holder {
+    -moz-transition: height .3s;
+    -ms-transition: height .3s;
+    -o-transition: height .3s;
+    -webkit-transition: height .3s;
+    transition: height .3s; height: 100px;
+}
+a:hover .theme-hover-text {
+    -moz-transition: height .3s;
+    -ms-transition: height .3s;
+    -o-transition: height .3s;
+    -webkit-transition: height .3s;
+    transition: height .3s; height: 85px;
+}
 
 /*Instagram section ------------------------------------*/
-.instagram-section {background: #e5e5e5; padding-top: 50px; padding-bottom: 50px; border-top: 1px solid #2f598a;}
-.instagram-section .title {padding-left: 29px; padding-bottom: 25px; color: #a6a49f; font-size: 24px; text-transform: uppercase;}
+.instagram-section {background: #e5e5e5; padding-top: 42px; padding-bottom: 51px; border-top: 1px solid #2f598a;}
+.instagram-section .title {padding-left: 29px; padding-bottom: 13px; color: #a6a49f; font-size: 24px; text-transform: uppercase;}
 .instagram-section .title img {margin-left: 90px; margin-top: 5px;}
-.instagram-section .image-list a {display: inline-block; float: left; margin-right: 1px;}
+.instagram-section .image-list a {display: inline-block; float: left; margin-right: 1px; position: relative; display: inline-block;}
+.instagram-section .plan-cover {position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; background: url(/images/image-hover-cover.png) no-repeat center center; display: none;}
+.instagram-section a:hover .plan-cover {display: block;}
+
+
 
 /*Inspired by Iceland section -------------------------------------*/
 .inspired-iceland-section {background: url(/images/inspired-iceland-bg.jpg) no-repeat center center fixed; padding-top: 70px; padding-bottom: 90px;
@@ -537,21 +602,28 @@ li:hover .convert-form input[type='text'] {zoom: 1;}
   background-size: cover;}
 
 .inspired-iceland-section h2 {color: #fff; font-size: 51px; padding-bottom: 50px;}
-.inspired-iceland-section .lefter {padding-left: 30px; width: 430px; float: left; color: #fff; font-size: 18px; line-height: 25px;}
+.inspired-iceland-section .lefter {padding-left: 30px; width: 430px; float: left; color: #fff; font-size: 18px; line-height: 25px; margin-top: -7px;}
+.inspired-iceland-section .lefter p {margin-top: 0px; margin-bottom: 20px; font-size: 18px; line-height: 25px;}
 .inspired-iceland-section .righter {width: 500px; float: right;}
 
-
+.inspired-iceland-section .button {background-color: #559fd3; height: 40px; line-height: 40px; font-size: 14px;}
+.inspired-iceland-section .button:hover {background-color: #3e89bd;}
 
 /*Latest tweet section -------------------------------------*/
 .latest-tweet-section {background: #e58919;}
-.latest-tweet-section .site-block {background: url(/images/tw-big.png) no-repeat left top;}
-.latest-tweet-section h2 {float: left; padding-left: 185px; width: 120px; color: #8a5508;}
-.detailed-tweet {float: left; width: ; color: #fff; font-size: 16px; width: 600px; padding-top: 25px;}
+.latest-tweet-section .site-block {background: url(/images/tw-big.png) no-repeat left top; padding-top: 19px; padding-bottom: 15px;}
+.latest-tweet-section h2 {float: left; padding-left: 140px; width: 120px; color: #8a5508; font-size: 26px; line-height: 21px; text-align: right;}
+.detailed-tweet {float: left; width: ; color: #fff; font-size: 17px; width: 696px; padding-top: 33px; padding-left: 15px;}
+.detailed-tweet span {color: #8a5508; font-size: 14px;}
+.detailed-tweet a {color: #8a5508;}
+
+
 
 /*Events section --------------------------------------------*/
 .events-section .title {padding-left: 35px; background: url(/images/y-2013.png) no-repeat left center; margin-top: 52px; margin-bottom: 36px;}
 .events-section .title .small {font-size: 48px; color: #fff; line-height: 45px; font-weight: normal;}
 .events-section .title .big {font-size: 66px; color: #00a1d6; line-height: 45px; font-weight: bold;}
+
 
 /*Slider*/
 .events-slider {background: url(/images/event-bg-rep.png) repeat-x left top; padding: 7px 0; position: relative;}
@@ -623,7 +695,9 @@ li:hover .convert-form input[type='text'] {zoom: 1;}
 
 /*Join club section --------------------------------------------*/
 .join-club-section .lefter {float: left; width: 52%;}
-.join-club-section .righter {float: right; width: 45%; padding-top: 14px;}
+.join-club-section .righter {float: right; width: 47%; padding-top: 0px;}
+.join-club-section .righter h2 {margin-bottom: 22px;}
+
 
 .join-club-section h2 {font-weight: normal; font-size: 34px; line-height: 26px; margin: 0;} 
 .join-club-section h2 strong {font-weight: 500; color: #559fd3;} 
@@ -634,12 +708,12 @@ li:hover .convert-form input[type='text'] {zoom: 1;}
 .join-club-section .title .subtitle {float: left; line-height: 19px; font-size: 21px;}
 
 .subscribe-form {padding-top: 24px;}
-.subscribe-form input[type='text'] {width: 222px; margin-right: 15px; padding: 13px 16px;}
-.subscribe-form .ui-selectmenu {margin-right: 18px;}
-.subscribe-form input[type='submit'] {background-color: #696969; width: 100px;}
+.subscribe-form input[type='text'] {width: 220px; margin-right: 6px; padding: 12px 16px; border: 1px solid #a6a49f;}
+.subscribe-form .ui-selectmenu {margin-right: 6px; border: 1px solid #a6a49f;}
+.subscribe-form input[type='submit'] {background-color: #559fd3; width: 100px;}
 .no-js .subscribe-form input[type='submit']:hover, .subscribe-form input[type='submit'].hovered,
 .content-page .subscribe-form input[type='submit']:hover,
-.blog-page .subscribe-form input[type='submit']:hover {background-color: #a6a49f;}
+.blog-page .subscribe-form input[type='submit']:hover {background-color: #2978b0;}
 .subscribe-form .explain {padding-top: 15px; padding-left: 6px; width: 430px;}
 
 .social-links a {display: inline-block; width: 24px; height: 24px; margin-right: 5px; margin-bottom: 5px; background: url(/images/social.png) no-repeat left top;}
@@ -657,20 +731,26 @@ li:hover .convert-form input[type='text'] {zoom: 1;}
 
 
 /*Latest news section*/
-.latest-news-section {background: #e5e5e5; padding-top: 30px; padding-bottom: 60px;}
-.latest-news-section h2 {font-size: 51px; color: #a6a49f;}
+.latest-news-section {background: #fff; padding-top: 30px; padding-bottom: 60px;}
+.latest-news-section h2 {font-size: 51px; color: #a6a49f; margin-bottom: 44px;}
 .latest-news-section h2 strong {color: #86c543;}
 .latest-news-section .col {width: 49.5%; margin-right: 1%; float: left;}
 .latest-news-section .col:last-child {margin-right: 0;}
 
-.latest-news-item {background: #fff; margin-bottom: 10px;}
+.latest-news-item {margin-bottom: 50px; position: relative; padding-left: 80px;}
 .latest-news-item:last-child {margin-bottom: 0;}
-.latest-news-item__content {padding: 17px;}
-.latest-news-item img {}
-.latest-news-item h3 {font-size: 24px; color: #86c543;}
+.latest-news-item__content {}
+.latest-news-item img {margin-bottom: 12px;}
+.latest-news-item h3 {font-size:36px; color: #333; margin-top: 0;}
+.latest-news-item h3 a {color: #333;}
+.latest-news-item h3 a:hover {color: #86C543;}
+
 .latest-news-item p {font-size: 14px; line-height: 20px;}
 .latest-news-item p a {color: #86c543; text-decoration: none;}
-.latest-news-item .latest-news-item__author {font-size: 12px; color: #a6a49f;}
+.latest-news-item .latest-news-item__author {font-size: 12px; margin-bottom: 0px;}
+
+.latest-news-item__date {position: absolute; left: 0px; top: 0px; background: #86c543; color: #fff; text-align: center; border-bottom: 60px solid #e5e5e5; font-size: 20px; line-height: 20px; text-transform: uppercase; width: 60px; padding-top: 3px; padding-bottom: 8px;}
+.latest-news-item__date span {font-size: 42px; line-height: 42px; font-weight: bold; display: block;}
 
 /*Contact info section --------------------------------------------*/
 .contact-info-section .label {width: 150px; float: left; font-size: 31px;}

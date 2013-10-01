@@ -208,6 +208,11 @@ define([
 				 isIphone = true;
 			}
 
+			$('.planer-slide-down').on('click', function(){
+				$.scrollTo("#sticky-menu", 500);
+			});
+			
+
 	        /* Placeholder for old browsers */
 	        $('input[placeholder], textarea[placeholder]').placeholder();
 			
