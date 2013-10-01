@@ -356,7 +356,7 @@ define([
 			});
 
 
-	        this.$("#footer").waypoint(function(dir) {
+	        this.$("#latest-news-section").waypoint(function(dir) {
 	            if (dir == 'down') {
 	                $bottom.css({
 	                    visibility: 'visible'
