@@ -213,6 +213,12 @@ define([
 			});
 			
 
+			$('.trip-themes-list a').on('click', function(event){
+				$.scrollTo("#travel-options", 100, {offset:-50});
+				$('#travel-options').addClass('visible');
+				event.preventDefault();
+			});
+
 	        /* Placeholder for old browsers */
 	        $('input[placeholder], textarea[placeholder]').placeholder();
 			
