@@ -265,11 +265,25 @@ background: url(/images/bg-4.jpg) no-repeat center center fixed;
 
 .top-menu {float: left;}
 .top-menu li {float: left; margin-right: 24px;}
-.top-menu a {display: inline-block; font-size: 14px; color: #fff; line-height: 40px;}
+.top-menu a {display: inline-block; font-size: 14px; color: #fff; line-height: 48px;}
 .top-menu a:hover {color: #86c543;}
 .top-menu > li.has-submenu > a:hover, .top-menu > li.has-submenu:hover > a {background: url(/images/top-menu-active.png) no-repeat center bottom;}
 
-.top-menu__submenu {position: absolute; left: 0px; top: 41px; text-align: center; width: 100%; background: #333;z-index: 20; overflow: hidden;
+.small-main-logo {overflow: hidden; text-align: left;
+    -moz-transition: width .5s;
+    -ms-transition: width .5s;
+    -o-transition: width .5s;
+    -webkit-transition: width .5s;
+    transition: width .5s; width: 0;}
+
+.stuck .small-main-logo {
+    -moz-transition: width .5s;
+    -ms-transition: width .5s;
+    -o-transition: width .5s;
+    -webkit-transition: width .5s;
+    transition: width .5s; width: 140px;}
+
+.top-menu__submenu {position: absolute; left: 0px; top: 49px; text-align: center; width: 100%; background: #333;z-index: 20; overflow: hidden;
     -moz-transition: max-height .5s;
     -ms-transition: max-height .5s;
     -o-transition: max-height .5s;
@@ -277,8 +291,9 @@ background: url(/images/bg-4.jpg) no-repeat center center fixed;
     transition: max-height .5s; max-height: 0px;
 
 }
-.top-menu__submenu .site-block-in {padding-top: 4px; padding-bottom: 4px;}
-.top-menu__submenu a {line-height: 32px;}
+.top-menu__submenu-in {border-bottom: 1px solid #5f764d;}
+.top-menu__submenu .site-block-in {padding-top: 18px; padding-bottom: 18px;}
+.top-menu__submenu a {line-height: 26px;}
 .top-menu__submenu .menu {padding-left: 35px;}
 .top-menu__submenu li {margin-right: 33px; }
 li:hover .top-menu__submenu {
@@ -286,7 +301,7 @@ li:hover .top-menu__submenu {
     -ms-transition: max-height .5s .5s;
     -o-transition: max-height .5s .5s;
     -webkit-transition: max-height .5s .5s;
-    transition: max-height .5s .5s; max-height: 300px;}
+    transition: max-height .5s .5s; max-height: 340px;}
 
 .submenu-cols-5 .menu {width: 175px; float: left; margin-right: 15px; padding-left: 0px;}
 .submenu-cols-6 .menu {width: 120px; float: left; margin-right: 15px; padding-left: 0px;}
@@ -345,7 +360,7 @@ li:hover .top-menu__submenu {
 .lang-menu .active,
 .lang-menu a:hover {background-position: left bottom;}
 
-.chose-destination {float: right; color: #fff; line-height: 40px; font-size: 14px; width: 116px; text-align: center; background: #3b3a3a;}
+.chose-destination {float: right; color: #fff; line-height: 48px; font-size: 14px; width: 116px; text-align: center; background: #3b3a3a;}
 .chose-destination.active {background: #86c543;}
 .no-js .chose-destination:hover,
 .chose-destination.hovered {color: #fff;}
@@ -486,15 +501,19 @@ li:hover .convert-form input[type='text'] {zoom: 1;}
 
 .article-section .logo {position: absolute; right: -425px; bottom: 0px;}
 
+/*Travel options section*/
+.travel-options-section {background: #fff; border-bottom: 3px solid #d5af37; padding-top: 33px; padding-bottom: 33px; text-align: center; color: #d5af37; font-size: 20px;}
+.travel-options-section span {display: inline-block; position: relative; border-bottom: 1px dashed #2b2b2b; font-weight: 500;}
+
 
 /*Travel plan section ----------------------------------------*/
 .travel-plan-section {background: #e5e5e5; padding-bottom: 45px;}
-.travel-plan-section .section-title {font-size: 38px; text-align: center; padding-top: 27px; margin-bottom: 1px;}
+.travel-plan-section .section-title {font-size: 35px; font-weight: 300; text-align: center; padding-top: 27px; margin-bottom: 1px;}
 .travel-plan-section .section-subtitle {text-align: center; font-size: 20px; padding-bottom: 40px;}
 .plan-top-info,
 .plan-bottom-info {position: absolute; padding: 6px 12px; background: url(/images/top-menu-grad.png); z-index: 20; color: #fff;}
 
-.travel-plan-section a {display: block; position: relative;}
+.travel-plan-section a {display: block; position: relative; z-index: 9;}
 .travel-plan-section .plan-cover {position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; width: 100%; height: 100%; background: url(/images/image-hover-cover.png) no-repeat center center; display: none;}
 a:hover .plan-cover {display: block; z-index: 21;}
 

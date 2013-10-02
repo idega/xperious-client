@@ -350,10 +350,7 @@ define([
             this.$('.planner-small-slider').cycle();
 
             
-   			this.$("#sticky-menu").waypoint('sticky', {
-			  context: window,
-			  offset: '-100%'
-			});
+   			this.$(".site-header__bottom").waypoint('sticky');
 
 
 	        this.$("#latest-news-section").waypoint(function(dir) {
