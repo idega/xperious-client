@@ -26,7 +26,7 @@ define([
 			this.findImages('.section').imagesLoaded(_.bind(function() {
 				this.setView('.search-results-view', new SearchResultsView()).render();
 
-
+				
 				$(".custom-checkbox").button();
 	
 				var $tooltipLeft = $('<div class="tooltip"><span class="sp"><br/></span><span class="value"></span></div>').css({

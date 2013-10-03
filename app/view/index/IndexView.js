@@ -208,6 +208,7 @@ define([
 				 isIphone = true;
 			}
 
+
 			$('.planer-slide-down').on('click', function(){
 				$.scrollTo("#sticky-menu", 500);
 			});

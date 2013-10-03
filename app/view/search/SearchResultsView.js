@@ -62,6 +62,18 @@ define([
 
         afterRender: function() {
         	this.loadImages('.element > div:first-child');
+
+            $('.default-image-slider').cycle();
+
+            var destinationPopup = $('.destination-popup-section');
+
+            $('.destination-popup-section .destination-section__close').on('click', function(){
+                destinationPopup.fadeOut().addClass('closed');
+            });
+
+            $('#js-show-destination-popup').on('click', function(){
+                destinationPopup.removeClass('closed').fadeIn();
+            });
         }
 
     });

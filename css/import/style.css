@@ -250,6 +250,8 @@ body {margin: 0; font-size: 12px;}
 
 
 /*Sections-------------------------------------------------*/
+.default-section {padding-top: 30px; padding-bottom: 30px; background: #ececec;}
+
 .home-section {color: #fff; position: relative; overflow: hidden;}
 .article-section {color: #0d2115; font-size: 25px;
     background: url(/images/bg-2.jpg) no-repeat center center; 
@@ -906,58 +908,83 @@ a:hover .theme-hover-text {
 .sidebar-content-section .left-content {width: 197px; float: left;}
 .sidebar-content-section .main-content {width: 730px; float: right; margin-right: 49px;}
 
+/*Travel packages*/
+.search-preferences-section {background: #fff; border-bottom: 3px solid #d5af37; text-align: center; font-size: 18px; padding-top: 13px; padding-bottom: 15px;}
+.search-preferences-section span {color: #d5af37; border-bottom: 1px dashed #333;}
 
-.package-parameters-filter {position: relative; border-radius: 3px; border: 1px solid #e5e5e5; padding: 10px;
-background: #ffffff; /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-8 */
+.package-list-suggestion {padding-top: 0px; padding-bottom: 30px; text-align: center; font-size: 18px;}
+.package-list-suggestion span {color: #d5af37; border-bottom: 1px dashed #333;}
+
+.travel-package-block {position: relative;}
+.travel-package-block .package-desc {background: #fff; padding: 13px 15px; position: relative; height: 130px; overflow: hidden;}
+.package-desc, .package-desc p {line-height: 20px; font-size: 14px;}
+.package-desc p:first-child {margin-top: 0;}
+.package-desc p:last-child {margin-bottom: 0;}
+.package-desc .lefter {width: 320px; float: left;}
+.package-desc .righter {width: 120px; float: right;}
+.package-desc h3 {font-weight: bold; color: #d5af37; margin-top: 0;}
+
+
+.description-cover {background: #d5af37; color: #fff; position: absolute; left: 0px; bottom: 0px; right: 0px; height: 0; overflow: hidden; z-index: 6;
+	-moz-transition: height .3s;
+    -ms-transition: height .3s;
+    -o-transition: height .3s;
+    -webkit-transition: height .3s;
+    transition: height .3s; height: 0px;
 }
-.package-parameters-filter hr {margin: 12px 0;}
-.package-parameters-filter h4 {font-size: 17px; color: #e58919; text-align: center; font-weight: 400; margin: 0;}
-.package-parameters-filter h5 {font-size: 13px; color: #6d6d6d; font-weight: 400; margin: 0; margin-bottom: 5px;}
+.travel-package-block:hover .description-cover {
+	-moz-transition: height .3s;
+    -ms-transition: height .3s;
+    -o-transition: height .3s;
+    -webkit-transition: height .3s;
+    transition: height .3s; height: 156px;
+}
+.description-cover p {margin: 0; padding-bottom: 36px; background: url(/images/eye-ico.png) no-repeat center bottom; text-align: center; padding-top: 56px; font-size: 20px;}
 
-/*Cutsom checkboxes*/
-.ui-button-text-only {border: 0; padding: 0; padding-left: 23px; background: url(/images/checkbox.png) no-repeat 4px 3px; margin-bottom: 5px; font-family: 'Ubuntu',sans-serif;}
-.ui-button-text-only.ui-state-active {background-position: -383px 3px;}
-.ui-button .ui-button-text {padding: 0; font-size: 14px; color: #6d6d6d; font-weight: 300; line-height: 17px;}
+.travel-package-block .plan-price {font-size: 20px; color: #333;}
+.travel-package-block .plan-price strong {font-weight: 500;}
+.travel-package-block .plan-price .big-text {font-size: 20px;}
+.travel-package-block .plan-days {position: absolute; background: url(/images/brown-bg.png); color: #fff; font-size: 18px; padding: 0 16px; line-height: 40px; position: absolute; left: 20px; top: 15px; z-index: 150;}
 
-/*Slider*/
-.ui-slider {height: 6px; border: none; background: url(/images/slider-grad.png) repeat-x left top; margin-top: 43px; margin-bottom: 17px;}
-.ui-slider .ui-slider-handle {width: 14px; height: 14px; background: url(/images/handler.png) no-repeat left 1px; border: none; cursor: pointer;}
-.ui-slider-horizontal .ui-slider-range {background: url(/images/slider-rep.png) repeat-x left top}
-.ui-slider .tooltip {background: #605f5c; border-radius: 2px; padding: 1px 4px 0 4px; font-size: 12px; color: #fff; font-weight: 400; left: 50%; white-space: nowrap; line-height: 18px;}
-.ui-slider .sp {position: absolute; display: inline-block; width: 10px; height: 6px; left: 50%; margin-left: -5px; bottom: -5px; background: url(/images/grey-nip-down.png) no-repeat left top;}
+.travel-blocks-2 {margin-bottom: 10px;}
+.travel-blocks-2 .default-image-slide {width: 490px; height: 310px;}
+.travel-blocks-2 .travel-package-block {width: 490px; float: left; margin-right: 10px;}
+.travel-blocks-2 .travel-package-block:last-child {margin-right: 0;}
 
-.ratings td {vertical-align: middle; font-size: 14px; color: #a7a7a7; line-height: 20px;}
-.ratings td:first-child {padding-right: 12px;}
-.ratings td img {vertical-align: baseline;}
+.travel-blocks-3 {margin-bottom: 10px;}
+.travel-blocks-3 .default-image-slide {width: 320px; height: 310px;}
+.travel-blocks-3 .travel-package-block {width:320px; float: left; margin-right: 10px;}
+.travel-blocks-3 .travel-package-block:last-child {margin-right: 0;}
+.travel-blocks-3 .lefter {float: none; padding-bottom: 0px; width: auto;}
+.travel-blocks-3 .righter {float: none; padding-right: 125px;}
+.travel-blocks-3 .plan-price {position: absolute; width: 113px; right: 15px; bottom: 12px; z-index: 5; font-size: 14px;}
+.travel-blocks-3 .package-desc {height: 224px;}
+.travel-blocks-3 .travel-package-block:hover .description-cover {height: 250px;}
+.travel-blocks-3 .description-cover p {padding-top: 95px;}
 
-/*Package elements*/
-.package-elements {width: 730px; overflow: hidden;}
-.package-elements .in {width: 750px;}
-.package-elements .element {position: relative; margin-right: 15px; margin-bottom: 15px;}
-.package-elements .title,
-.package-elements .price {position: absolute; color: #fff;}
-.package-elements .title span,
-.package-elements .price span {display: block; line-height: 28px;}
-.package-elements .title {left: 15px; top: 15px;}
-.package-elements .price {right: 15px; bottom: 15px; text-align: right;}
+.destination-popup-section.closed {display: none;}
+.destination-popup-section {position: absolute; right: 0px; left: 0px; z-index: 155;}
+.destination-popup-section .destination-section__title {color: #fff; background: #d5af37;}
+.destination-popup-section .destination-section__close {background-image: url(/images/destination-close-2.png);}
 
-.package-elements span {font-size: 25px;}
-.package-elements .strong {font-weight: 400; font-size: 24px;}
-.package-elements .big {font-size: 30px; font-weight: bold; text-transform: uppercase; line-height: 32px;}
-.package-elements .price span {font-size: 12px; line-height: 18px; font-weight: 400;}
-.package-elements .price .big {font-size: 24px;}
+.more-travel-plans {text-align: center; padding-top: 35px; font-size: 16px; text-transform: uppercase; padding-bottom: 15px;}
+.more-travel-plans a {color: #a6a49f;}
+.more-travel-plans a:hover {text-decoration: underline;}
+.more-travel-plans strong {font-weight: 500;}
 
-.package-elements .cover {position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; background: url(/images/zoom-cover.png) no-repeat center center; visibility: hidden; cursor: pointer;}
-.element:hover .cover {visibility: visible;}
+
+/*Default image slider*/
+.default-image-slider {position: relative;}
+.default-image-slider .slide-title {position: absolute; left: 0px; bottom: 0px; right: 0px; background: url(/images/top-menu-grad.png); color: #fff; padding: 10px; font-size: 10px; text-align: right;}
+.default-image-slider .slide-title a {color: #fff; text-decoration: underline;}
+.default-image-slider .slide-title a:hover {text-decoration: none;}
+ 
+.image-slider-left,
+.image-slider-right {position: absolute; width: 37px; height: 48px; background: url(/images/gallery-arrows-2.png) no-repeat left top; top: 50%; margin-top: -24px; z-index: 150; cursor: pointer;}
+.image-slider-left {left: 0;}
+.image-slider-left:hover {background-position: left bottom;}
+.image-slider-right {background-position: right top; right: 0;}
+.image-slider-right:hover {background-position: right bottom;}
 
 
 /*Alignments*/

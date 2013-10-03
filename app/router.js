@@ -1,6 +1,7 @@
 define(['app',
 	'view/site/LoadingView',
 	'view/site/HeaderView',
+	'view/site/TopMenuView',
 	'view/site/QuestionsView',
 	'view/site/BottomView',
 	'view/site/FooterView',
@@ -24,6 +25,7 @@ define(['app',
 ], function(app,
 	LoadingView,
 	HeaderView,
+	TopMenuView,
 	QuestionsView,
 	BottomView,
 	FooterView,
@@ -282,7 +284,7 @@ define(['app',
 
     				layout.setView(new IndexView({
     					views: {
-    						'.menu-view' : new IndexMenuView(),
+    						'.site-topMenu-view' : new TopMenuView(),
     						'.timeframe-view' : new TimeframeView(),
                             '.guests-view' : new GuestsView(),
     						'.events-slider .site-block' :  new EventSliderView(),
@@ -300,7 +302,12 @@ define(['app',
 
     		    	layout.setView(new SearchView({
     		    		views: {
-    						'.header-view' : new HeaderView(),
+    						'.header-view' : new HeaderView(
+    						{
+								views: {
+									'.site-topMenu-view' : new TopMenuView()
+								}
+							}),
     						'.search-preferences-view' : new SearchPreferencesView(),
     	    				'.questions-view' : new QuestionsView(),
     	    				'.footer-view' : new FooterView(),
@@ -317,7 +324,12 @@ define(['app',
 
     		    	layout.setView(new PlanView({
     		    		views: {
-    						'.header-view' : new HeaderView(),
+    						'.header-view' : new HeaderView(
+    						{
+								views: {
+									'.site-topMenu-view' : new TopMenuView()
+								}
+							}),
     						'.questions-view' : new QuestionsView(),
     						'.footer-view' : new FooterView(),
     						'.bottom-view' : new BottomView(),
@@ -340,7 +352,12 @@ define(['app',
 
     		    	layout.setView(new EventsView({
     		    		views: {
-    						'.header-view' : new HeaderView(),
+    						'.header-view' : new HeaderView(
+    						{
+								views: {
+									'.site-topMenu-view' : new TopMenuView()
+								}
+							}),
     						'.footer-view' : new FooterView(),
     						'.bottom-view' : new BottomView()
     		    		}
@@ -355,7 +372,12 @@ define(['app',
 
 	    		    	layout.setView(new AttractionsView({
 	    		    		views: {
-	    						'.header-view' : new HeaderView(),
+	    						'.header-view' : new HeaderView(
+    						{
+								views: {
+									'.site-topMenu-view' : new TopMenuView()
+								}
+							}),
 	    						'.category-view' : new AttractionsCategoryView(),
 	    						'.regions-view' : new AttractionsRegionsView(),
 	    						'.footer-view' : new FooterView(),
@@ -372,7 +394,12 @@ define(['app',
 
 	    		    	layout.setView(new AttractionView({
 	    		    		views: {
-	    						'.header-view' : new HeaderView(),
+	    						'.header-view' : new HeaderView(
+    						{
+								views: {
+									'.site-topMenu-view' : new TopMenuView()
+								}
+							}),
 	    						'.category-view' : new AttractionsCategoryView(),
 	    						'.regions-view' : new AttractionsRegionsView(),
 	    						'.gallery-view' : new AttractionGalleryView(),
