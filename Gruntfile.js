@@ -64,14 +64,7 @@ module.exports = function(grunt) {
     		    		google: 'empty:'
     		    	}
     	    	}
-        	},
-            css: {
-                options: {
-                    cssIn: 'dist/temp/css/main.css',
-                    out: 'dist/temp/out.css',
-                    // cssPrefix: '/css/'
-                }
-            }
+        	}
         },
 
 
@@ -184,54 +177,40 @@ module.exports = function(grunt) {
     	},
         
         
+        /** Compile stylus stylesheets */
         stylus: {
             compile: {
                 files: {
-                    'dist/temp/css/main.css' : 'stylesheets/main.styl'
-                  // 'dist/temp/css/attraction.css': 'styl/attraction.styl',
-                  // 'dist/temp/css/attractions.css': 'styl/attractions.styl',
-                  // 'dist/temp/css/events.css': 'styl/events.styl',
-                  // 'dist/temp/css/main.css': 'styl/main.styl',
-                  // 'dist/temp/css/plan.css': 'styl/plan.styl',
-                  // 'dist/temp/css/responsive.css': 'styl/responsive.styl',
-                  // 'dist/temp/css/search.css': 'styl/search.styl',
-                  // 'dist/temp/css/style.css': 'styl/style.styl',
+                    'dist/temp/out.css' : 'stylesheets/main.styl'
                 },
                 options: {
-                    'include css': true,
-                    'linenos' : true
+                    'include css': true
                 }
-          }
-          // incremental: {
-          //     files: {
-          //         'styl/main.styl.css' : 'styl/main.styl'
-          //     }
-          // }
+            }
         },
 
-    
-        // watch: {
-        //     less: {
-        //         files: ["styl/*.styl"],
-        //         tasks: ['stylus:incremental'],
-        //         options: {
-        //             nospawn: true
-        //         }
-        //     }
-        // },
-        // 
-        // 
-        // concurrent: {
-        //       run: ["connect:dev:keepalive", "watch:less"],
-        //       options: {
-        //           logConcurrentOutput: true
-        //       }
-        // },
+        /** Detect any changes on stylesheets, recompile when needed */
+        watch: {
+            stylus: {
+                files: ["stylesheets/**/*.styl"],
+                tasks: ['stylus'],
+                options: {
+                    nospawn: true
+                }
+            }
+        },
+        
+        /** Run server and watch in the same process */
+        concurrent: {
+            server : ["connect:dev:keepalive", "watch:stylus"],
+            options: {
+                logConcurrentOutput: true
+            }
+        },
 
-    
     	/* Clean dist folder */
         clean: ["dist/"]
-      });
+    });
 
 
     grunt.loadNpmTasks('grunt-contrib');
@@ -240,24 +219,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sed');
     grunt.loadNpmTasks('grunt-rsync');
     grunt.loadNpmTasks('grunt-concurrent');
-
-
-    // var changedFiles = Object.create(null);
-    // grunt.event.on('watch', function(action, filepath) {
-    //     // grunt.log.writeln(action + " " + filepath);
-    //     // var changedFiles = Object.create(null)
-    // 
-    //     changedFiles[filepath + '.css'] = [filepath];
-    //     // grunt.log.writeln('aaa' + changedFiles);
-    //     // grunt.log.writeln(        grunt.config.get('stylus.incremental.files')['dummy.css']);
-    // 
-    //     // changedFiles[filepath + '.css'] = filepath;
-    //     // var files = grunt.config.get('stylus.incremental.files');
-    //     grunt.config('stylus.incremental.files', changedFiles);
-    //     // grunt.log.writeln(JSON.stringify(grunt.config.get('stylus.incremental.files')));
-    //     changedFiles = Object.create(null);
-    //     // grunt.task.run('stylus:incremental');
-    // });
 
 
     grunt.registerTask("init", "Initialize environment", function(apihost) {
@@ -275,14 +236,11 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask("run", "Run local server", [
-        // "stylus:compile",
-        // "concurrent:run"
-        // "watch:less"
         "stylus:compile",
-        "connect:dev:keepalive"
+        "concurrent:server"
     ]);
 
-    
+
     grunt.registerTask("default", "Run local server", [
         "run",
     ]);
@@ -304,6 +262,7 @@ module.exports = function(grunt) {
         "requirejs",
         "concat", 
         "uglify",
+        "stylus:compile",
         "cssmin",
         "copy",
         "sed:version",
