@@ -27,7 +27,13 @@ define([
 						: undefined
 				}
 			};
+		},
+
+		afterRender: function() {
+			$(".custom-checkbox").button();
 		}
+
+		
 	});
 
 });

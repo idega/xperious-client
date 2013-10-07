@@ -1,5 +1,5 @@
 /*Font declarations*/
-body, button,input,select,textarea, .ui-widget{font-family:'Ubuntu',sans-serif;font-weight:300;}
+body, button,input,select,textarea, .ui-widget{font-family: 'Open Sans', sans-serif; font-weight: 300;}
 
 /*---Default elements---*/
 a{margin:0;padding:0;font-size:100%;vertical-align:baseline;text-decoration:none;color:#86c543;}
@@ -205,6 +205,13 @@ button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;ver
 .guests .body .row input{width:10px;height:18px;color:#aba9a2;font-family:Ubuntu;font-weight:300;}
 .guests .body .row input[type=text]{font-family:Ubuntu;color:#6d6d6d;padding-right:8px;padding-left:8px;font-size:14px;font-weight:400;}
 .guests .body .row .label{font-size:14px;color:#aba9a2;font-family:Ubuntu;font-weight:300;line-height:34px;width:10px;}
+
+/*Cutsom checkboxes*/
+.ui-button-text-only {border: 0; padding: 0; padding-left: 23px; background: url('/images/checkbox.png') no-repeat 4px 3px; margin-bottom: 5px; font-family: 'Ubuntu',sans-serif; text-align: left;}
+.ui-button-text-only.ui-state-active {background-position: -383px 3px;}
+.ui-button .ui-button-text {padding: 0; font-size: 14px; color: #6d6d6d; font-weight: 300; line-height: 17px; border: none;}
+.custom-checkbox {position: relative;}
+.custom-checkbox input[type="checkbox"] {position: absolute; left: 2px; top: 2px;}
 
 /*---Helpers---*/
 .menu{list-style:none;padding:0;margin:0;}
@@ -688,9 +695,26 @@ a:hover .theme-hover-text{-moz-transition:height .3s;-ms-transition:height .3s;-
 
 /*Travel packages*/
 .search-preferences-section{background:#fff;border-bottom:3px solid #d5af37;text-align:center;font-size:18px;padding-top:13px;padding-bottom:15px;}
-.search-preferences-section span{color:#d5af37;border-bottom:1px dashed #333;}
+.search-preferences-section span span{color:#d5af37;border-bottom:1px dashed #333;}
+.search-preferences-section .package-list-suggestion {margin-top: 10px;}
+
+/*popups in search preferences*/
+.white-popup {position: absolute; margin-left: 10px; margin-top: 10px; background: #fff; border: 1px solid #a6a49f; border-radius: 3px; box-shadow: 0 0 10px rgba(0,0,0,0.35); z-index: 152;}
+.white-popup .nip {position: absolute; display: inline-block; left: 80px; top: -7px; height: 7px; width: 10px; background: url(/images/white-nip-top.png) no-repeat left top; }
+.white-popup label {display: block; margin-bottom: 11px;}
+
+.input-popup input[type="text"] {padding-top: 10px; padding-bottom: 7px; font-size: 16px; width: 418px;}
+
+.accommodation-popup {padding: 16px 18px; width: 230px;}
+.accommodation-popup h4 {margin: 0; color: #86c543; font-size: 16px; text-transform: uppercase; padding-bottom: 10px;}
+.accommodation-popup .col-1 {float: left; width: 92px;}
+.accommodation-popup .col-2 {float: right; width: 125px;}
+
+
+
 .package-list-suggestion{padding-top:0px;padding-bottom:30px;text-align:center;font-size:18px;}
-.package-list-suggestion span{color:#d5af37;border-bottom:1px dashed #333;}
+.package-list-suggestion > span{color:#d5af37;border-bottom:1px dashed #333;}
+.package-list-suggestion span span {cursor: pointer;}
 .travel-package-block{position:relative;}
 .travel-package-block .package-desc{background:#fff;padding:13px 15px;position:relative;height:130px;overflow:hidden;}
 .package-desc,.package-desc p{line-height:20px;font-size:14px;}
@@ -720,10 +744,9 @@ a:hover .theme-hover-text{-moz-transition:height .3s;-ms-transition:height .3s;-
 .travel-blocks-3 .package-desc{height:224px;}
 .travel-blocks-3 .travel-package-block:hover .description-cover{height:250px;}
 .travel-blocks-3 .description-cover p{padding-top:95px;}
-.destination-popup-section.closed{display:none;}
-.destination-popup-section{position:absolute;right:0px;left:0px;z-index:155;}
+.destination-popup-section{position:absolute;right:0px;left:0px;z-index:155; display: none;}
 .destination-popup-section .destination-section__title{color:#fff;background:#d5af37;}
-.destination-popup-section .destination-section__close{background-image:url(/images/destination-close-2.png);}
+.destination-popup-section .destination-section__close{background-image:url(/images/destination-close-2.png); border-bottom: none;}
 .more-travel-plans{text-align:center;padding-top:35px;font-size:16px;text-transform:uppercase;padding-bottom:15px;}
 .more-travel-plans a{color:#a6a49f;}
 .more-travel-plans a:hover{text-decoration:underline;}

@@ -10,7 +10,10 @@ define([
 
 
         events: {
-        	'click .element' : 'result'
+        	'click .element' : 'result',
+            'click #js-show-destination-popup' : 'showDestinationPopup',
+            'click .destination-popup-section .destination-section__close' : 'closeDestinationPopup'
+
         },
 
 
@@ -58,6 +61,15 @@ define([
 	        	e.preventDefault();
         	}
         },
+
+        showDestinationPopup: function(){
+
+            $('.destination-popup-section').fadeIn();
+        },
+
+        closeDestinationPopup: function(){
+            $('.destination-popup-section').fadeOut();
+        },
         
 
         afterRender: function() {
@@ -65,15 +77,6 @@ define([
 
             $('.default-image-slider').cycle();
 
-            var destinationPopup = $('.destination-popup-section');
-
-            $('.destination-popup-section .destination-section__close').on('click', function(){
-                destinationPopup.fadeOut().addClass('closed');
-            });
-
-            $('#js-show-destination-popup').on('click', function(){
-                destinationPopup.removeClass('closed').fadeIn();
-            });
         }
 
     });
