@@ -184,7 +184,8 @@ module.exports = function(grunt) {
                     'dist/temp/out.css' : 'stylesheets/main.styl'
                 },
                 options: {
-                    'include css': true
+                    'include css': true,
+                    'linenos': true
                 }
             }
         },
