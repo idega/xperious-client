@@ -1,9 +1,9 @@
 <div class="site-block">
      <div class="package-list-options">
           My type of interest/theme is 
-          <span>
-             <span>golf, horses, hicking</span>
-             <div class="white-popup input-popup">
+          <span class="relative">
+             <span class="js-toggle-sibling-popup toggle-sibling-popup">golf, horses, hicking</span>
+             <div class="white-popup input-popup display-none">
               <span class="nip"></span>
               <input type="text" placeholder="I'd like to"/>
              </div>
@@ -11,87 +11,91 @@
           and the timeframe is 
           <span>
             <span>01.10.2013 - 23.11.2013</span>
-          </span> 
+          </span> <br/>
           traveling 
           <span>
             <span>5</span>
           </span> 
           my budget is 
-          <span>
-            <span>150.000 ISK</span>
-             <div class="white-popup input-popup">
-              <span class="nip"></span>
-              <input type="text" placeholder="I'd like to"/>
+          <span class="relative">
+            <span class="js-toggle-sibling-popup toggle-sibling-popup">150.000 ISK</span>
+            <div class="white-popup input-popup display-none" style="margin-left: -10px;">
+              <span class="nip" style="left: 55px;"></span>
+              <input type="text" placeholder="150.000 ISK" class="numbers-input"/>
              </div>
           </span> 
           per person my accommodation type is 
-          <span>
-            <span>hotels</span>
-            <div class="white-popup accommodation-popup">
-              <span class="nip"></span>
+          <span class="relative">
+            <span class="js-toggle-sibling-popup toggle-sibling-popup">hotels</span>
+            <div class="white-popup accommodation-popup display-none" style="margin-left: -105px;">
+              <span class="nip" style="left: 128px;"></span>
               <form class="clearfix">
                 <div class="col-1">
                   <h4>HOTELS</h4>
-                  <div class="form-row">
-                    <label class="custom-checkbox" for="ch-1-1">
-                      <input type="checkbox" id="ch-1-1" />
-                    </label>
                     <div class="clearfix">
-                      <input name="star1" type="radio" class="star" checked="checked"/>
-                      <input name="star1" type="radio" class="star" />
-                      <input name="star1" type="radio" class="star" />
-                      <input name="star1" type="radio" class="star" />
-                      <input name="star1" type="radio" class="star" />
+                      <label class="custom-checkbox fl" for="ch-1-1">
+                        <input type="checkbox" id="ch-1-1" />
+                      </label>
+                      <div class="clearfix stars-block fl">
+                        <input name="star1" type="radio" class="star" checked="checked"/>
+                        <input name="star1" type="radio" class="star" />
+                        <input name="star1" type="radio" class="star" />
+                        <input name="star1" type="radio" class="star" />
+                        <input name="star1" type="radio" class="star" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-row">
-                    <label class="custom-checkbox clearfix" for="ch-1-2">
-                      <input type="checkbox" id="ch-1-2" />
-                    </label>
+
                     <div class="clearfix">
-                      <input name="star2" type="radio" class="star" />
-                      <input name="star2" type="radio" class="star" checked="checked" />
-                      <input name="star2" type="radio" class="star" />
-                      <input name="star2" type="radio" class="star" />
-                      <input name="star2" type="radio" class="star" />
+                      <label class="custom-checkbox clearfix fl" for="ch-1-2">
+                        <input type="checkbox" id="ch-1-2" />
+                      </label>
+                      <div class="clearfix stars-block fl">
+                        <input name="star2" type="radio" class="star" />
+                        <input name="star2" type="radio" class="star" checked="checked" />
+                        <input name="star2" type="radio" class="star" />
+                        <input name="star2" type="radio" class="star" />
+                        <input name="star2" type="radio" class="star" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-row">
-                    <label class="custom-checkbox clearfix" for="ch-1-3">
-                      <input type="checkbox" id="ch-1-3" />
-                    </label>
+
                     <div class="clearfix">
-                      <input name="star3" type="radio" class="star" />
-                      <input name="star3" type="radio" class="star" />
-                      <input name="star3" type="radio" class="star" checked="checked" />
-                      <input name="star3" type="radio" class="star" />
-                      <input name="star3" type="radio" class="star" />
+                      <label class="custom-checkbox clearfix fl" for="ch-1-3">
+                        <input type="checkbox" id="ch-1-3" />
+                      </label>
+                      <div class="clearfix stars-block fl">
+                        <input name="star3" type="radio" class="star" />
+                        <input name="star3" type="radio" class="star" />
+                        <input name="star3" type="radio" class="star" checked="checked" />
+                        <input name="star3" type="radio" class="star" />
+                        <input name="star3" type="radio" class="star" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-row">
-                    <label class="custom-checkbox clearfix" for="ch-1-4">
-                      <input type="checkbox" id="ch-1-4" />
-                    </label>
+
                     <div class="clearfix">
-                      <input name="star4" type="radio" class="star" />
-                      <input name="star4" type="radio" class="star" />
-                      <input name="star4" type="radio" class="star" />
-                      <input name="star4" type="radio" class="star" checked="checked" />
-                      <input name="star4" type="radio" class="star" />
+                      <label class="custom-checkbox clearfix fl" for="ch-1-4">
+                        <input type="checkbox" id="ch-1-4" />
+                      </label>
+                      <div class="clearfix stars-block fl">
+                        <input name="star4" type="radio" class="star" />
+                        <input name="star4" type="radio" class="star" />
+                        <input name="star4" type="radio" class="star" />
+                        <input name="star4" type="radio" class="star" checked="checked" />
+                        <input name="star4" type="radio" class="star" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-row">
-                    <label class="custom-checkbox clearfix" for="ch-1-5">
-                      <input type="checkbox" id="ch-1-5" />
-                    </label>
+
                     <div class="clearfix">
-                      <input name="star5" type="radio" class="star" />
-                      <input name="star5" type="radio" class="star" />
-                      <input name="star5" type="radio" class="star" />
-                      <input name="star5" type="radio" class="star" />
-                      <input name="star5" type="radio" class="star" checked="checked" />
+                      <label class="custom-checkbox clearfix fl" for="ch-1-5">
+                        <input type="checkbox" id="ch-1-5" />
+                      </label>
+                      <div class="clearfix stars-block fl">
+                        <input name="star5" type="radio" class="star" />
+                        <input name="star5" type="radio" class="star" />
+                        <input name="star5" type="radio" class="star" />
+                        <input name="star5" type="radio" class="star" />
+                        <input name="star5" type="radio" class="star" checked="checked" />
+                      </div>
                     </div>
-                  </div>
                 </div>
                 <div class="col-2">
                   <h4>OTHER</h4>

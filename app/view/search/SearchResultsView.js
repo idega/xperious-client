@@ -65,10 +65,12 @@ define([
         showDestinationPopup: function(){
 
             $('.destination-popup-section').fadeIn();
+            $('.site-cover-for-map').fadeIn();
         },
 
         closeDestinationPopup: function(){
             $('.destination-popup-section').fadeOut();
+            $('.site-cover-for-map').fadeOut();
         },
         
 

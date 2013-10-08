@@ -7,6 +7,10 @@ define([
 
 		template: 'search/preferences',
 
+		events: {
+        	'click .js-toggle-sibling-popup' : 'toggleSiblingPopup'
+        },
+
 		initialize: function() {
 			app.search.pref.on('change', this.render, this);
 			app.search.terminals.on('reset', this.render, this);
@@ -30,8 +34,20 @@ define([
 		},
 
 		afterRender: function() {
-			$(".custom-checkbox").button();
-		}
+			
+
+		},
+
+		toggleSiblingPopup: function(e){
+			var $this = $(e.currentTarget).next();
+
+
+			if ($this.hasClass('visible')){
+				$this.fadeOut().removeClass('visible');
+			}else{
+				$this.fadeIn().addClass('visible');
+			}
+        }
 
 		
 	});
