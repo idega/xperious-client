@@ -81,6 +81,7 @@ define([
 
 				}, this));
 			}
+			$('.default-image-slider').cycle();
 		}
 	});
 

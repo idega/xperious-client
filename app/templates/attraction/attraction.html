@@ -9,20 +9,118 @@
 
 
   <% if (product.id) { %>
-	  <div class="section package-info-section">
-	    <div class="site-block">
-	      <h2 class="green"><%= product.title %></h2>
-	      <p><%= product.subtitle %></p>
-	    </div>
-	  </div>
-	
 	  <div class="section gallery-section">
-	     <div class="gallery-view" />
+	  	<div class="site-block clearfix">
+	  		<div class="attraction-gallery">
+	  			 <div class="default-image-slider image-slider-location" 
+                data-cycle-slides=".default-image-slide"  
+                data-cycle-prev="#image-slider-left-5" 
+                data-cycle-next="#image-slider-right-5"
+                data-cycle-timeout="0"
+                data-cycle-log="false">
+                    <div class="default-image-slide">
+                        <img src="images/attraction-ex-1.jpg" alt=""/>
+                        <div class="slide-title clearfix">
+                            <div class="photo-title fl">Arnarsapi</div>
+                            <div class="photo-author fr">by <a href="#">Björgvin Óskarsson</a></div>    
+                        </div>
+                    </div>
+                    <div class="default-image-slide">
+                        <img src="images/attraction-ex-1.jpg" alt=""/>
+                        <div class="slide-title clearfix">
+                            <div class="photo-title fl">Arnarsapi</div>
+                            <div class="photo-author fr">by <a href="#">Björgvin Óskarsson</a></div>    
+                        </div>
+                    </div>
+                    <div class="default-image-slide">
+                        <img src="images/attraction-ex-1.jpg" alt=""/>
+                        <div class="slide-title clearfix">
+                            <div class="photo-title fl">Arnarsapi</div>
+                            <div class="photo-author fr">by <a href="#">Björgvin Óskarsson</a></div>    
+                        </div>
+                    </div>
+                    <div id="image-slider-left-5" class="image-slider-left"></div>
+                    <div id="image-slider-right-5" class="image-slider-right"></div>
+                </div>
+	  		</div>
+	  		<div class="attraction-details">
+	  			<table class="attraction-details-table">
+	  				<tr>
+	  					<td class="title">Roadnumber:</td>
+	  					<td>518</td>
+	  				</tr>
+	  				<tr>
+	  					<td class="title">Town:</td>
+	  					<td>Borgarnes</td>
+	  				</tr>
+	  				<tr>
+	  					<td class="title">Website:</td>
+	  					<td><a href="#">www.barnafossar.is</a></td>
+	  				</tr>
+	  				<tr>
+	  					<td class="title">Email:</td>
+	  					<td><a href="#">botgard@rvk.is</a></td>
+	  				</tr>
+	  				<tr>
+	  					<td class="title">Phone:</td>
+	  					<td>411 8650</td>
+	  				</tr>
+	  				<tr>
+	  					<td class="title">Price:</td>
+	  					<td>admission free</td>
+	  				</tr>
+	  				<tr>
+	  					<td class="title">Hours:</td>
+	  					<td>greenhouse 10am-10pm Apr-Sep, to 5pm Oct-Mar</td>
+	  				</tr>
+	  				<tr>
+	  					<td class="title">Tags:</td>
+	  					<td>Nature, west, sight</td>
+	  				</tr>
+	  				<tr>
+	  					<td></td>
+	  					<td></td>
+	  				</tr>
+	  				<tr>
+	  					<td class="title"><img src="images/edit-ico.png" alt=""/></td>
+	  					<td><a href="#">Correct these details</a></td>
+	  				</tr>
+	  				<tr>
+	  					<td class="title"><img src="images/location-ico.png" alt=""/></td>
+	  					<td><a href="#">Add new sight</a></td>
+	  				</tr>
+	  			</table>
+	  		</div>
+	  	</div>
+
+	     <!-- <div class="gallery-view" /> -->
 	  </div>
 	  <div class="section attractions-place-info-section">
 	    <div class="site-block clearfix">
 	      <div class="col-1">
-	        <div class="bordered">
+	      	<div class="xperious-rating">
+	      		<img src="images/xp-rating.png" alt=""/>
+	      	</div>
+	      	<div>
+	      		<p>
+	      			Barnafoss is also known as Bjarnafoss, which was its previous name. Barnafoss is near Hraunfossar which burst out of Hallmundarhraun which is a great lava plain. Barnafoss is a waterfall in Western Iceland, about 100 kilometres (62 mi) from Reykjavík. Barnafoss is on the river Hvita in Borgarfjordur. Hraunfossar flows out of a lava field into Hvita near Barnafoss, creating a stunning scenery.
+	      		</p>
+	      		<h4>Barnafoss in folk mythology</h4>
+	      		<p>
+	      			Many Icelandic folk tales have been associated with Barnafoss, the most famous being about two boys from a nearby farm, Hraunsás. One day, the boys' parents went with their ploughmen to a church. The boys were supposed to stay at home, but as they grew bored they decided to follow their parents. They made a shortcut and crossed a natural stone-bridge that was above the waterfall. But on their way, they felt dizzy and fell into the water and drowned. When their mother found out what had happened, she put a spell on the bridge saying that nobody would ever cross it without drowning himself. A little while later, the bridge was demolished in an earthquake.
+	      		</p>
+	      		<p>
+	      			Another waterfall, Barnafoss, is on the River Skjalfandafljot near the abandoned farm Barnafell in Ljosavatn County. There the river runs in a narrow, and close to 100 metres (330 ft) deep canyon. According to legends, young and brave men jumped across its narrowest parts. During prolonged subzero periods, the spray creates an ice arch across the river above the waterfall and sometimes a rope was strung across the river there to quicken this development. Flocks of sheep were driven over that bridge to graze on the Thingey Island between the two branches of the river.
+	      		</p>
+	      	</div>
+	      	<div>
+	      		<a href="#" class="link-ico">Wikipedia</a>
+	      	</div>
+	      	<div class="social-shading">
+	      		<img src="images/social-sharing-buttons.png" alt=""/>
+	      	</div>
+
+	        <!-- <div class="bordered">
 	           <% if (product.address) { %>
 	               <% if (product.address.roadNumber) { %>
 	                   <p><strong>Roadnumber:</strong> <%= product.address.roadNumber %></p>
@@ -41,10 +139,23 @@
 						<span class="attribution"><%= product.description.attribution.author %></span>
 					<% } %>
 				<% } %>
-	        </div>
+	        </div> -->
 	      </div>
 	      <div class="col-2">
-		        <h3>Other attractions in the region</h3>
+	      		<div class="xperious-rating">
+	      			<img src="images/ta-rating.png" alt=""/>
+	      		</div>
+	      		<div class="attraction-map">
+	      			<img src="images/detailed-attr-map.jpg" alt=""/>
+	      		</div>
+	      		<div class="fb-block">
+	      			<img src="images/fb-block-2.png" alt=""/>
+	      		</div>
+	      		<div class="attraction-actions">
+	      			<a href="#" class="button">BOOKMARK</a>
+	      			<a href="#" class="button button-colored">ADD TO TRIP</a>
+	      		</div>
+		       <!--  <h3>Other attractions in the region</h3>
 		        <% if (products && products.length > 1) { %>
 			        <ul class="menu list clearfix">
 			            <% _.each(_.first(products, 20), function(p) { %>
@@ -55,28 +166,161 @@
 			        </ul>
                 <% } else { %>
                     <p>No other attractions found</p>
-                <% } %>
+                <% } %> -->
 	      </div>
 	    </div>
 	  </div>
 	  <div class="section attractions-place-social">
-	    <div class="site-block clearfix">
-	      <div class="col-1 clearfix">
-	        <div class="fb-like-long"><img src="/images/like-long.png"></div><a href="#" class="icon icon-gp"> <img src="/images/gp-ico.png"></a><a href="#" class="icon icon-tw"> <img src="/images/tw-ico-2.png"></a><a href="#" class="icon icon-mail"><img src="/images/mail-ico.png"></a><a href="#" class="icon icon-print"><img src="/images/print-ico.png"></a>
-	      </div>
-	      <div class="col-2 clearfix"><a href="#" class="button">Bookmark</a>
-	        <div class="map-image"><img src="/images/small-map.png"></div>
+	    <div class="site-block clearfix tac">
+	      <div class="title">SOCIAL</div>
+	      <p>To see what people think about this destination and which of your friends have been there, connect your facebook account.</p>
+	      <div>
+	      	<a href="#" class="fb-button">Connect using Facebook</a>
 	      </div>
 	    </div>
 	  </div>
-	  <div class="section rout-on-map-section">
+	  <div class="section tripAdvisor-section">
 	    <div class="site-block">
-	      <div class="clearfix">
-	        <h2>ATTRACTION <br/><strong>on a map</strong></h2>
-	        <h3>Click on the map to enlarge it and see more details about the rout and directions.</h3>
-	      </div>
-	        <div class="map-holder" />
+	    	<div class="title"><span>TripAdvisor reviews</span></div>
+	    	<div class="clearfix reviews-list">
+	    		<div class="col-1">
+	    			<div class="review-item">
+	    				<h5>Title of the review</h5>
+	    				<p class="date">By Name, 8/22/12</p>
+	    				<p>
+	    					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#">read more</a>
+	    				</p>
+	    			</div>
+	    			<div class="review-item">
+	    				<h5>Title of the review</h5>
+	    				<p class="date">By Name, 8/22/12</p>
+	    				<p>
+	    					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#">read more</a>
+	    				</p>
+	    			</div>
+	    			<div class="review-item">
+	    				<h5>Title of the review</h5>
+	    				<p class="date">By Name, 8/22/12</p>
+	    				<p>
+	    					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#">read more</a>
+	    				</p>
+	    			</div>
+	    		</div>
+	    		<div class="col-2">
+	    			<div class="review-item">
+	    				<h5>Title of the review</h5>
+	    				<p class="date">By Name, 8/22/12</p>
+	    				<p>
+	    					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#">read more</a>
+	    				</p>
+	    			</div>
+	    			<div class="review-item">
+	    				<h5>Title of the review</h5>
+	    				<p class="date">By Name, 8/22/12</p>
+	    				<p>
+	    					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#">read more</a>
+	    				</p>
+	    			</div>
+	    		</div>
+	    	</div>
 	    </div>
+	  </div>
+	  <div class="section sights-section">
+	  	<div class="site-block">
+	  		<div class="title">Nearby Food &amp; Drink</div>
+	  		<div class="attractions-list clearfix">
+			   <table cellspacing="0" cellpadding="0" class="attractions-list-table">
+			        <tr>
+			          <td>
+			            <a href="#" class="element">
+					         <div class="img">
+					         	<img src="images/img-holder.png" alt=""/>
+					         </div>
+					         <div class="details">
+					           <h4>Title of sight</h4>
+					           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. <span>[...]</span></p>
+					         </div>
+					         <div class="element-cover">
+					         	<div class="cover-title">Title of the sight</div>
+					         	<div class="cover-subtitle">Subtitle of sight</div>
+					         	<div class="element-thumbs tac">
+					         		<img src="images/th-1-1.png" alt=""/>
+					         		<img src="images/th-1-1.png" alt=""/>
+					         		<img src="images/th-1-1.png" alt=""/>
+					         	</div>
+					         </div>
+					    </a>
+			          </td>
+			          <td>
+			             <a href="#" class="element">
+					         <div class="img">
+					         	<img src="images/img-holder.png" alt=""/>
+					         </div>
+					         <div class="details">
+					           <h4>Title of sight</h4>
+					           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. <span>[...]</span></p>
+					         </div>
+					         <div class="element-cover">
+					         	<div class="cover-title">Title of the sight</div>
+					         	<div class="cover-subtitle">Subtitle of sight</div>
+					         	<div class="element-thumbs tac">
+					         		<img src="images/th-1-1.png" alt=""/>
+					         		<img src="images/th-1-1.png" alt=""/>
+					         		<img src="images/th-1-1.png" alt=""/>
+					         	</div>
+					         </div>
+					    </a>
+			          </td>
+			          <td>
+			             <a href="#" class="element">
+					         <div class="img">
+					         	<img src="images/img-holder.png" alt=""/>
+					         </div>
+					         <div class="details">
+					           <h4>Title of sight</h4>
+					           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. <span>[...]</span></p>
+					         </div>
+					         <div class="element-cover">
+					         	<div class="cover-title">Title of the sight</div>
+					         	<div class="cover-subtitle">Subtitle of sight</div>
+					         	<div class="element-thumbs tac">
+					         		<img src="images/th-1-1.png" alt=""/>
+					         		<img src="images/th-1-1.png" alt=""/>
+					         		<img src="images/th-1-1.png" alt=""/>
+					         	</div>
+					         </div>
+					    </a>
+			          </td>
+			          <td>
+			            <a href="#" class="element">
+					         <div class="img">
+					         	<img src="images/img-holder.png" alt=""/>
+					         </div>
+					         <div class="details">
+					           <h4>Title of sight</h4>
+					           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. <span>[...]</span></p>
+					         </div>
+					         <div class="element-cover">
+					         	<div class="cover-title">Title of the sight</div>
+					         	<div class="cover-subtitle">Subtitle of sight</div>
+					         	<div class="element-thumbs tac">
+					         		<img src="images/th-1-1.png" alt=""/>
+					         		<img src="images/th-1-1.png" alt=""/>
+					         		<img src="images/th-1-1.png" alt=""/>
+					         	</div>
+					         </div>
+					    </a>
+			          </td>
+			        </tr>
+			    </table>
+
+			    <div class="more-attractions tac">
+			   		<a href="#">-     SHOW ME <strong>MORE NEARBY SIGTHS</strong>     -</a>
+			    </div>
+
+			</div>
+
+	  	</div>
 	  </div>
   <% } else { %>
          <div class="loading"><img src="<%= loader %>" /></div>

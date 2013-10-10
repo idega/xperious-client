@@ -9,6 +9,7 @@ define([
 
 		events: {
         	'click .js-toggle-sibling-popup' : 'toggleSiblingPopup'
+
         },
 
 		initialize: function() {
@@ -34,7 +35,8 @@ define([
 		},
 
 		afterRender: function() {
-			
+
+
 
 		},
 
@@ -45,6 +47,7 @@ define([
 			if ($this.hasClass('visible')){
 				$this.fadeOut().removeClass('visible');
 			}else{
+				$('.white-popup.visible').fadeOut().removeClass('visible');
 				$this.fadeIn().addClass('visible');
 			}
         }

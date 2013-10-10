@@ -1,7 +1,24 @@
 <div class="section attractions-title-section">
   <div class="site-block">
     <div class="clearfix">
-      <h2>IN 
+       <div class="region-select clearfix">
+          <p class="label">CHOOSE REGION:</p>
+          <ul class="menu clearfix">
+            <% _.each(regions, function(region) { %>
+                <li <%= (region.id == selected.id) ? 'class="selected"' : '' %> >
+                    <a href="<%= baseUrl + '/' + region.id %>" data-id="<%= region.id %>"><%= region.title %></a>
+                </li>
+            <% }) %>
+          </ul>
+        </div>
+        <h2>
+          Barnafoss - Children's Falls
+        </h2>
+        <h3>
+          A cursed waterfall after two children who disappeared many, many years ago.
+        </h3>
+
+     <!--  <h2>IN 
         <%= (selected && selected.title 
             && (selected.title.toUpperCase() === 'NORTH' 
              || selected.title.toUpperCase() === 'EAST' 
@@ -19,6 +36,6 @@
                 <a href="<%= baseUrl + '/' + region.id %>" data-id="<%= region.id %>"><%= region.title %></a>
             </li>
         <% }) %>
-      </ul>
-    </div>
+      </ul> 
+    </div> -->
 </div>

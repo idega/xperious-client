@@ -64,6 +64,7 @@ define([
 
         showDestinationPopup: function(){
 
+            $('.white-popup.visible').fadeOut();
             $('.destination-popup-section').fadeIn();
             $('.site-cover-for-map').fadeIn();
         },
