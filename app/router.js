@@ -10,6 +10,7 @@ define(['app',
 	'view/index/timeframe/TimeframeView',
     'view/index/guests/GuestsView',
 	'view/index/event/EventSliderView',
+    'view/signup/SignupView',
 	'view/search/SearchView',
 	'view/search/SearchPreferencesView',
 	'view/plan/PlanView',
@@ -34,6 +35,7 @@ define(['app',
 	TimeframeView,
     GuestsView,
 	EventSliderView,
+    SignupView,
 	SearchView,
 	SearchPreferencesView,
 	PlanView,
@@ -54,6 +56,7 @@ define(['app',
 	    	'search(/:query)/:country/:from/:to/:arrivalterminal/:arrivaltime/:adults/:teenagers/:children/:infants/:seniors(/budget/:budgetfrom/:budgetto)(/plan/:index)' : 'search',
 	    	'attractions/:country/:category(/:region)(/:product)' : 'attractions',
 	    	'events*path' : 'events',
+            'signup*path' : 'signup',
 	    	'' : 'index'
 	    },
 
@@ -125,7 +128,13 @@ define(['app',
 	    events: function() {
     		app.layout(this._layout().events()).render();
 	    },
-	    
+
+	    /**
+	     * Show signup page.
+	     */
+	    signup: function() {
+    		app.layout(this._layout().signup()).render();
+	    },
 
 	    /**
 	     * Search plans by given preferences.
@@ -340,6 +349,26 @@ define(['app',
 									'.day-products-view' : new PlanDayProductsView()
 								}
 							})
+    		    		}
+    		    	}));
+
+	    			return layout;
+	    		}, this),
+
+
+	    		signup: _.bind(function() {
+    		    	var layout = new Backbone.Layout();
+
+    		    	layout.setView(new SignupView({
+    		    		views: {
+    						'.header-view' : new HeaderView(
+    						{
+								views: {
+									'.site-topMenu-view' : new TopMenuView()
+								}
+							}),
+    						'.footer-view' : new FooterView(),
+    						'.bottom-view' : new BottomView()
     		    		}
     		    	}));
 
