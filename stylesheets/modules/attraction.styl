@@ -21,8 +21,6 @@
 .package-info-section h2.green{font-size:57px;color:#86c543;margin-bottom:4px;}
 .attractions-place-page .package-info-section p{margin-top:4px;margin-bottom:3px;}
 .attractions-place-page .package-info-section .site-block{padding-top:15px;}
-.attractions-place-page .attractions-title-section .site-block{position:relative;padding-bottom:18px;}
-.attractions-place-page .attractions-title-section .region-select{position:absolute;left:0px;bottom:18px;}
 
 /*Attractions place info section -------------------------------------------------------------------------- */
 .attractions-place-info-section{background:#fff;}
@@ -33,13 +31,12 @@
 .attractions-place-info-section .col-1 h4 {margin-bottom: 0px; font-size: 14px; font-weight: bold;}
 .attractions-place-info-section .col-2{float:right;width:390px;}
 .attraction-map {margin-top: 7px; margin-bottom: 25px;}
-.attractions-place-info-section .fb-block {margin-bottom: 12px;}
+.attractions-place-info-section .fb-block {padding-bottom: 25px; padding-top: 25px;}
 .attractions-place-info-section .xperious-rating {padding-bottom: 18px;}
 
 
-.attraction-actions {padding-top: 10px;}
+.attraction-actions {padding-top: 25px; padding-bottom: 45px;}
 .attraction-actions .button {font-size: 14px; line-height: 40px; margin-right: 18px; height: 40px;}
-.attraction-actions .button-colored {background-color: #559fd3;}
 
 .attractions-place-info-section .bordered{border-top:1px solid #a6a49f;}
 .attractions-place-info-section .bordered p{margin:0;padding:8px 0;padding-bottom:7px;border-bottom:1px solid #a6a49f;}
@@ -108,24 +105,63 @@
 
 /* overrides */
 .attractions-place-page .inner-home-section{background:url(/images/attractions-bg-2.jpg) no-repeat fixed center top;}
-.attractions-place-page .attractions-title-section .site-block h2{position:static; margin-bottom: 10px;}
-.attractions-place-page .attractions-title-section .region-select{position:static;}
 .attractions-place-page .rout-on-map-section .map-holder{width:780px;height:390px;padding:0px;margin-top:45px;}
 .attractions-place-page .gallery .media-holder{width:780px;height:500px;}
 .attractions-place-page .gallery .media-holder img{padding-right:780px;padding-bottom:500px;background-size:cover;background-position:center center;}
 .attractions-place-page .gallery .thumbs-holder img{padding-right:156px;padding-bottom:100px;background-size:cover;background-position:center center;}
-.attractions-place-page .attractions-title-section .site-block{padding-top: 45px; padding-bottom: 48px;}
 .attractions-place-page .loading{width:100%;height:180px;padding-top:120px;text-align:center;background-color:#fff}
 .attractions-place-page .loading img{width:35px;opacity:0.75;}
 
 /*Attraction skins*/
+
+/*Dafault skin blue*/
+.link-ico {display: inline-block; padding-left: 16px; background: url(/images/link-ico-blue.png) no-repeat left center; font-size: 11px; text-decoration: underline;}
+.link-ico:hover {text-decoration: none;}
+.element-cover {background-color: #559fd3;}
+.attraction-actions .button-colored {background-color: #559fd3;}
 .attractions-title-section {border-bottom: 2px solid #559fd3;}
-.region-select li.selected a, .region-select li a:hover {color: #559fd3;}
-.attractions-title-section h2 {color: #559fd3;}
-.attraction-details-table td a {color: #559fd3;}
-.link-ico {color: #559fd3; display: inline-block; padding-left: 16px; background: url(/images/link-ico-blue.png) no-repeat left center; font-size: 11px;}
 .sights-section {background: #ebeff2; border-bottom: 2px solid #559fd3;}
-.sights-section .title {color: #559fd3;}
-.sights-section .details h4 {color: #559fd3;}
-.sights-section .details p span {color: #559fd3;}
+.region-select li.selected a, 
+.region-select li a:hover,
+.attractions-title-section h2,
+.attraction-details-table td a,
+.link-ico,
+.sights-section .title,
+.sights-section .details h4,
+.sights-section .details p span,
+.attractions-title-section a {color: #559fd3;}
+
+
+/*Skin color: sand*/
+.skin-sand .link-ico {background: url(/images/link-ico-sand.png) no-repeat left center;}
+.skin-sand .element-cover {background-color: #d5af37;}
+.skin-sand .attraction-actions .button-colored {background-color: #d5af37;}
+.skin-sand .attractions-title-section {border-bottom: 2px solid #d5af37;}
+.skin-sand .sights-section {background: #faf5e7; border-bottom: 2px solid #d5af37;}
+.skin-sand .region-select li.selected a, 
+.skin-sand .region-select li a:hover,
+.skin-sand .attractions-title-section h2,
+.skin-sand .attraction-details-table td a,
+.skin-sand .link-ico,
+.skin-sand .sights-section .title,
+.skin-sand .sights-section .details h4,
+.skin-sand .sights-section .details p span,
+.skin-sand .attractions-title-section a {color: #d5af37;}
+
+
+/*Skin color: green*/
+.skin-green .link-ico {background: url(/images/link-ico-green.png) no-repeat left center;}
+.skin-green .element-cover {background-color: #86c543;}
+.skin-green .attraction-actions .button-colored {background-color: #86c543;}
+.skin-green .attractions-title-section {border-bottom: 2px solid #86c543;}
+.skin-green .sights-section {background: #edf1e9; border-bottom: 2px solid #86c543;}
+.skin-green .region-select li.selected a, 
+.skin-green .region-select li a:hover,
+.skin-green .attractions-title-section h2,
+.skin-green .attraction-details-table td a,
+.skin-green .link-ico,
+.skin-green .sights-section .title,
+.skin-green .sights-section .details h4,
+.skin-green .sights-section .details p span,
+.skin-green .attractions-title-section a {color: #86c543;}
 

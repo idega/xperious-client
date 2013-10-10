@@ -45,7 +45,20 @@ define([
 					app.attractions.country.get('code'),
 					app.attractions.category.get('id'))
 			};
+		},
+
+		afterRender: function() {
+			var stackedClass = null;
+			$('.js-change-skin').click(function(){
+				var $this = $(this);
+				
+				$('body').removeClass(stackedClass);
+				stackedClass = $this.attr('data-class');
+				$('body').addClass(stackedClass);
+				return false;
+			});
 		}
+
 		
 	});
 
