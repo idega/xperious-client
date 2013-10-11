@@ -214,7 +214,7 @@ div.star-rating {padding-top: 4px;}
 .custom-checkbox input[type="checkbox"] {position: absolute; left: 2px; top: 2px;}
 
 /*---Helpers---*/
-.menu{list-style:none;padding:0;margin:0;}
+.menu, .no-style{list-style:none;padding:0;margin:0;}
 .fl{float:left;}
 .fr{float:right;}
 .tar{text-align:right;}
@@ -904,7 +904,7 @@ a:hover .theme-hover-text{-moz-transition:height .3s;-ms-transition:height .3s;-
 .media-gallery{border:1px solid #5c5c5c;border-radius:4px;}
 .media-gallery #fancybox-content{border-color:#363636;border-radius:4px;padding-top:30px;background:#363636;}
 .media-gallery #fancybox-close{background:url(/images/media-close.png) no-repeat left top;right:1px;top:22px;width:16px;height:16px;}
-.media-gallery #fancybox-left-ico,.media-gallery #fancybox-right-ico{width:60px;height:80px;margin-top:-30px;}
+.media-gallery #fancybox-left-ico, .media-gallery #fancybox-right-ico{width:60px;height:80px;margin-top:-30px;}
 .media-gallery #fancybox-left-ico{background:url(/images/gallery-prev.png) no-repeat left top;}
 .media-gallery #fancybox-right-ico{background:url(/images/gallery-next.png) no-repeat left top;}
 .media-gallery #fancybox-left:hover span{left:19px;}
@@ -919,5 +919,43 @@ a:hover .theme-hover-text{-moz-transition:height .3s;-ms-transition:height .3s;-
 .loading .author{width:100%;font-family:'Ubuntu';font-size:19px;text-align:center;font-weight:200;color:#333333;margin-top:8px;}
 .loading .spinner{width:100%;text-align:center;margin-top:30px;}
 .loading .ui-dialog-titlebar{display:none;}
-.loading.ui-widget-content{background:none;border:0px;}
+.loading.ui-widget-content {background:none; border:0px;}
 .loading + .ui-widget-overlay{background:rgba(255,255,255,0.95);}
+
+/*Login section----------------------------------*/
+.login-section {padding-top: 20px; padding-bottom: 20px; background: #efefef;}
+.login-section .site-block {width: 484px;}
+
+.login-title {font-size: 36px; padding-bottom: 10px; padding-bottom: 15px;}
+.login-title a {text-transform: uppercase;}
+.login-title a.selected {color: #d6d4ce;}
+
+.login-section label {display: block; padding-left: 4px; padding-bottom: 7px; float: none;}
+.login-section input[type="text"],
+.login-section input[type="password"] {width: 452px;}
+
+.or-block {background: url(/images/grey-dot.png) repeat-x center center; margin-top: 40px; margin-bottom: 40px; text-align: center;}
+.or-block span {background: #efefef; display: inline-block; color: #a6a49f; font-size: 16px; text-transform: uppercase; padding: 0 7px;}
+
+.login-section .fb-signup {display: block; border-radius: 3px; background: #3c5193; text-align: center; line-height: 40px; color: #fff;}
+.login-section .fb-signup:hover {background: #33437a;}
+.login-section .fb-signup span {display: inline-block; background: url(/images/fb-ico-2.png) no-repeat left center; padding-left: 40px;}
+.login-section .button {border: none; border-radius: 3px; height: 40px; line-height: 40px; color: #fff; background: #86c543; color: #fff; text-transform: uppercase; font-size: 14px; text-align: center; padding: 0; width: 484px;}
+
+.user-menu {float: left; padding-left: 20px; padding-top: 12px; background: url(/images/grey-line.png) no-repeat left 16px;}
+.user-menu .user-avatar {float: right;}
+.user-avatar img {border: 1px solid #e5e5e5;}
+.user-menu .user-name {float: right; font-size: 12px; color: #e5e5e5; line-height: 14px; padding-right: 16px; background: url(/images/arrow-down-grey.png) no-repeat right 7px; margin-right: 10px; padding-left: 10px; margin-top: 3px;}
+.user-menu .user-messages {float: right; width: 20px; height: 14px; background: url(/images/mail-ico-grey.png) no-repeat center center; padding-left: 10px; padding-right: 10px; border-left: 1px solid #e5e5e5; margin-top: 3px;}
+.user-menu .menu-item {float: right; font-size: 12px; color: #e5e5e5; line-height: 14px; padding-right: 16px; background: url(/images/arrow-down-grey.png) no-repeat right 7px; padding-left: 10px; border-left: 1px solid #e5e5e5; margin-top: 3px;}
+.user-menu .has-submenu {position: relative;}
+.user-submenu {position: absolute; border: 1px solid #a6a49f; border-radius: 3px; background: #fff; display: none;}
+.user-submenu .nip {display: inline-block; position: absolute; width: 11px; height: 7px; background: url(/images/white-nip-top-2.png) no-repeat left top; right: 23px; top: -7px;}
+.user-submenu a {display: block; white-space: nowrap; padding: 0 10px; line-height: 30px; color: #333; font-size: 13px;}
+
+
+/*Welcome section --------------------------------*/
+.welcome-section {background: #fff; padding-top: 40px; padding-bottom: 40px;}
+.welcome-text {width: 875px; float: right;}
+.welcome-text p {line-height: 18px;}
+.welcome-text p:first-child {margin-top: 0;}
