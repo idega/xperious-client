@@ -3,9 +3,8 @@ define([
 ],function(
 	app) {
 
-
 	return Backbone.View.extend({
-		template: 'signup/signup'
+		template: 'user/signup'
 	});
 
 });

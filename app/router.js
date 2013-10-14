@@ -10,7 +10,9 @@ define(['app',
 	'view/index/timeframe/TimeframeView',
     'view/index/guests/GuestsView',
 	'view/index/event/EventSliderView',
-    'view/signup/SignupView',
+    'view/user/SignupView',
+    'view/user/SigninView',
+    'view/user/AccountView',    
 	'view/search/SearchView',
 	'view/search/SearchPreferencesView',
 	'view/plan/PlanView',
@@ -36,6 +38,8 @@ define(['app',
     GuestsView,
 	EventSliderView,
     SignupView,
+    SigninView,
+    AccountView,
 	SearchView,
 	SearchPreferencesView,
 	PlanView,
@@ -57,6 +61,8 @@ define(['app',
 	    	'attractions/:country/:category(/:region)(/:product)' : 'attractions',
 	    	'events*path' : 'events',
             'signup*path' : 'signup',
+            'signin*path' : 'signin',
+            'account*path' : 'account',
 	    	'' : 'index'
 	    },
 
@@ -134,6 +140,20 @@ define(['app',
 	     */
 	    signup: function() {
     		app.layout(this._layout().signup()).render();
+	    },
+
+	    /**
+	     * Show signin page.
+	     */
+	    signin: function() {
+    		app.layout(this._layout().signin()).render();
+	    },
+
+	    /**
+	     * Show account page.
+	     */
+	    account: function() {
+    		app.layout(this._layout().account()).render();
 	    },
 
 	    /**
@@ -375,6 +395,44 @@ define(['app',
 	    			return layout;
 	    		}, this),
 
+
+	    		signin: _.bind(function() {
+    		    	var layout = new Backbone.Layout();
+
+    		    	layout.setView(new SigninView({
+    		    		views: {
+    						'.header-view' : new HeaderView(
+    						{
+								views: {
+									'.site-topMenu-view' : new TopMenuView()
+								}
+							}),
+    						'.footer-view' : new FooterView(),
+    						'.bottom-view' : new BottomView()
+    		    		}
+    		    	}));
+
+	    			return layout;
+	    		}, this),
+
+	    		account: _.bind(function() {
+    		    	var layout = new Backbone.Layout();
+
+    		    	layout.setView(new AccountView({
+    		    		views: {
+    						'.header-view' : new HeaderView(
+    						{
+								views: {
+									'.site-topMenu-view' : new TopMenuView()
+								}
+							}),
+    						'.footer-view' : new FooterView(),
+    						'.bottom-view' : new BottomView()
+    		    		}
+    		    	}));
+
+	    			return layout;
+	    		}, this),
 
 	    		events: _.bind(function() {
     		    	var layout = new Backbone.Layout();
