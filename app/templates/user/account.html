@@ -7,7 +7,7 @@
   	<div class="section account-details-section">
 		<div class="site-block">
 			<div class="section-title">Account-details</div>
-			<ul class="menu account-menu">
+			<ul class="menu account-menu clearfix">
 				<li>
 					<a href="#">My profile</a>
 				</li>
@@ -24,40 +24,44 @@
 			<div class="clearfix">
 				<div class="col-1">
 					<img src="images/saulius-avatar.png" alt="" />
-					<div>Saulius Mačiulis</div>
+					<div class="user-name">Saulius Mačiulis</div>
 					<a href="#">Edit Profile</a>
 					<hr/>
 					<a href="#" class="verification-ico">VERIFACATIONS</a>
-					<ul class="menu verifications-menu">
+					<ul class="menu verifications-menu clearfix">
 						<li>
 							<a href="#" class="verification-fb">
 								<strong>Facebook</strong><br/>
 								485 Friends
+								<span class="ico"><br/></span>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="verification-gp">
 								<strong>Google +</strong><br/>
 								230 Friends
+								<span class="ico"><br/></span>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="verification-in">
 								<strong>Linkedin</strong><br/>
 								130 Friends
+								<span class="ico"><br/></span>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="verification-mail">
 								<strong>Email</strong><br/>
 								130 Friends
+								<span class="ico"><br/></span>
 							</a>
 						</li>
 					</ul>
 				</div>
 				<div class="col-2">
 					<h4>My Trips</h4>
-					<ul class="menu account-trips-menu">
+					<ul class="menu account-trips-menu clearfix">
 						<li>
 							<a href="#">All</a>
 						</li>
@@ -68,6 +72,70 @@
 							<a href="#">Past trips</a>
 						</li>
 					</ul>
+					<div class="clearfix account-trip">
+						<div class="trip-media">
+							<img src="images/trip-media-1.png" alt="" />
+							<div class="trip-media-days"><strong>10</strong> days/9 nights</div>
+							<span class="nip"><br/></span>
+						</div>
+						<div class="trip-description clearfix">
+							<div class="lefter">
+								<p>
+									<strong>Iceland: <span class="color">28 Oct. - 04. Nov 2013</span></strong>
+								</p>
+								<p>
+									Enjoy the bright nights, whale watching, hot springs and bathing in the amazing Blue Lagoon. Truly an unforgettable weekend in Europe’s northernmost capital!
+								</p>
+								<br/>
+								<p>
+									<strong>Total</strong> per person <strong>980.990</strong> ISK
+								</p>
+							</div>
+							<div class="righter">
+								<p>
+									<strong>Highlights:</strong><br/>
+									 · Akureyri<br/>
+									 · Whale Watching<br/>
+									 · Bird Watching<br/>
+									 · Dettifoss<br/>
+									 · Ásbyrgi
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix account-trip">
+						<div class="trip-media">
+							<img src="images/trip-media-1.png" alt="" />
+							<div class="trip-media-days"><strong>10</strong> days/9 nights</div>
+							<span class="nip"><br/></span>
+						</div>
+						<div class="trip-description clearfix">
+							<div class="lefter">
+								<p>
+									<strong>Iceland: <span class="color">28 Oct. - 04. Nov 2013</span></strong>
+								</p>
+								<p>
+									Enjoy the bright nights, whale watching, hot springs and bathing in the amazing Blue Lagoon. Truly an unforgettable weekend in Europe’s northernmost capital!
+								</p>
+								<br/>
+								<p>
+									<strong>Total</strong> per person <strong>980.990</strong> ISK
+								</p>
+							</div>
+							<div class="righter">
+								<p>
+									<strong>Highlights:</strong><br/>
+									 · Akureyri<br/>
+									 · Whale Watching<br/>
+									 · Bird Watching<br/>
+									 · Dettifoss<br/>
+									 · Ásbyrgi
+								</p>
+							</div>
+						</div>
+					</div>
+
+
 				</div>
 			</div>
 		</div>	
@@ -91,7 +159,18 @@
 				<div class="clearfix">
 					<div class="col-1">
 						<h3>PROFILE PHOTO</h3>
-						[foto upload]
+						<div class="account-photo-upload clearfix">
+							<img src="images/default-photo.png" alt="" class="fl" />
+							<div class="upload-info">
+								<p>
+									<strong>Upload my photo…</strong>
+								</p>
+								<p>
+									Image should be at leasty 300px x 300px
+								</p>
+								<a href="#" class="button">UPLOAD PHOTO</a>
+							</div>
+						</div>
 					</div>
 					<div class="col-2">
 						
@@ -100,16 +179,69 @@
 				<div class="clearfix">
 					<div class="col-1">
 						<h3>BASIC INFORMATION</h3>
-
+						<div class="form-row">
+							<label>First name</label>
+							<input type="text" />
+						</div>
+						<div class="form-row">
+							<label>Last name</label>
+							<input type="text" />
+						</div>
+						<div class="form-row">
+							<label>Email address</label>
+							<input type="text" />
+						</div>
+						<div class="form-controls">
+							<input type="submit" class="button" value="UPDATE" />
+						</div>
 					</div>
 					<div class="col-2">
 						<h3>USERNAME AND PASSWORD</h3>
-						
+						<div class="form-row">
+							<label>User name</label>
+							<input type="text" />
+						</div>
+						<div class="form-row">
+							<label>Password - <a href="#">Generate strong password</a></label>
+							<input type="text" />
+						</div>
+						<div class="form-row">
+							<label>Confirm password</label>
+							<input type="text" />
+						</div>
+						<div class="form-controls">
+							<input type="submit" class="button" value="UPDATE" />
+						</div>
 					</div>
 				</div>
 				<div class="clearfix">
 					<div class="col-1">
 						<h3>ADDRESS</h3>
+						<div class="form-row">
+							<label>Address</label>
+							<input type="text" />
+						</div>
+						<div class="form-row">
+							<label>City</label>
+							<select class="custom-select">
+								<option>&nbsp;</option>
+								<option>Some city</option>
+							</select>
+						</div>
+						<div class="form-row">
+							<label>Zip/Postcode</label>
+							<input type="text" />
+						</div>
+						<div class="form-row">
+							<label>Country*</label>
+							<select class="custom-select">
+								<option>&nbsp;</option>
+								<option>Some country</option>
+							</select>
+						</div>
+						<div class="form-controls">
+							<input type="submit" class="button" value="UPDATE" />
+						</div>
 					</div>
 					<div class="col-2">
 						
@@ -121,14 +253,18 @@
   	</div>
 
 	<div class="section account-travel-credits-section">
-		<div class="site-block tac">
+		<div class="site-block">
 			<div class="section-title">MY TRAVEL CREDITS</div>
 			<div class="clearfix">
 				<div class="col-1">
-					
+					<div class="credits-block tac">
+						TRAVEL CREDIT EARNED <br/> <strong>$289</strong>
+					</div>
 				</div>
 				<div class="col-2">
-					
+					<div class="credits-block tac">
+						TRAVEL CREDIT EARNED <br/> <strong>$289</strong>
+					</div>
 				</div>
 			</div>
 			<div class="tac">
@@ -138,10 +274,35 @@
 			<h2>How do referrals and travel credits work?</h2>
 			<div class="clearfix">
 				<div class="col-1">
-					
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+					</p>
+					<p class="indent">
+						<strong>Example 1:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+					</p>
+					<p class="indent">
+						<strong>Example 1:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.
+					</p>
+					<p>
+						Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+					</p>
 				</div>
 				<div class="col-2">
-					
+					<p>
+						Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+					</p>
+					<p class="indent">
+						<strong>Example 1:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+					</p>
+					<p class="indent">
+						<strong>Example 1:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.
+					</p>
+					<p class="indent">
+						<strong>Example 1:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p>
+					<p>
+						Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+					</p>
 				</div>
 			</div>
 			<div class="white-info-block tac">
@@ -154,8 +315,8 @@ or more as a guest booked on Xperious. Get ready for the thank yous!</p>
 	</div>
 
 	<div class="section account-bookmarks-section">
-		<div class="site-block tac">
-			<div class="sction-title">MY BOOKMARKS</div>
+		<div class="site-block">
+			<div class="section-title">MY BOOKMARKS</div>
 			<ul class="menu bookmarks-menu">
 				<li>
 					<a href="#">All</a>
@@ -175,16 +336,91 @@ or more as a guest booked on Xperious. Get ready for the thank yous!</p>
 			</ul>
 			<div class="bookmarks-list clearfix">
 				<div class="bookmark-item">
-					[Bookmarkas]
+					<img src="images/bookmark-1.png" alt="" />
+					<div class="bookmark-details">
+						<p class="bookmark-name">Snaefellsjokull national park</p>
+						<p class="bookmark-desc">The National Park in Snæfellsnes covers an area of 170m²</p>
+					</div>
+					<div class="bookmark-cover">
+						<p>Snaefellsjokull national park</p>
+						<a href="#" class="white-page-ico"><br/></a>
+						<a href="#" class="white-link-ico"><br/></a>
+						<a href="#" class="white-popout-ico"><br/></a>
+					</div>
+				</div>
+				<div class="bookmark-item">
+					<img src="images/bookmark-1.png" alt="" />
+					<div class="bookmark-details">
+						<p class="bookmark-name">Snaefellsjokull national park</p>
+						<p class="bookmark-desc">The National Park in Snæfellsnes covers an area of 170m²</p>
+					</div>
+					<div class="bookmark-cover">
+						<p>Snaefellsjokull national park</p>
+						<a href="#" class="white-page-ico"><br/></a>
+						<a href="#" class="white-link-ico"><br/></a>
+						<a href="#" class="white-popout-ico"><br/></a>
+					</div>
+				</div>
+				<div class="bookmark-item">
+					<img src="images/bookmark-1.png" alt="" />
+					<div class="bookmark-details">
+						<p class="bookmark-name">Snaefellsjokull national park</p>
+						<p class="bookmark-desc">The National Park in Snæfellsnes covers an area of 170m²</p>
+					</div>
+					<div class="bookmark-cover">
+						<p>Snaefellsjokull national park</p>
+						<a href="#" class="white-page-ico"><br/></a>
+						<a href="#" class="white-link-ico"><br/></a>
+						<a href="#" class="white-popout-ico"><br/></a>
+					</div>
+				</div>
+				<div class="bookmark-item">
+					<img src="images/bookmark-1.png" alt="" />
+					<div class="bookmark-details">
+						<p class="bookmark-name">Snaefellsjokull national park</p>
+						<p class="bookmark-desc">The National Park in Snæfellsnes covers an area of 170m²</p>
+					</div>
+					<div class="bookmark-cover">
+						<p>Snaefellsjokull national park</p>
+						<a href="#" class="white-page-ico"><br/></a>
+						<a href="#" class="white-link-ico"><br/></a>
+						<a href="#" class="white-popout-ico"><br/></a>
+					</div>
+				</div>
+				<div class="bookmark-item">
+					<img src="images/bookmark-1.png" alt="" />
+					<div class="bookmark-details">
+						<p class="bookmark-name">Snaefellsjokull national park</p>
+						<p class="bookmark-desc">The National Park in Snæfellsnes covers an area of 170m²</p>
+					</div>
+					<div class="bookmark-cover">
+						<p>Snaefellsjokull national park</p>
+						<a href="#" class="white-page-ico"><br/></a>
+						<a href="#" class="white-link-ico"><br/></a>
+						<a href="#" class="white-popout-ico"><br/></a>
+					</div>
+				</div>
+				<div class="bookmark-item">
+					<img src="images/bookmark-1.png" alt="" />
+					<div class="bookmark-details">
+						<p class="bookmark-name">Snaefellsjokull national park</p>
+						<p class="bookmark-desc">The National Park in Snæfellsnes covers an area of 170m²</p>
+					</div>
+					<div class="bookmark-cover">
+						<p>Snaefellsjokull national park</p>
+						<a href="#" class="white-page-ico"><br/></a>
+						<a href="#" class="white-link-ico"><br/></a>
+						<a href="#" class="white-popout-ico"><br/></a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>	
 
 	<div class="section account-invoices-section">
-		<div class="site-block tac">
-			<div class="sction-title">MY INVOICES</div>
-			<table cellspacing="0" cellpadding="0">
+		<div class="site-block">
+			<div class="section-title">MY INVOICES</div>
+			<table cellspacing="0" cellpadding="0" class="invoice-table">
 				<tr>
 					<th>Date</th>
 					<th>Reference ID</th>
@@ -197,7 +433,7 @@ or more as a guest booked on Xperious. Get ready for the thank yous!</p>
 					<td>21. August 2013</td>
 					<td>INVPX1002356</td>
 					<td>xxxxxxxxxxxx9631</td>
-					<td><a href="#" class="download-ico">Download Invoice</a></td>
+					<td><a href="#" class="download-invoice-ico">Download Invoice</a></td>
 					<td>387.980 ISK</td>
 					<td><img src="images/small-check.png" alt="" /></td>
 				</tr>
@@ -205,7 +441,7 @@ or more as a guest booked on Xperious. Get ready for the thank yous!</p>
 					<td>21. August 2013</td>
 					<td>INVPX1002356</td>
 					<td>xxxxxxxxxxxx9631</td>
-					<td><a href="#" class="download-ico">Download Invoice</a></td>
+					<td><a href="#" class="download-invoice-ico">Download Invoice</a></td>
 					<td>387.980 ISK</td>
 					<td><img src="images/small-check.png" alt="" /></td>
 				</tr>
