@@ -4,7 +4,12 @@ define([
 	app) {
 
 	return Backbone.View.extend({
-		template: 'user/account'
+		template: 'user/account',
+
+		afterRender: function() {
+			$('.custom-select').selectmenu();
+		}
 	});
 
 });
+

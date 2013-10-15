@@ -983,24 +983,26 @@ a:hover .theme-hover-text{-moz-transition:height .3s;-ms-transition:height .3s;-
 
 
 /*Account details section -----------------------------------*/
-.account-details-section {background: #fff; padding-top: 40px;}
+.account-details-section {background: #fff; padding-top: 40px; padding-bottom: 33px;}
 .account-details-section .section-title {font-size: 36px; text-transform: uppercase; color: #86c543;}
 .account-details-section .color {color: #cbae4a;}
 
 
 /*Account menu*/
-.account-menu {padding-top: 10px; padding-bottom: 40px;}
-.account-menu li {float: left; margin-right: 15px;}
+.account-menu {padding-top: 6px; padding-bottom: 48px;}
+.account-menu li {float: left; margin-right: 25px;}
 .account-menu a {display: inline-block; color: #a6a49f; font-size: 18px;}
 .account-menu a:hover {color: #86c543;}
 
 .account-details-section .col-1 {float: left; width: 232px;}
 .account-details-section .col-2 {float: right; width: 738px;}
-.account-details-section h4 {font-size: 24px; color: #333;}
+.account-details-section h4 {font-size: 24px; color: #333; margin-top: -9px; text-transform: uppercase; margin-bottom: 0px;}
 .account-details-section .col-1 p,
-.account-details-section .col-2 p {line-height: 18px;}
+.account-details-section .col-2 p {line-height: 21px; margin-top: 4px; margin-bottom: 4px;}
 .account-details-section .col-1 p:first-child,
 .account-details-section .col-2 p:first-child {margin-top: 0px;}
+.account-details-section .col-1 p:last-child,
+.account-details-section .col-2 p:last-child {margin-bottom: 0;}
 
 
 .account-trips-menu {padding-bottom: 25px;}
@@ -1009,12 +1011,14 @@ a:hover .theme-hover-text{-moz-transition:height .3s;-ms-transition:height .3s;-
 .account-trips-menu a:hover, .account-trips-menu .active {font-size: 14px; color: #86c543;}
 
 .account-trip {margin-bottom: 10px;}
-.account-details-section .user-name {font-size: 20px; font-weight: 400; color: #333; padding-top: 12px; padding-bottom: 12px;}
+.account-details-section .user-name {font-size: 20px; font-weight: 400; color: #333; padding-top: 12px; padding-bottom: 1px;}
+.edit-profile-link {font-size: 15px;}
 
-.account-details-section hr {margin-top: 18px; margin-bottom: 18px;}
+.account-details-section hr {margin-top: 15px; margin-bottom: 15px; border-color: #a6a49f;}
 
-a.verification-ico {display: block; padding-right: 50px; background: url(/images/verification-ico.png) no-repeat right center;}
+a.verification-ico {display: block; padding-right: 50px; background: url(/images/verification-ico.png) no-repeat right center; line-height: 21px; font-size: 15px; margin-bottom: 18px;}
 
+.verifications-menu li {padding-bottom: 14px;}
 .verifications-menu a {display: block; position: relative; font-size: 12px; color: #333;}
 .verifications-menu a strong {font-size: 14px; font-weight: 400;}
 .verifications-menu .ico {display: inline-block; position: absolute; width: 24px; height: 24px; background: url(/images/verification-icons.png) no-repeat left top; top: 5px; right: 15px;}
@@ -1023,86 +1027,115 @@ a.verification-ico {display: block; padding-right: 50px; background: url(/images
 .verification-mail .ico {background-position: left -72px;}
 
 .trip-media {float: left; position: relative; width: 232px;}
-.trip-media-days {position: absolute; left: 0px; top: 0px; right: 0px; padding: 7px 10px; background: #bea443; color: #fff; font-size: 18px;}
+.trip-media-days {position: absolute; left: 0px; top: 0px; right: 0px; padding: 7px 15px; background: #bea443; color: #fff; font-size: 18px;}
 .trip-media-days strong {font-weight: 400;}
 .trip-media .nip {position: absolute; width: 8px; height: 16px; background: url(/images/sand-nip.png) no-repeat left top; right: -8px; top: 12px;}
-.trip-description {background: #f4f4f3; width: 506px; float: right;}
-.trip-description .lefter {width: 310px; padding: 16px; float: left;}
-.trip-description .righter {width: 142px; padding-right: 16px; float: right; padding-top: 16px; padding-bottom: 16px;}
+.trip-description {background: #f4f4f3; width: 506px; float: right; font-size: 14px;}
+.trip-description p {margin-bottom: 8px;}
+.trip-description .lefter {width: 310px; padding: 9px 16px; float: left; position: relative; padding-bottom: 30px; height: 132px;}
+.trip-description .righter {width: 142px; padding-right: 16px; float: right; padding-top: 9px; padding-bottom: 16px;}
+.trip-description .total-price {position: absolute; left: 16px; bottom: 13px;}
+
 
 
 /*Account invite friends section ----------------------------*/
-.account-invite-friends-section {background: #f6f6f5; padding-top: 30px; padding-bottom: 30px;}
-.account-invite-friends-section .section-title {font-size: 36px; text-transform: 36px; padding-bottom: 5px; color: #333;}
-.account-invite-friends-section .section-subtitle {font-size: 18px; color: #333;}
+.account-invite-friends-section {background: #f6f6f5; padding-top: 34px; padding-bottom: 42px;}
+.account-invite-friends-section .section-title {font-size: 36px; text-transform: 36px; padding-bottom: 1px; color: #333;}
+.account-invite-friends-section .section-subtitle {font-size: 18px; color: #333; margin: 0; margin-bottom: 17px;}
 .account-invite-friends-section .button {background: #605f5c; height: 40px; line-height: 40px; text-align: center; font-size: 14px; padding-left: 27px; padding-right: 27px;}
+.account-invite-friends-section .button:hover {background: #333;}
 
 
 /*Account profile section ------------------------------------*/
-.account-profile-section {background: #fff; padding-top: 30px; padding-bottom: 30px;}
-.account-profile-section .col-1 {width: 483px; float: left; margin-bottom: 45px;}
+.account-profile-section {background: #fff; padding-top: 40px; padding-bottom: 1px;}
+.account-profile-section .col-1 {width: 483px; float: left; margin-bottom: 41px;}
 .account-profile-section .col-2 {width: 483px; float: right;}
 
-.account-profile-section .section-title {font-size: 36px; text-transform: 36px; padding-bottom: 5px; color: #333; text-align: center;}
-.account-profile-section .section-subtitle {font-size: 18px; color: #333; text-align: center;}
-.account-profile-section h3 {text-transform: uppercase; font-size: 24px; color: #333;}
+.account-profile-section .section-title {font-size: 36px; text-transform: 36px; padding-bottom: 1px; color: #333; text-align: center;}
+.account-profile-section .section-subtitle {font-size: 18px; color: #333; text-align: center; margin: 0px; margin-bottom: 15px; margin-bottom: 45px;}
+.account-profile-section h3 {text-transform: uppercase; font-size: 24px; color: #333; margin-top: 0px; margin-bottom: 16px;}
 
-.account-profile-section label {padding-left: 4px; padding-bottom: 4px;}
+.account-profile-section select {width: 481px;}
+.account-profile-section label {padding-left: 4px; padding-bottom: 4px; float: none; display: block; font-size: 14px;}
 .account-profile-section input[type="text"],
-.account-profile-section input[type="password"] {border: 1px solid #a6a49f; padding: 9px 16px; width: 449px;}
+.account-profile-section input[type="password"] {border: 1px solid #a6a49f; padding: 10px 16px; width: 449px;}
 .account-profile-section input[type="submit"].button {padding-right: 10px; font-size: 14px; height: 40px; line-height: 40px; background: #86c543; padding: 0 32px;}
+.account-profile-section input[type="submit"].button:hover {background: #53762b;}
 
-.upload-info p {font-size: 14px; line-height: 21px; margin-top: 0; margin-bottom: 3px;}
+.account-profile-section .ui-selectmenu {border: 1px solid #a6a49f;}
+.account-profile-section .form-controls {padding-top: 6px;}
+
+
+
+.ui-selectmenu-menu .ui-widget {border: 1px solid #a6a49f;}
+.ui-selectmenu-menu .ui-corner-bottom {border-top: none;}
+
+.upload-info p {font-size: 14px; line-height: 18px; margin-top: 0; margin-bottom: 3px;}
 .upload-info p:first-child {margin-top: -5px;}
 .upload-info strong {font-size: 16px; font-weight: 400;}
-.upload-info .button {padding: 0 32px; height: 40px; line-height: 40px; font-size: 14px; background: #333;}
+.upload-info .button {padding: 0 19px; height: 40px; line-height: 40px; font-size: 14px; background: #333; margin-top: 14px;}
+.upload-info .button:hover {background: #030300;}
+.account-photo-upload {padding-left: 4px;}
 .account-photo-upload img {margin-right: 22px; float: left;}
-.account-photo-upload .upload-info {float: left; width: 345px;}
+.account-photo-upload .upload-info {float: left; width: 345px; padding-top: 14px;}
 
 
 
 /*Account travel credits section -----------------------------*/
-.account-travel-credits-section {background: #f2f1f1; padding-top: 40px; padding-bottom: 40px;}
-.account-travel-credits-section .section-title {font-size: 36px; text-transform: 36px; padding-bottom: 5px; color: #333; text-align: center; padding-bottom: 40px;}
-.account-travel-credits-section h2 {font-size: 24px;}
+.account-travel-credits-section {background: #f2f1f1; padding-top: 31px; padding-bottom: 50px;}
+.account-travel-credits-section hr {margin-top: 25px; margin-bottom: 14px; border-color: #a6a49f;}
+.account-travel-credits-section .section-title {font-size: 36px; text-transform: 36px; padding-bottom: 5px; color: #333; text-align: center; padding-bottom: 65px;}
+.account-travel-credits-section h2 {font-size: 24px; text-align: center; color: #333; margin-bottom: 15px;}
 
 .account-travel-credits-section .button {padding: 0 32px; background: #86c543; height: 40px; line-height: 40px; background: #86c543; font-size: 14px;}
+.account-travel-credits-section .button:hover {background: #53762b;}
 .account-travel-credits-section .col-1,
-.account-travel-credits-section .col-2 {width: 483px;}
+.account-travel-credits-section .col-2 {width: 483px; color: #333;}
 .account-travel-credits-section .col-1 {float: left;}
 .account-travel-credits-section .col-2 {float: right;}
 
 .account-travel-credits-section .col-1 p,
-.account-travel-credits-section .col-2 p {font-size: 14px; line-height: 21px;}
+.account-travel-credits-section .col-2 p {font-size: 14px; line-height: 21px; margin-top: 21px; margin-bottom: 21px;}
+
+.account-travel-credits-section .col-1 p:first-child,
+.account-travel-credits-section .col-2 p:first-child {margin-top: 0;}
+
 p.indent {padding-left: 37px;}
 
-.credits-block {font-size: 24px; text-transform: uppercase;}
+.credits-block {font-size: 24px; text-transform: uppercase; color: #333; padding-bottom: 13px;}
 .credits-block strong {font-size: 36px; font-weight: 700;}
 
-.account-travel-credits-section .white-info-block {background: #fff; padding: 15px;}
+.account-travel-credits-section .white-info-block {background: #fff; padding: 15px; margin-top: 27px; padding-bottom: 19px;}
 .white-info-block h5 {margin: 0; font-size: 18px; font-weight: 400;}
 .white-info-block p {margin: 0; font-size: 14px; line-height: 21px;}
 
 
 /*Account bookmarks section -----------------------------*/
-.account-bookmarks-section {background: #e9e8e7; padding-top: 40px; padding-bottom: 40px;}
-.account-bookmarks-section .section-title {font-size: 36px; text-transform: 36px; padding-bottom: 5px; color: #333; text-align: center; padding-bottom: 12px;}
+.account-bookmarks-section {background: #e9e8e7; padding-top: 40px; padding-bottom: 29px;}
+.account-bookmarks-section .section-title {font-size: 36px; text-transform: 36px; padding-bottom: 7px; color: #333; text-align: center; padding-bottom: 12px;}
 
 /*Bookmarks menu*/
-.bookmarks-menu {text-align: center; margin-bottom: 45px; font-size: 14px; padding-bottom: 5px; border-bottom: 1px solid #d8d7d5; }
-.bookmarks-menu li {display: inline-block; padding: 0 11px;}
+.bookmarks-menu {text-align: center; margin-bottom: 50px; font-size: 14px; padding-bottom: 2px; border-bottom: 1px solid #d8d7d5; }
+.bookmarks-menu li {display: inline-block; padding: 0 10px;}
 .bookmarks-menu a {display: inline-block; color: #333;}
 
 .bookmark-item {width: 232px; float: left; margin-right: 20px; margin-bottom: 20px; position: relative;}
 .bookmark-item:nth-child(4n) {margin-right: 0;}
 .bookmark-details {background: #fff; color: #333; padding: 10px 12px; height: 160px; overflow: hidden;}
-.bookmark-cover {background: #86c543; color: #fff; position: absolute; left: 0px; bottom: 0px; right: 0px; height: 0px; overflow: hidden;}
-.bookmark-item:hover .bookmark-cover {height: 180px;}
+.bookmark-details .bookmark-name {font-size: 24px; line-height: normal; margin-top: 4px;}
+.bookmark-details .bookmark-desc {font-size: 14px; line-height: 21px;}
+.bookmark-cover {background: #86c543; color: #fff; position: absolute; left: 0px; bottom: 0px; right: 0px; height: 0px; overflow: hidden; font-size: 14px; -moz-transition:height .3s;-ms-transition:height .3s;-o-transition:height .3s;-webkit-transition:height .3s;transition:height .3s;}
+.bookmark-item:hover .bookmark-cover {height: 180px; -moz-transition:height .3s;-ms-transition:height .3s;-o-transition:height .3s;-webkit-transition:height .3s;transition:height .3s;}
+.bookmark-cover p {padding: 6px 10px; text-align: center; font-size: 18px;}
+.bookmark-cover a {display: inline-block; position: absolute; top: 106px; width: 32px; height: 18px;}
+.bookmark-cover .white-page-ico {left: 36px; background: url(/images/add-page-white-ico.png) no-repeat center center;}
+.bookmark-cover .white-link-ico {left: 100px; background: url(/images/link-white-ico.png) no-repeat center center;}
+.bookmark-cover .white-popout-ico {left: 165px; background: url(/images/popup-white-ico.png) no-repeat center center;}
 
 
 /*Account invoices section -----------------------------*/
 .account-invoices-section {background: #fff; padding-top: 40px; padding-bottom: 40px;}
-.account-invoices-section .section-title {font-size: 36px; text-transform: 36px; padding-bottom: 5px; color: #333; text-align: center; padding-bottom: 12px;}
+.account-invoices-section .section-title {font-size: 36px; text-transform: 36px; padding-bottom: 32px; color: #333; text-align: center; padding-bottom: 12px;}
 
 .invoice-table {width: 100%;}
 .invoice-table td,
@@ -1119,13 +1152,15 @@ p.indent {padding-left: 37px;}
 
 
 /*Account invite friends 2 section -----------------------------*/
-.account-invite-friends-2-section {background: #333; padding-top: 30px; padding-bottom: 30px;}
-.account-invite-friends-2-section .section-title {font-size: 36px; text-transform: 36px; padding-bottom: 5px; color: #fff;}
-.account-invite-friends-2-section .section-subtitle {font-size: 18px; color: #fff;}
+.account-invite-friends-2-section {background: #333; padding-top: 34px; padding-bottom: 42px;}
+.account-invite-friends-2-section .section-title {font-size: 36px; text-transform: 36px; padding-bottom: 1px; color: #fff;}
+.account-invite-friends-2-section .section-subtitle {font-size: 18px; color: #fff; margin-top: 0px; margin-bottom: 17px;}
 
 .account-invite-friends-2-section .button {line-height: 40px; height: 40px; padding: 0 32px; background: #86c543; font-size: 14px; margin: 0 10px;}
+.account-invite-friends-2-section .button:hover {background: #53762b;}
 .account-invite-friends-2-section .button-fb {background: #3c5193 url(/images/fb-button-ico-2.png) no-repeat left center; padding-left: 63px;}
+.account-invite-friends-2-section .button-fb:hover {background: #3e527a url(/images/fb-button-ico-2.png) no-repeat left center;}
 .account-invite-friends-2-section .button-tw {background: #37a7df url(/images/tw-button-ico.png) no-repeat left center; padding-left: 63px;}
-
+.account-invite-friends-2-section .button-tw:hover {background: #2e8ab6 url(/images/tw-button-ico.png) no-repeat left center;}
 
 
