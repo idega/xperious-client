@@ -313,6 +313,7 @@ body{margin:0;font-size:14px;}
 .site-header .logo{display:inline-block;float:left;padding-top:1px;padding-bottom:1px;}
 .site-header .logo-text{float:left;padding-top:20px;font-size:15px;color:#e5e5e5;}
 .site-header__sign-in{float:right;margin-top:20px;font-size:14px;cursor:pointer;}
+.site-header__sign-in:hover {color: #86c543;}
 .site-header__map-ico{background:url(/images/destination-map.png) no-repeat left top;width:116px;height:69px;top:0px;right:164px;display:inline-block;position:absolute;}
 
 /*Top menu*/
@@ -347,17 +348,19 @@ li:hover .top-menu__submenu{-moz-transition:max-height .5s .5s;-ms-transition:ma
 
 /*Signin section*/
 .header-signin-form{width:774px;}
+.header-signin-form a:hover {color: #9ce64e;}
 .sign-in-section{background:#333;border-top:1px solid #7e9566;margin:0;overflow:hidden;height:0px;}
 .sign-in-section .site-block-in{padding:9px 0;}
 .sign-in-section h2{text-transform:uppercase;font-weight:300;color:#86c543;text-align:left;}
 .sign-in-section h2 span{text-transform:none;color:#a6a49f;font-size:14px;}
 .signin-info{font-size:14px;color:#a6a49f;margin:0;padding-top:9px;width:500px;float:left;text-align:left;}
 .signin-links{width:250px;float:right;font-size:14px;padding-top:7px;padding-bottom:7px;}
-.fb-login{display:inline-block;float:left;color:#fff;padding-left:37px;line-height:34px;padding-right:8px;border-radius:4px;background:#4466a9 url(/images/fb-button.png) no-repeat left top;font-size:14px;margin-right:5px;}
-.fb-login img{vertical-align:baseline;}
 .sign-in-section input[type="text"],
 .sign-in-section input[type="password"]{font-size:14px;padding:7px 12px;width:220px;margin-right:5px;}
-.sign-in-section .button{background:#86c543;width:110px;float:left;height:34px;font-size:14px;text-transform:none;text-align:center;padding:0 10px;line-height:34px;}
+.sign-in-section .button{width:110px;float:left;height:34px;text-transform:none;text-align:center;padding:0 10px;line-height:34px;}
+.sign-in-section .fb-login{display:inline-block;float:left;color:#fff;padding-left:37px;line-height:34px;padding-right:8px;border-radius:4px;background:#4466a9 url(/images/fb-button.png) no-repeat left top;font-size:14px;margin-right:5px; width: auto;}
+.sign-in-section .fb-login:hover {background-color: #2e5092; color: #fff;}
+.sign-in-section .fb-login img{vertical-align:baseline;}
 
 /*Header desination selection*/
 .header-destination-section.closed{overflow:hidden;}
@@ -379,7 +382,7 @@ li:hover .top-menu__submenu{-moz-transition:max-height .5s .5s;-ms-transition:ma
 .lang-menu .active,
 .lang-menu a:hover{background-position:left bottom;}
 .chose-destination{float:right;color:#fff;line-height:48px;font-size:14px;width:116px;text-align:center;background:#3b3a3a;}
-.chose-destination.active{background:#86c543;}
+.chose-destination.active, .chose-destination:hover{background:#86c543;}
 .no-js .chose-destination:hover,
 .chose-destination.hovered{color:#fff;}
 
