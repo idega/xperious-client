@@ -4,7 +4,11 @@ define([
 	app) {
 
 	return Backbone.View.extend({
-		template: 'sights/correctDetails'
+		template: 'sights/correctDetails',
+
+		afterRender: function() {
+			$('.custom-select').selectmenu();
+		}
 	});
 
 });

@@ -6,7 +6,7 @@ a{margin:0;padding:0;font-size:100%;vertical-align:baseline;text-decoration:none
 a:hover,a:focus{outline:none;}
 a img{border:none;}
 img{vertical-align:middle;-ms-interpolation-mode:bicubic;}
-b,strong{font-weight:bold;}
+b,strong{font-weight:500;}
 p{line-height:1.2em;margin:12px 0;}
 hr{display:block;height:1px;border:0;border-top:1px solid #e5e5e5;margin:1em 0;padding:0;}
 h1,h2,h3,h4,h5,h6{margin:12px 0;font-weight:300;}
@@ -41,7 +41,24 @@ button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;ver
 :-ms-input-placeholder{color:#6d6d6d;font-weight:300;}
 
 /*Custom buttons*/
-.button{padding-top:0;padding-bottom:0;display:inline-block;border-radius:4px;background:#ccc url(/images/button-ico.png) no-repeat right center;padding-right:36px;padding-left:10px;height:46px;line-height:46px;text-transform:uppercase;color:#fff;font-size:18px;border:none;text-align:left;position:relative;}
+.button{padding-top:0;padding-bottom:0;display:inline-block;border-radius:4px;background:#86c543; padding-left:16px; padding-right: 16px; height:40px;line-height:40px;text-transform:uppercase;color:#fff;font-size:14px;border:none;text-align:left;position:relative; 
+	-webkit-transition: background-color 0.2s linear; 
+	-moz-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+.button:hover {background: #53762b;
+	-webkit-transition: background-color 0.2s linear;
+    -moz-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+ }
+
+.button-grey {background: #a6a49f;}
+.button-grey:hover {background: #605f5c;}
+
 
 /*Autocomplete*/
 .ui-autocomplete{padding:0;background:#fff;}
@@ -211,7 +228,8 @@ div.star-rating {padding-top: 4px;}
 
 /*Cutsom checkboxes*/
 .login-section .custom-checkbox,
-.custom-checkbox {position: relative; line-height: 17px; min-height: 17px; font-size: 14px; color: #6d6d6d; font-weight: 300; text-align: left; padding-left: 22px;}
+.custom-checkbox {position: relative; line-height: 17px; min-height: 17px; font-size: 14px; color: #333; font-weight: 300; text-align: left; padding-left: 22px;}
+.custom-checkbox {padding-left: 22px !important;}
 .login-section .custom-checkbox input[type="checkbox"],
 .custom-checkbox input[type="checkbox"] {position: absolute; left: 2px; top: 2px;}
 
@@ -235,15 +253,15 @@ div.star-rating {padding-top: 4px;}
 /*Default form fields*/
 input[type="text"],
 input[type="password"],
-textarea{padding:8px 16px;background:#fff;border:none;border-radius:4px;font-size:16px;color:#6d6d6d;line-height:20px;width:492px;float:left;}
+textarea{padding:8px 16px;background:#fff;border:none;border-radius:4px;font-size:14px;color:#6d6d6d;line-height:20px;width:492px;float:left;}
 input[type="text"],
 input[type="password"]{height:20px;}
 input.shorter{width:295px;margin-right:17px;}
 .form-row{margin-bottom:15px;}
 
 /*-----------Site structure----------*/
-html{color:#000;font-size:100%;overflow-y:scroll;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
-body{margin:0;font-size:12px;}
+html{color:#333;font-size:100%;overflow-y:scroll;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+body{margin:0;font-size:14px;}
 .site-block,
 .site-block-in{margin:0 auto;width:990px;padding:1px 0;}
 .site{margin-bottom:295px;z-index:100;position:relative;}
@@ -598,7 +616,7 @@ a:hover .theme-hover-text{-moz-transition:height .3s;-ms-transition:height .3s;-
 .subscribe-form{padding-top:24px;}
 .subscribe-form input[type='text']{width:220px;margin-right:6px;padding:12px 16px;border:1px solid #a6a49f;}
 .subscribe-form .ui-selectmenu{margin-right:6px;border:1px solid #a6a49f;}
-.subscribe-form input[type='submit']{background-color:#559fd3;width:100px;}
+.subscribe-form input[type='submit']{background-color:#559fd3;width:100px; text-align: center; height: 46px; line-height: 46px;}
 .no-js .subscribe-form input[type='submit']:hover,.subscribe-form input[type='submit'].hovered,
 .content-page .subscribe-form input[type='submit']:hover,
 .blog-page .subscribe-form input[type='submit']:hover{background-color:#2978b0;}
@@ -952,13 +970,13 @@ a:hover .theme-hover-text{-moz-transition:height .3s;-ms-transition:height .3s;-
 .login-section .button:hover {background: #53762b;}
 
 .user-menu {float: left; padding-left: 20px; padding-top: 0px; background: url(/images/grey-line.png) no-repeat left 18px;}
-.user-menu .user-avatar {float: right; margin-top: 14px;}
+.user-menu .user-avatar {float: right; margin-top: 12px;}
 .user-avatar img {border: 1px solid #e5e5e5;}
 .user-menu .user-name {float: right; font-size: 12px; color: #e5e5e5; line-height: 14px; margin-right: 10px; padding-left: 10px; padding-bottom: 1px; position: relative;}
 .user-menu .user-messages {float: right; width: 20px; height: 14px; background: url(/images/mail-ico-grey.png) no-repeat center center; padding-left: 10px; padding-right: 10px; border-left: 1px solid #e5e5e5; margin-top: 17px;}
 .user-menu .menu-item {float: right; font-size: 12px; color: #e5e5e5; line-height: 14px; padding-left: 10px; padding-bottom: 1px; position: relative; background: url(/images/grey-line.png) no-repeat left 18px;}
-.user-menu .has-submenu {display: inline-block; line-height: 49px; padding-right: 16px; background: url(/images/arrow-down-grey.png) no-repeat right 22px; cursor: pointer}
-.user-submenu {position: absolute; border: 1px solid #a6a49f; border-radius: 3px; background: #fff; right: 0px; top: 50px; display: none; box-shadow: 0 0 9px rgba(0,0,0,0.5)}
+.user-menu .has-submenu {display: inline-block; line-height: 46px; padding-right: 16px; background: url(/images/arrow-down-grey.png) no-repeat right 22px; cursor: pointer}
+.user-submenu {position: absolute; border: 1px solid #a6a49f; border-radius: 3px; background: #fff; right: 0px; top: 47px; display: none; box-shadow: 0 0 9px rgba(0,0,0,0.5)}
 .submenu-parent:hover .user-submenu {display: block;}
 .user-submenu li:first-child {padding-top: 7px;}
 .user-submenu li:last-child {padding-bottom: 8px;}
@@ -1059,12 +1077,14 @@ a.verification-ico {display: block; padding-right: 50px; background: url(/images
 .account-profile-section label {padding-left: 4px; padding-bottom: 4px; float: none; display: block; font-size: 14px;}
 .account-profile-section input[type="text"],
 .account-profile-section input[type="password"] {border: 1px solid #a6a49f; padding: 10px 16px; width: 449px;}
+.account-profile-section input[type="text"]:focus,
+.account-profile-section input[type="password"]:focus {border-color: #86c543;}
+
 .account-profile-section input[type="submit"].button {padding-right: 10px; font-size: 14px; height: 40px; line-height: 40px; background: #86c543; padding: 0 32px;}
 .account-profile-section input[type="submit"].button:hover {background: #53762b;}
 
 .account-profile-section .ui-selectmenu {border: 1px solid #a6a49f;}
 .account-profile-section .form-controls {padding-top: 6px;}
-
 
 
 .ui-selectmenu-menu .ui-widget {border: 1px solid #a6a49f;}
@@ -1163,4 +1183,43 @@ p.indent {padding-left: 37px;}
 .account-invite-friends-2-section .button-tw {background: #37a7df url(/images/tw-button-ico.png) no-repeat left center; padding-left: 63px;}
 .account-invite-friends-2-section .button-tw:hover {background: #2e8ab6 url(/images/tw-button-ico.png) no-repeat left center;}
 
+
+/*Account invite friends 2 section -----------------------------*/
+.sight-correction-section {background: #fff; padding-top: 40px; padding-bottom: 47px;}
+.sight-correction-section .section-title {font-size: 36px; color: #333; padding-bottom: 11px;}
+.sight-correction-section .section-subtitle {margin-top: 0; margin-bottom: 42px; font-size: 14px; line-height: 21px;}
+
+.sight-correction-section .site-correction-form {width: 652px; float: left;}
+.sight-correction-section .form-row {margin-bottom: 14px;}
+.sight-correction-section .form-item {width: 238px; float: left; margin-right: 8px;}
+.sight-correction-section input[type="text"],
+.sight-correction-section textarea {border: 1px solid #a6a49f; width: 450px; padding-top: 10px; padding-bottom: 10px; resize: none;}
+.sight-correction-section input[type="text"]:focus,
+.sight-correction-section textarea:focus {border-color: #86c543;}
+.sight-correction-section textarea {width: 618px; height: 181px;}
+.sight-correction-section .form-item input[type="text"] {width: 204px;}
+.sight-correction-section label {padding-left: 4px; padding-bottom: 4px; float: none; display: block;}
+.sight-correction-section .custom-checkbox {margin-top: 5px;}
+.sight-correction-section .form-controls {padding-top: 15px;}
+
+.upload-ilustartion-block {padding-top: 3px; padding-bottom: 3px; font-size: 14px;}
+.upload-ilustartion-block .button {float: left; margin-right: 12px;}
+.upload-ilustartion-block p {margin-top: 1px; margin-bottom: 4px;}
+
+.sight-correction-section select {width: 482px;}
+.sight-correction-section .ui-selectmenu {border: 1px solid #a6a49f; height: 42px;}
+.sight-correction-section .ui-selectmenu-menu li a, 
+.sight-correction-section .ui-selectmenu-status {line-height: 42px;}
+.sight-correction-section .ui-state-default .ui-icon {top: 2px;}
+
+.sight-correction-section .map-wrap {padding-top: 7px; padding-bottom: 17px;}
+.sight-correction-section .map-wrap p {margin: 7px 0; font-size: 12px;}
+
+.faq-list-block {width: 286px; background: #e5e5e5; padding: 20px 14px; float: right; margin-top: 58px; padding-top: 14px;}
+.faq-list-block ul {margin-bottom: 20px;}
+.faq-list-block h4 {margin-top: 0; font-size: 24px; margin-bottom: 15px;}
+.faq-list-block li {margin-bottom: 12px; line-height: 20px;}
+.faq-list-block li a {color: #333;}
+.faq-list-block li a:hover {color: #86c543;}
+.faq-list-block .button {display: block; text-align: center;}
 
