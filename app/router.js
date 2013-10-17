@@ -25,6 +25,7 @@ define(['app',
 	'view/attractions/AttractionsRegionsView',
 	'view/attraction/AttractionView',
 	'view/attraction/AttractionGalleryView',
+    'view/sights/SightsCorrectDetailsView',
 ], function(app,
 	LoadingView,
 	HeaderView,
@@ -51,7 +52,8 @@ define(['app',
 	AttractionsCategoryView,
 	AttractionsRegionsView,
 	AttractionView,
-	AttractionGalleryView) {
+	AttractionGalleryView,
+    SightsCorrectDetailsView) {
 
 
 	return Backbone.Router.extend({
@@ -59,6 +61,7 @@ define(['app',
 	    routes: {
 	    	'search(/:query)/:country/:from/:to/:arrivalterminal/:arrivaltime/:adults/:teenagers/:children/:infants/:seniors(/budget/:budgetfrom/:budgetto)(/plan/:index)' : 'search',
 	    	'attractions/:country/:category(/:region)(/:product)' : 'attractions',
+            'sights/correct-details*path' : 'sightsCorrectDetails',
 	    	'events*path' : 'events',
             'signup*path' : 'signup',
             'signin*path' : 'signin',
@@ -126,6 +129,13 @@ define(['app',
 
 			}, this));
 	    },
+
+        /**
+         * Show sights details correction page.
+         */
+        sightsCorrectDetails: function() {
+    		app.layout(this._layout().sightsCorrectDetails()).render();            
+        },
 
 
 	    /**
@@ -497,9 +507,29 @@ define(['app',
 
 	    			return layout;
 	    		}, this),
+
+
+                sightsCorrectDetails: _.bind(function() {
+	    		    	var layout = new Backbone.Layout();
+
+	    		    	layout.setView(new SightsCorrectDetailsView({
+	    		    		views: {
+	    						'.header-view' : new HeaderView(
+        						{
+    								views: {
+    									'.site-topMenu-view' : new TopMenuView()
+    								}
+    							}),
+	    						'.footer-view' : new FooterView(),
+	    						'.bottom-view' : new BottomView()
+	    		    		}
+	    		    	}));
+
+	    			return layout;
+	    		}, this),
 	    	};
 	    }
-	    
+
 	});
 
 });
