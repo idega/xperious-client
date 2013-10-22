@@ -462,8 +462,30 @@ li:hover .top-menu__submenu{transition:max-height .5s .5s;max-height:340px;}
 .plan-top-info,
 .plan-bottom-info{position:absolute;padding:6px 12px;background:url(/images/top-menu-grad.png);z-index:20;color:#fff;}
 .travel-plan-section a{display:block;position:relative;z-index:9;}
-.travel-plan-section .plan-cover{position:absolute;left:0px;right:0px;bottom:0px;width: 100%;height:0;background:url(/images/image-hover-cover.png) no-repeat center center; transition:height .3s;}
-a:hover .plan-cover{z-index:21; transition:height .3s; height: 100%;}
+.travel-plan-section .plan-img-holder-small {position: relative; width: 240px; height: 185px;}
+.travel-plan-section .plan-img-holder-medium {position: relative; width: 490px; height: 235px;}
+.travel-plan-section .plan-img-holder-big {position: relative; width: 240px; height:380px;}
+.travel-plan-section .plan-img {height: 185px; transition:height .3s; width: 240px; top: 0px;}
+
+
+.plan-img-holder-small .plan-img {height: 185px; transition:height .3s; width: 240px;}
+.plan-img-holder-medium .plan-img {height: 235px; transition:height .3s; width: 490px;}
+.plan-img-holder-big .plan-img {height: 380px; transition:height .3s; width: 240px;}
+
+.plan-img-holder-small:hover .plan-img {height: 95px; transition:height .3s;}
+.plan-img-holder-medium:hover .plan-img {height: 145px; transition:height .3s;}
+.plan-img-holder-big:hover .plan-img {height: 290px; transition:height .3s;}
+
+
+.plan-img-holder-small:hover .plan-cover {height: 90px;}
+.plan-img-holder-medium:hover .plan-cover {height: 90px;}
+.plan-img-holder-big:hover .plan-cover {height: 90px;}
+
+a:hover .plan-top-info,
+a:hover .plan-bottom-info {display: none;}
+.travel-plan-section .plan-cover{position:absolute;left:0px;right:0px;bottom:0px;width: 100%;height:0;background: #333; transition:height .3s; color: #fff; overflow: hidden; font-size: 16px;}
+.travel-plan-section .plan-cover .text {padding: 19px 10px; text-align: center; padding-bottom: 25px; background: url(/images/eye-ico.png) no-repeat center bottom;}
+
 .plan-top-info{left:0px;top:0px;right:0px;background:url(/images/plan-grad-top.png) repeat-x left top;text-align:center;font-size:18px;line-height:20px;padding:10px;padding-top:25px;min-height:45px;vertical-align:middle;}
 .plan-top-info .dotted{color:#fff;border-bottom:1px dashed #fff;}
 .plan-bottom-info{left:0px;bottom:0px;right:0px;background:url(/images/plan-grad-bottom.png) repeat-x left bottom;text-align:center;font-size:14px;line-height:20px;padding:14px 10px;padding-top:26px;min-height:40px;vertical-align:middle;}
