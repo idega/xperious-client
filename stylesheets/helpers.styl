@@ -1,12 +1,60 @@
-/*Helpers*/
+/* ===[ Helpers ]=== */
+.menu,
+.no-style {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.fl {
+    float: left
+}
+.fr {
+    float: right
+}
+.tar {
+    text-align: right
+}
+.tac {
+    text-align: center
+}
+.tal {
+    text-align: left
+}
+.vat {
+    vertical-align: top
+}
+.vac {
+    vertical-align: center
+}
+.date {
+    color: #ccc
+}
+.relative {
+    position: relative
+}
+.display-none {
+    display: none
+}
+.clearfix:before,
+.clearfix:after,
+.form-row:before,
+.form-row:after {
+    content: "";
+    display: table;
+}
+.clearfix:after,
+.form-row:after {
+    clear: both
+}
+.clearfix,
+.form-row {
+    zoom: 1
+}
 
 
 
 
-
-
-
-/*Transition*/
+/*Stylus helpers*/
 transition ()
   -webkit-transition arguments
   -moz-transition arguments

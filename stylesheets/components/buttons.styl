@@ -1,1 +1,53 @@
-/*Buttons*/
+/* ===[ Buttons ]=== */
+.button {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: inline-block;
+    border-radius: 4px;
+    background: sty-color-green;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    position: relative;
+    font-weight: 400;
+    transition: background-color 0.2s linear;
+}
+.button:hover {
+    color: #fff;
+    background: sty-color-green-dark;
+    transition: background-color 0.2s linear;
+}
+
+/*Button grey*/
+.button-grey {
+    background: sty-color-grey
+}
+.button-grey:hover {
+    background: sty-color-grey-dark
+}
+
+.button-full-width {
+    display: block
+}
+input.button-full-width {
+    width: 100%
+}
+
+.fb-button {
+    background: sty-color-fb
+}
+.fb-button:hover {
+    background: sty-color-fb-dark
+}
+.fb-button span {
+    display: inline-block; 
+    background: url(/images/fb-ico-2.png) no-repeat left center; 
+    padding-left: 40px; 
+    padding-right: 32px
+}

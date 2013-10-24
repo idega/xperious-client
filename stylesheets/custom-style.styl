@@ -1,55 +1,3 @@
-/*Font declarations*/
-body, button,input,select,textarea, .ui-widget{font-family: 'Ubuntu', sans-serif; font-weight: 300;}
-
-/*---Default elements---*/
-a{margin:0;padding:0;font-size:100%;vertical-align:baseline;text-decoration:none;color:#86c543;}
-a:hover,a:focus{outline:none;}
-a img{border:none;}
-img{vertical-align:middle;-ms-interpolation-mode:bicubic;}
-b,strong{font-weight:500;}
-p{line-height:1.2em;margin:12px 0;}
-hr{display:block;height:1px;border:0;border-top:1px solid #e5e5e5;margin:1em 0;padding:0;}
-h1,h2,h3,h4,h5,h6{margin:12px 0;font-weight:300;}
-
-/*Tables*/
-table{border-collapse:collapse;border-spacing:0;}
-table.full-table{width:100%;}
-td,td img{vertical-align:top;}
-
-/*Forms*/
-form{margin:0;}
-textarea{overflow:auto;vertical-align:top;}
-fieldset{border:0;margin:0;padding:0;}
-legend{border:0;margin-left:-7px;padding:0;}
-input[type="checkbox"],input[type="radio"]{box-sizing:border-box;}
-input[type="search"]{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
-button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;}
-button,input{line-height:normal;overflow:visible;}
-.form-row input[type="text"],.form-row label{display:inline-block;float:left;}
-label.for-input{width:auto !important;cursor:pointer}
-input.radio,input.checkbox{vertical-align:text-bottom;margin:0;}
-input[type="text"],input[type="password"],textarea,select{border:1px solid #ccc;position:relative;}
-button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
-button{width:auto;overflow:visible;}
-button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;vertical-align:middle;outline:none;outline:none;}
-
-/*Placeholders*/
-.placeholder{color:#6d6d6d;font-weight:300;}
-::-webkit-input-placeholder{color:#6d6d6d;font-weight:300;}
-:-moz-placeholder{color:#6d6d6d;font-weight:300;}
-::-moz-placeholder{color:#6d6d6d;font-weight:300;opacity:1;}
-:-ms-input-placeholder{color:#6d6d6d;font-weight:300;}
-
-/*Custom buttons*/
-.button{padding-top:0;padding-bottom:0;display:inline-block;border-radius:4px;background:#86c543; padding-left:16px; padding-right: 16px; height:40px;line-height:40px;text-transform:uppercase;color:#fff;font-size:14px;border:none;text-align:left;position:relative;
-    transition: background-color 0.2s linear;
-}
-.button:hover {background: #53762b; transition: background-color 0.2s linear;}
-
-.button-grey {background: #a6a49f;}
-.button-grey:hover {background: #605f5c;}
-
-
 /*Autocomplete*/
 .ui-autocomplete{padding:0;background:#fff;}
 .ui-menu .ui-menu-item{border:none;background:none !important;margin:0 !important;}
@@ -61,10 +9,10 @@ button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;ver
 .ui-selectmenu{display:block;display:inline-block;position:relative;height:44px;vertical-align:middle;text-decoration:none;overflow:hidden;zoom:1;float:left;border:none;background:#fff;border-radius:4px;font-weight:300;}
 .ui-selectmenu.ui-corner-top{border-radius:4px 4px 0 0;}
 .ui-selectmenu.to-top{border-radius:0 0 4px 4px;}
-.ui-selectmenu-icon{position:absolute;right:6px;margin-top:-8px;top:50%;}
+.ui-selectmenu-icon{position:absolute;right:6px; margin-top:-8px;top:50%;}
 .ui-selectmenu-menu{padding:0;margin:0;position:absolute;top:0;display:none;z-index:1005;}
 
-/* z-index:1005 to make selectmenu work with dialog */
+
 .ui-selectmenu-menu ul{padding:0;margin:0;list-style:none;position:relative;overflow:auto;overflow-y:auto ;overflow-x:hidden;-webkit-overflow-scrolling:touch;}
 .ui-selectmenu-open{display:block;}
 .ui-selectmenu-menu-popup{margin-top:-1px;}
@@ -216,42 +164,9 @@ div.star-rating {padding-top: 4px;}
 .guests .body .row input[type=text]{font-family:Ubuntu;color:#6d6d6d;padding-right:8px;padding-left:8px;font-size:14px;font-weight:400;}
 .guests .body .row .label{font-size:14px;color:#aba9a2;font-family:Ubuntu;font-weight:300;line-height:34px;width:10px;}
 
-/*Cutsom checkboxes*/
-.login-section .custom-checkbox,
-.custom-checkbox {position: relative; line-height: 17px; min-height: 17px; font-size: 14px; color: #333; font-weight: 300; text-align: left; padding-left: 22px;}
-.custom-checkbox {padding-left: 22px !important;}
-.login-section .custom-checkbox input[type="checkbox"],
-.custom-checkbox input[type="checkbox"] {position: absolute; left: 2px; top: 2px;}
 
-/*---Helpers---*/
-.menu, .no-style{list-style:none;padding:0;margin:0;}
-.fl{float:left;}
-.fr{float:right;}
-.tar{text-align:right;}
-.tac{text-align:center;}
-.tal{text-align:left;}
-.vat{vertical-align:top;}
-.vac{vertical-align:center;}
-.date{color:#ccc;}
-.clearfix:before,.clearfix:after,.form-row:before,.form-row:after{content:"";display:table;}
-.clearfix:after,.form-row:after{clear:both;}
-.clearfix,.form-row{zoom:1;}
-.relative {position: relative;}
-
-.display-none {display: none;}
-
-/*Default form fields*/
-input[type="text"],
-input[type="password"],
-textarea{padding:8px 16px;background:#fff;border:none;border-radius:4px;font-size:14px;color:#6d6d6d;line-height:20px;width:492px;float:left;}
-input[type="text"],
-input[type="password"]{height:20px;}
-input.shorter{width:295px;margin-right:17px;}
-.form-row{margin-bottom:15px;}
 
 /*-----------Site structure----------*/
-html{color:#333;font-size:100%;overflow-y:scroll;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
-body{margin:0;font-size:14px;}
 .site-block,
 .site-block-in{margin:0 auto;width:990px;padding:1px 0;}
 .site{margin-bottom:295px;z-index:100;position:relative;}
@@ -966,23 +881,13 @@ a:hover .theme-hover-text{transition:height .3s;height:85px;}
 .login-title a.selected {color: #d6d4ce;}
 .login-title a.selected:hover {color: #86c543;}
 
-.login-section .form-row {font-size: 14px;}
-.login-section label {display: block; padding-left: 4px; padding-bottom: 4px; float: none; font-size: 14px;}
 .login-section input[type="text"],
-.login-section input[type="password"] {width: 452px; border: 1px solid #a6a49f; padding: 10px 16px;}
-.login-section .form-controls {padding-top: 6px;}
-.login-section .explainer {font-size: 14px; line-height: 17px;}
-.login-section .custom-checkbox {display: inline-block; padding-bottom: 0px;}
+.login-section input[type="password"] {width: 452px;}
+.login-section .explainer {line-height: 17px;}
 
 
 .or-block {background: url(/images/grey-dot.png) repeat-x center center; margin-top: 40px; margin-bottom: 40px; text-align: center;}
 .or-block span {background: #efefef; display: inline-block; color: #a6a49f; font-size: 16px; text-transform: uppercase; padding: 0 7px;}
-
-.login-section .fb-signup {display: block; border-radius: 3px; background: #3c5193; text-align: center; line-height: 40px; color: #fff; font-size: 15px; font-weight: 400;}
-.login-section .fb-signup:hover {background: #33437a;}
-.login-section .fb-signup span {display: inline-block; background: url(/images/fb-ico-2.png) no-repeat left center; padding-left: 40px; padding-right: 33px;}
-.login-section .button {border: none; border-radius: 3px; height: 40px; line-height: 40px; color: #fff; background: #86c543; color: #fff; text-transform: uppercase; font-size: 14px; text-align: center; padding: 0; width: 484px;}
-.login-section .button:hover {background: #53762b;}
 
 .user-menu {float: left; padding-left: 20px; padding-top: 0px; background: url(/images/grey-line.png) no-repeat left 18px;}
 .user-menu .user-avatar {float: right; margin-top: 12px;}
@@ -1211,13 +1116,9 @@ p.indent {padding-left: 37px;}
 .sight-correction-section .form-row {margin-bottom: 14px;}
 .sight-correction-section .form-item {width: 238px; float: left; margin-right: 8px;}
 .sight-correction-section input[type="text"],
-.sight-correction-section textarea {border: 1px solid #a6a49f; width: 450px; padding-top: 10px; padding-bottom: 10px; resize: none;}
-.sight-correction-section input[type="text"]:focus,
-.sight-correction-section textarea:focus {border-color: #86c543;}
+.sight-correction-section textarea {width: 450px; padding-top: 10px; padding-bottom: 10px; resize: none;}
 .sight-correction-section textarea {width: 618px; height: 181px;}
 .sight-correction-section .form-item input[type="text"] {width: 204px;}
-.sight-correction-section label {padding-left: 4px; padding-bottom: 4px; float: none; display: block;}
-.sight-correction-section .custom-checkbox {margin-top: 5px;}
 .sight-correction-section .form-controls {padding-top: 15px;}
 
 .upload-ilustartion-block {padding-top: 3px; padding-bottom: 3px; font-size: 14px;}
@@ -1532,9 +1433,9 @@ div.star-rating{background:transparent!important;overflow:hidden!important}
 .review-item p {margin-top: 4px; margin-bottom: 0px; font-size: 14px; line-height: 21px;}
 
 /*Sights section*/
-.sights-section {background: #faf5e7; padding-top: 45px;}
+.sights-section {padding-top: 45px;}
 
-.sights-section .title {font-size: 36px; color: #d5af37; text-align: center; padding-bottom: 48px;}
+.sights-section .title {font-size: 36px; text-align: center; padding-bottom: 48px;}
 .sights-section .element {display: inline-block; border-bottom: 1px solid #a6a49f; position: relative; height: 250px; overflow: hidden;}
 .sights-section .details p {font-size: 12px; line-height: 17px; color: #333; margin-top: 4px;}
 .sights-section .details h4 {font-weight: bold; color: #559fd3; font-size: 16px; margin-top: 7px; margin-bottom: 4px;}

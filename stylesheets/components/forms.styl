@@ -1,1 +1,56 @@
-/*Forms*/
+/*Form elements*/
+input[type="text"],
+input[type="password"],
+textarea {
+    padding: 10px 16px;
+    background: #fff;
+    border: 1px solid #a6a49f;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #6d6d6d;
+    line-height: 20px;
+    width: 492px;
+    float: left;
+}
+input[type="text"],
+input[type="password"] {
+    height: 20px
+}
+input.shorter {
+    width: 295px;
+    margin-right: 17px;
+}
+.form-row {
+    margin-bottom: 15px
+}
+
+/*On focus*/
+input[type="password"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #86c543;
+}
+
+form label {
+    padding-left: 4px; 
+    padding-bottom: 4px; 
+    float: none; 
+    display: block;
+}
+
+
+/*Custom checkboxes radios*/
+.custom-checkbox {
+    position: relative; 
+    line-height: 17px; 
+    min-height: 17px; 
+    padding: 0;
+    padding-left: 22px;
+    cursor: pointer;
+}
+.custom-checkbox input[type="checkbox"] {
+    position: absolute; 
+    left: 2px; 
+    top: 2px;
+}
+.sight-correction-section .custom-checkbox {margin-top: 5px;}
