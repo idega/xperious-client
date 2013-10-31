@@ -23,12 +23,12 @@
 	    <div class="site-block clearfix">
 	      <div class="col-1">
 	        <div class="bordered">
-	           <% if (product.address) { %>
-	               <% if (product.address.roadNumber) { %>
-	                   <p><strong>Roadnumber:</strong> <%= product.address.roadNumber %></p>
+	           <% if (product.location) { %>
+	               <% if (product.location.roadNumber) { %>
+	                   <p><strong>Roadnumber:</strong> <%= product.location.roadNumber %></p>
 	               <% } %>
-	               <% if (product.address.town) { %>
-	                   <p><strong>Town:</strong> <%= product.address.town %></p>
+	               <% if (product.location.town) { %>
+	                   <p><strong>Town:</strong> <%= product.location.town %></p>
 	               <% } %>
 	           <% } %>
 	        </div>

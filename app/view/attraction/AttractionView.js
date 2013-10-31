@@ -64,16 +64,16 @@ define([
 							this.$('.map-holder')[0], {
 								zoom: 9,
 								center: new google.maps.LatLng(
-									app.attractions.product.get('address').latitude, 
-									app.attractions.product.get('address').longitude),
+									app.attractions.product.get('location').latitude, 
+									app.attractions.product.get('location').longitude),
 								mapTypeId: google.maps.MapTypeId.ROADMAP,
 								streetViewControl: false
 						});
 		
 						new google.maps.Marker({
 							 position: new google.maps.LatLng(
-									app.attractions.product.get('address').latitude, 
-									app.attractions.product.get('address').longitude),
+									app.attractions.product.get('location').latitude, 
+									app.attractions.product.get('location').longitude),
 							 title: app.attractions.product.get('title'),
 							 map: map
 						 });

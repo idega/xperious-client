@@ -22,9 +22,9 @@ function(
 			var items = plan.days()[day];
 			var lat, lng;
 			for (var i = 0; i < items.length; i++) {
-				if (items[i].get('address') && items[i].get('address').latitude && items[i].get('address').longitude) {
-					lat = items[i].get('address').latitude;
-					lng = items[i].get('address').longitude;
+				if (items[i].get('location') && items[i].get('location').latitude && items[i].get('location').longitude) {
+					lat = items[i].get('location').latitude;
+					lng = items[i].get('location').longitude;
 					break;
 				}
 			}

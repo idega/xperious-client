@@ -11,7 +11,7 @@ function(
 		model: ProductModel,
 		
 		url: function() {
-			return app.apihost + '/v1/products/list';
+			return app.apihost + '/v1/products';
 		},
 
 		data: function(data) {
