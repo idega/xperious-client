@@ -21,7 +21,6 @@ define([
   'jquery.waypoints',
   'jquery.waypointsSticky',
   'jquery.rating',
-  'modernizr',
   'common'
 ], function(props, LayoutManager) {	
 

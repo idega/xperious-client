@@ -163,7 +163,6 @@ require.config({
        'jquery.waypointsSticky' : '../lib/jquery/jquery.waypointsSticky',
        'jquery.cookie' : '../lib/jquery/jquery.cookie',
        'jquery.rating' : '../lib/jquery/jquery.rating',
-       'modernizr' : '../lib/modernizr/modernizr',
        'underscore' : '../lib/underscore/underscore',
        'backbone' : '../lib/backbone/backbone',
        'backbone.relational' : '../lib/backbone/backbone.relational',
