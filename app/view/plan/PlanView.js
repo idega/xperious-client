@@ -86,8 +86,8 @@ define([
 							if (item.get('type') === 'PRODUCT') {
 								new google.maps.Marker({
 									 position: new google.maps.LatLng(
-										item.get('address').latitude, 
-										item.get('address').longitude),
+										item.get('location').latitude, 
+										item.get('location').longitude),
 									 title: item.get('title'),
 									 map: map
 								 });

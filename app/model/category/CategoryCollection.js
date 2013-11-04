@@ -9,7 +9,7 @@ function(
 	return Backbone.Collection.extend({
 
 		url: function() {
-			return app.apihost + '/v1/categories/list';
+			return app.apihost + '/v1/categories';
 		},
 
 		model: CategoryModel,

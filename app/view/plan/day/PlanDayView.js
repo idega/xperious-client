@@ -167,8 +167,8 @@ define([
 					if (item.get('type') === 'PRODUCT') {
 						if (!request.origin) {
 							request.origin = new google.maps.LatLng(
-								item.get('address').latitude, 
-								item.get('address').longitude);
+								item.get('location').latitude, 
+								item.get('location').longitude);
 
 						} else {
 							if (request.destination) {
@@ -181,8 +181,8 @@ define([
 								});
 							}
 							request.destination = new google.maps.LatLng(
-								item.get('address').latitude, 
-								item.get('address').longitude);
+								item.get('location').latitude, 
+								item.get('location').longitude);
 						}
 					}
 				}, this));
@@ -225,8 +225,8 @@ define([
 				if (item.get('type') === 'PRODUCT') {
 					new google.maps.Marker({
 						 position: new google.maps.LatLng(
-							item.get('address').latitude, 
-							item.get('address').longitude),
+							item.get('location').latitude, 
+							item.get('location').longitude),
 						 title: item.get('title'),
 						 map: map
 					 });

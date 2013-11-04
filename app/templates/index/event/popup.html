@@ -22,11 +22,11 @@
      </div>
      <div class="map-wrap">
        <div class="map-holder">
-          <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= event.address.latitude %>,<%= event.address.longitude %>&zoom=14&size=440x150&maptype=roadmap&sensor=false" />
+          <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= event.location.latitude %>,<%= event.location.longitude %>&zoom=14&size=440x150&maptype=roadmap&sensor=false" />
        </div>
        <div class="map-tooltip">
          <p class="title">
-            <%= event.address.street %> <%= event.address.streetNumber %>
+            <%= event.location.street %> <%= event.location.streetNumber %>
          </p>
          <p>View map &#8901; Get Directions</p><span class="nip"></br></span>
        </div>
